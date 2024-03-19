@@ -13,4 +13,6 @@
         </div>
     </div> --}}
     <p>INICIO</p>
+
+    
 </x-app-layout>
