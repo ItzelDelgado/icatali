@@ -13,7 +13,8 @@
         <button class="bg-black rounded-full px-4 py-2 ml-5">
             <a class="text-white uppercase font-bold bebas-400" href="">Contactanos</a>
         </button>
-        <img class="absolute w-40 -left-20 -bottom-20" src="{{ asset('img/decoraciones/circulo-radial.svg') }}" alt="">
+        <img class="absolute w-40 -left-20 -bottom-20" src="{{ asset('img/decoraciones/circulo-radial.svg') }}"
+            alt="">
         <div class="absolute bg-black w-48 h-48 rounded-[50%] -skew-x-[8deg] -right-8 -bottom-8 overflow-hidden">
             <img class="w-full h-full object-cover" src="{{ asset('img/barras_de_amaranto.JPG') }}" alt="">
         </div>
@@ -21,7 +22,7 @@
 
     <section class="relative bg-white z-20 p-10">
         <h2 class="text-lg bebas-400 font-semibold uppercase text-center">5 beneficios de las legumbres</h2>
-        <ul class="text-lg p-3 list-disc">
+        <ul class="text-lg p-3 list-image-checkmark">
             <li>Mejoraran la salud</li>
             <li>Son cultivos limpios</li>
             <li>Larga vida util</li>
@@ -29,43 +30,57 @@
             <li>Favorecen el crecimiento de otros cultivos</li>
         </ul>
         <img src="" alt="">
-
-
-<div class="cloud"></div>
     </section>
-    <section>
-        <h2>Conoce icatali</h2>
-        <p>Nos especializamos en el diseño y desarrollo de alternativas de consumo de origen vegetal, destacando por su
-            calidad y accesibilidad. Nuestra misión es ser aliados en la nutrición, brindando confianza al consumidor al
-            proporcionar productos con ingredientes que promueven la salud del cuerpo y del planeta. Utilizamos materias
-            primas sostenibles que ofrecen nutrientes con un bajo impacto ambiental.</p>
-        <p>Nuestros productos son validados sensorialmente por los consumidores y se caracterizan por tener un índice
-            glucémico bajo, fibra, así como un etiquetado limpio y veraz. Aunque reconocemos que cada persona es única,
-            aseguramos que los beneficios de nuestros productos siempre estarán presentes, gracias a nuestra adaptación
-            a los nuevos estilos de vida y tipos de dieta, como la restrictiva (por enfermedad), plant based, veganos,
-            vegetarianos, flexivegetarianos, plant forward, entre otros.</p>
-        <p>Nos esforzamos por ser la elección confiable y saludable para aquellos que buscan una alternativa consciente
-            y deliciosa en sus opciones de consumo</p>
-    </section>
-
-    <section>
-        <h2>Productos</h2>
-        <img src="" alt="">
-        hamburguesa
+    <section class="relative bg-nube-azul bg-no-repeat bg-cover bg-left px-10 py-20">
+        <div class="">
+            <h2 class="text-2xl bebas-400 font-semibold uppercase pb-4">Conoce icatali</h2>
+            <p>Nos especializamos en el diseño y desarrollo de alternativas de consumo de origen vegetal, destacando por
+                su
+                calidad y accesibilidad. Nuestra misión es ser aliados en la nutrición, brindando confianza al
+                consumidor al
+                proporcionar productos con ingredientes que promueven la salud del cuerpo y del planeta. Utilizamos
+                materias
+                primas sostenibles que ofrecen nutrientes con un bajo impacto ambiental.</p>
+            <p>Nuestros productos son validados sensorialmente por los consumidores y se caracterizan por tener un
+                índice glucémico bajo, fibra, así como un etiquetado limpio y veraz. Aunque reconocemos que cada persona
+                es
+                única, aseguramos que los beneficios de nuestros productos siempre estarán presentes, gracias a nuestra
+                adaptación a los nuevos estilos de vida y tipos de dieta, como la restrictiva (por enfermedad), plant
+                based,
+                veganos, vegetarianos, flexivegetarianos, plant forward, entre otros.</p>
+            <p>Nos esforzamos por ser la elección confiable y saludable para aquellos que buscan una alternativa
+                consciente y deliciosa en sus opciones de consumo</p>
+        </div>
     </section>
 
-    <section>
-        <h2>¿QUÉ DICE LA GENTE DE ICATALI?</h2>
-        Las galletas me encantan; su dulzura es adecuad, son suaves y no me es suficiente tres cuando la combino con
-        café. La uso como refrigerio con la convicción de que son saludables. Rosario
-        La harina la he usado como suplemento en harina para preparar hotcakes y no modifica sabor ni textura y le da
-        esponjoso a la torta de hotcakes.
-        Las galletas me parecieron ricas, el sabor es dulce delicioso y la consistencia es buen. Sobre todo son suér
-        naturales, me encantaron. Yasmin
-        Los productos de Icatali me han parecido novedosos y con un gran apoyo nutricional, además cuentan con un buen
-        sabor. Yolanda
-        Me gustaron mucho, son muy nutritivos y sabrosos. Novedidid y apoyan a la nutrición. Victor
-        Las galletas tienen, buena textura, se siente con cada mordida su firmeza y su sabor que no es empalagoso, muy
-        ricas. Armando
+    <section class="relative bg-white z-20 p-10">
+        <h2 class="text-2xl bebas-400 font-semibold uppercase pb-4 text-center">Productos</h2>
+        <div>
+            <div class="text-center pt-4">
+                <img class="mx-auto" src="{{ asset('img/hamburguesa.png') }}" alt="">
+                <h3 class="text-xl font-bold pt-4">Hamburguesas</h3>
+            </div>
+            <div class="text-center pt-4">
+                <img class="mx-auto" src="{{ asset('img/hotcakes.png') }}" alt="">
+                <h3 class="text-xl font-bold pt-4">Hotcakes</h3>
+            </div>
+            <div class="text-center pt-4">
+                <img class="mx-auto" src="{{ asset('img/galletas.png') }}" alt="">
+                <h3 class="text-xl font-bold pt-4">Galletas</h3>
+            </div>
+        </div>
     </section>
+
+    <div class="bg-nube-verde bg-no-repeat bg-cover bg-top py-20">
+        <h2 class="text-xl bebas-400 font-semibold uppercase text-center relative top-4">¿QUÉ DICE LA GENTE DE ICATALI?
+        </h2>
+    </div>
+
+    <div class="flex flex-col justify-center items-center border-t-[1.5rem] border-t-green-900 border-x-2 border-x-green-900 border-b-4 border-b-green-900 px-14 py-5">
+        <img class="w-60" src="{{ asset('img/female-user.png') }}" alt="">
+        <p>Las galletas me encantan; su dulzura es adecuad, son suaves y no me es suficiente tres cuando la combino con
+            café. La uso como refrigerio con la convicción de que son saludables. Rosario</p>
+    </div>
+
+
 </x-app-layout>

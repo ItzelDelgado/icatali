@@ -16,6 +16,11 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            backgroundImage: {
+                'nube-azul': "url('../../../icatali/public/img/decoraciones/nube-azul.svg')",
+                'nube-verde': "url('../../../icatali/public/img/decoraciones/nube-verde.svg')",
+
+            },
         },
     },
 

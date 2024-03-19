@@ -108,3 +108,15 @@ h1 {
         #ff0000 60px 15px 0 -10px,
         #ff0000 85px 5px 0 -5px;
 }
+
+.bg-nube-azul{
+    background-image: url(../../../icatali/public/img/decoraciones/nube-azul.svg);
+}
+
+.list-image-checkmark li::before {
+    content: url(http://[::1]:5173/public/img/decoraciones/checklist.png);
+    position: relative;
+    left: -5px;
+    top: 44%;
+    bottom: -12px;
+}
