@@ -21,4 +21,5 @@ Route::resource('/comentarios', ComentarioController::class)
 ->except(['show','destroy']);
 
 Route::resource('/preguntas_frecuentes', PreguntaFrecuenteController::class)
+->parameter('preguntas_frecuentes','pregunta_frecuente')
 ->except(['show','destroy']);

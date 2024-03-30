@@ -13,7 +13,7 @@ class PreguntaFrecuenteController extends Controller
      */
     public function index()
     {
-        $preguntas_frecuentes = PreguntaFrecuente::paginate();
+        $preguntas_frecuentes = PreguntaFrecuente::latest('id')->paginate(10);
         return view('admin.preguntas_frecuentes.index', compact('preguntas_frecuentes'));
     }
 
@@ -22,7 +22,7 @@ class PreguntaFrecuenteController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.preguntas_frecuentes.create');
     }
 
     /**
@@ -30,7 +30,23 @@ class PreguntaFrecuenteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(([
+            'pregunta' => 'required|string',
+            'respuesta' => 'required|string|max:1500',
+        ]));
+        
+        PreguntaFrecuente::create($request->all());
+        session()->flash(
+            'swal',
+            [
+                'title' => "¡Bien hecho!",
+                'text' => "La pregunta se ha agregado con éxito.",
+                'icon' => "success"
+
+            ]
+        );
+
+        return redirect()->route('admin.preguntas_frecuentes.index');
     }
 
     /**
@@ -46,7 +62,7 @@ class PreguntaFrecuenteController extends Controller
      */
     public function edit(PreguntaFrecuente $preguntaFrecuente)
     {
-        //
+        return view('admin.preguntas_frecuentes.edit',compact('preguntaFrecuente'));
     }
 
     /**
@@ -54,7 +70,24 @@ class PreguntaFrecuenteController extends Controller
      */
     public function update(Request $request, PreguntaFrecuente $preguntaFrecuente)
     {
-        //
+        $request->validate(([
+            'pregunta' => 'required|string',
+            'respuesta' => 'required|string|max:1500',
+        ]));
+
+        $preguntaFrecuente->update($request->all());
+
+        session()->flash(
+            'swal',
+            [
+                'title' => "¡Bien hecho!",
+                'text' => "La pregunta frecuente se ha actualizado con éxito.",
+                'icon' => "success"
+
+            ]
+        );
+
+        return redirect()->route('admin.preguntas_frecuentes.index');
     }
 
     /**

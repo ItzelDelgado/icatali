@@ -1,6 +1,6 @@
 <x-admin-layout>
     <div class="mt-2">
-        <h1 class="text-2xl font-medium text-gray-800">Lista de preguntas_frecuentes</h1>
+        <h1 class="text-2xl font-medium text-gray-800">Preguntas frecuentes</h1>
     </div>
 
     <div class="flex justify-end mb-4">
