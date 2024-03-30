@@ -1,8 +1,8 @@
 <x-app-layout>
 
-    <section class="bg-white relative p-10 h-[28rem] z-10 overflow-hidden">
-        <h1 class="uppercase font-bold mb-4 text-2xl">¡Nútrete hoy!</h1>
-        <p class="montserrat-400 mb-4">En Icatali ofrecemos alimentos que se caracterizan por ser altos en proteína de
+    <section class="bg-white relative p-10 h-[28rem] z-10 overflow-hidden container mx-auto">
+        <h1 class="uppercase font-bold mb-4 text-2xl md:text-4xl lg:text-5xl">¡Nútrete hoy!</h1>
+        <p class="montserrat-400 mb-4 md:max-w-[500px]">En Icatali ofrecemos alimentos que se caracterizan por ser altos en proteína de
             origen vegetal digerible, avalados con estudios científicos.Nuestro objetivo principal es ofrecer productos
             atractivos, nutritivos y accesibles para que el consumidor pueda elegir fácilmente opciones sanas. y sobre
             todo reconociendo todos sus ingredientes</p>
@@ -20,7 +20,7 @@
         </div>
     </section>
 
-    <section class="relative bg-white z-20 p-10">
+    <section class="relative bg-white z-20 p-10 container mx-auto">
         <h2 class="text-lg bebas-400 font-semibold uppercase text-center">5 beneficios de las legumbres</h2>
         <ul class="text-lg p-3 list-image-checkmark">
             <li>Mejoraran la salud</li>
@@ -31,7 +31,7 @@
         </ul>
         <img src="" alt="">
     </section>
-    <section class="relative bg-nube-azul bg-no-repeat bg-cover bg-left px-10 py-20">
+    <section class="relative bg-nube-azul bg-no-repeat bg-cover bg-left px-10 py-20 container mx-auto">
         <div class="">
             <h2 class="text-2xl bebas-400 font-semibold uppercase pb-4">Conoce icatali</h2>
             <p>Nos especializamos en el diseño y desarrollo de alternativas de consumo de origen vegetal, destacando por
@@ -53,7 +53,7 @@
         </div>
     </section>
 
-    <section class="relative bg-white z-20 p-10">
+    <section class="relative bg-white z-20 p-10 container mx-auto">
         <h2 class="text-2xl bebas-400 font-semibold uppercase pb-4 text-center">Productos</h2>
         <div>
             <div class="text-center pt-4">
@@ -71,16 +71,14 @@
         </div>
     </section>
 
-    <div class="bg-nube-verde bg-no-repeat bg-cover bg-top py-20">
+    <div class="bg-nube-verde bg-no-repeat bg-cover bg-top py-20 container mx-auto">
         <h2 class="text-xl bebas-400 font-semibold uppercase text-center relative top-4">¿QUÉ DICE LA GENTE DE ICATALI?
         </h2>
     </div>
 
-    <div class="flex flex-col justify-center items-center border-t-[1.5rem] border-t-green-900 border-x-2 border-x-green-900 border-b-4 border-b-green-900 px-14 py-5">
+    <div class="flex flex-col justify-center items-center border-t-[1.5rem] border-t-green-900 border-x-2 border-x-green-900 border-b-4 border-b-green-900 px-14 py-5 container mx-auto">
         <img class="w-60" src="{{ asset('img/female-user.png') }}" alt="">
         <p>Las galletas me encantan; su dulzura es adecuad, son suaves y no me es suficiente tres cuando la combino con
             café. La uso como refrigerio con la convicción de que son saludables. Rosario</p>
     </div>
-
-
 </x-app-layout>

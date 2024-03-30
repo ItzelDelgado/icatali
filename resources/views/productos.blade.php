@@ -12,5 +12,7 @@
             </div>
         </div>
     </div> --}}
-    <p>PRODUCTOS</p>
+    <h1>Aquí, cada producto es una promesa de bienestar</h1>
+    <p>Aseguramos que la experiencia de consumir nuestros productos será única y diferente.</p>
+
 </x-app-layout>

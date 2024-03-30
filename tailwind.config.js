@@ -20,8 +20,25 @@ export default {
                 'nube-azul': "url('../../../icatali/public/img/decoraciones/nube-azul.svg')",
                 'nube-verde': "url('../../../icatali/public/img/decoraciones/nube-verde.svg')",
 
+
             },
         },
+        container: {
+            // you can configure the container to be centered
+            center: true,
+
+            // or have default horizontal padding
+            padding: '1rem',
+
+            // default breakpoints but with 40px removed
+            screens: {
+              sm: '620px',
+              md: '820px',
+              lg: '920px',
+              xl: '1000px',
+              '2xl': '1200px',
+            },
+        }
     },
 
     plugins: [forms, typography],
