@@ -19,8 +19,9 @@ export default {
             backgroundImage: {
                 'nube-azul': "url('../../../icatali/public/img/decoraciones/nube-azul.svg')",
                 'nube-verde': "url('../../../icatali/public/img/decoraciones/nube-verde.svg')",
-
-
+            },
+            colors: {
+                'verde-icatali': '#ECF7EC',
             },
         },
         container: {
@@ -32,11 +33,11 @@ export default {
 
             // default breakpoints but with 40px removed
             screens: {
-              sm: '620px',
-              md: '820px',
-              lg: '920px',
-              xl: '1000px',
-              '2xl': '1200px',
+                sm: '620px',
+                md: '820px',
+                lg: '920px',
+                xl: '1000px',
+                '2xl': '1200px',
             },
         }
     },

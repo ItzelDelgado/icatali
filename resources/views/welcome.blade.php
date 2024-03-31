@@ -15,7 +15,7 @@
         </button>
         <img class="absolute w-40 -left-20 -bottom-20" src="{{ asset('img/decoraciones/circulo-radial.svg') }}"
             alt="">
-        <div class="absolute bg-black w-48 h-48 rounded-[50%] -skew-x-[8deg] -right-8 -bottom-8 overflow-hidden">
+        <div class="absolute bg-black w-48 h-48 rounded-[50%] -skew-x-[8deg] -right-12 -bottom-16 overflow-hidden">
             <img class="w-full h-full object-cover" src="{{ asset('img/barras_de_amaranto.JPG') }}" alt="">
         </div>
     </section>

@@ -1,44 +1,26 @@
 <x-app-layout>
-    {{-- <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-welcome />
-            </div>
+    <h1 class="bg-[url('../../../icatali/public/img/decoraciones/nube-preguntas.svg')] bg-no-repeat bg-cover h-36 flex justify-center items-center text-3xl mb-8">¿Como podemos ayudarte?</h1>
+    <div x-data="{ open: false }" class="relative" x-on:click.outside="open = false">
+        <!-- Botón del dropdown -->
+        <div @click="open = !open" class="flex justify-center items-center bg-verde-icatali p-2 border-2">
+            <h2 class="cursor-pointer ">¿Son productos específicamente para veganos?</h2>
+            <i class="fa-solid fa-circle-chevron-down text-2xl"></i>
         </div>
-    </div> --}}
-    <h1>¿Como podemos ayudarte?</h1>
-    <div>
-        ¿Son productos especificamente para veganos?
-        No, sin embargo los pueden consumir sin ningun problema ya que no contienen ningun ingrediente de origen animal
+        <!-- Contenido del dropdown -->
+        <p x-show="open" class="dropdown-content relative bg-white shadow-md rounded-md px-4 mt-2 pb-2 w-full" x-transition:leave-end="opacity-0 transform ">
+            No, sin embargo, los pueden consumir sin ningún problema ya que no contienen ningún ingrediente de origen animal.
+        </p>
     </div>
-    <div>
-        ¿Contiene algun tipo de edulcorante o azucar?
-        No, el endulzante es jarabe de agave
-    </div>
-    <div>
-        ¿Contienen gluten?
-        No, son libres de harina de trigo
-    </div>
-    <div>
-        ¿Contiene alergenos o algun tipo de alergeno?
-        No, ninguno reportado
-    </div>
-    <div>
-        ¿Lo pueden consumir los niños?
-        Si, ya que no contienen edulcorantes
-    </div>
-    <div>
-        ¿Tienen alto contenido de proteína?
-        Si, todos nuestros productos son altos en proteina de origen vegetal
-    </div>
-    <div>
-        ¿Pueden ser consumidos por personas con alguna condicion medica?
-        Si, ya que nuestros productos estan elaborados con jarabe de agave el cual es un ingrediente de bajo indice glucemico
+    <div x-data="{ open: false }" class="relative" x-on:click.outside="open = false">
+        <!-- Botón del dropdown -->
+        <div @click="open = !open" class="flex justify-center items-center bg-verde-icatali p-2 border-2">
+            <h2 class="cursor-pointer ">¿Son productos específicamente para veganos?</h2>
+            <i class="fa-solid fa-circle-chevron-down text-2xl"></i>
+        </div>
+        <!-- Contenido del dropdown -->
+        <p x-show="open" class="dropdown-content relative bg-white shadow-md rounded-md px-4 mt-2 pb-2 w-full" x-transition:enter="transition-opacity transition-transform ease-out duration-300" x-transition:enter-start="opacity-0 transform" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition-opacity transition-transform ease-in duration-300" x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform ">
+            No, sin embargo, los pueden consumir sin ningún problema ya que no contienen ningún ingrediente de origen animal.
+        </p>
     </div>
 </x-app-layout>
