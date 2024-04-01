@@ -16,7 +16,7 @@
                 </button>
                 <a href="/" class="flex ms-2 md:me-24">
                     {{-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="CBTA" /> --}}
-                    {{-- <span class="self-center text-xl font-semibold sm:text-2xl whitespace-now rap dark:text-white">CBTA</span> --}}
+                    {{-- <span class="self-center text-xl font-semibold sm:text-2xl whitespace-now rap">CBTA</span> --}}
                     <img class="w-20 md:w-28" src="{{ asset('img/Centro Biotecnologico de Terapias Avanzadas.png') }}" alt="">
                 </a>
             </div>
