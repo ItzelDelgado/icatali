@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\ComentarioController;
 use App\Http\Controllers\Admin\PreguntaFrecuenteController;
+use App\Http\Controllers\Admin\ProductoController;
 use App\Models\PreguntaFrecuente;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,6 @@ Route::resource('/comentarios', ComentarioController::class)
 Route::resource('/preguntas_frecuentes', PreguntaFrecuenteController::class)
 ->parameter('preguntas_frecuentes','pregunta_frecuente')
 ->except(['show','destroy']);
+
+Route::resource('/productos', ProductoController::class)
+->except(['destroy']);
