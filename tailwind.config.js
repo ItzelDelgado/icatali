@@ -22,6 +22,7 @@ export default {
             },
             colors: {
                 'verde-icatali': '#ECF7EC',
+                'verde-icatali-str': '#BCE079',
             },
         },
         container: {
