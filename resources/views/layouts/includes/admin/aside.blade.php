@@ -12,14 +12,21 @@
             'name' => 'Comentarios',
             'url' => route('admin.comentarios.index'),
             'active' => request()->routeIs('admin.comentarios.*'),
-            'icon' => 'fa-solid fa-hospital',
+            'icon' => 'fa-solid fa-comments',
         ],
         [
             //Informacion acerca del enlace
             'name' => 'Preguntas Frecuentes',
             'url' => route('admin.preguntas_frecuentes.index'),
             'active' => request()->routeIs('admin.preguntas_frecuentes.*'),
-            'icon' => 'fa-solid fa-users',
+            'icon' => 'fa-solid fa-circle-question',
+        ],
+        [
+        //Informacion acerca del enlace
+            'name' => 'Productos',
+            'url' => route('admin.productos.index'),
+            'active' => request()->routeIs('admin.productos.*'),
+            'icon' => 'fa-solid fa-seedling',
         ],
         // [
         //     //Informacion acerca del enlace
