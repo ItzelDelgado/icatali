@@ -60,7 +60,7 @@
             </div>
         </div>
         <div class="relative">
-            <div class="container max-w-[800px]">
+            <div class="container max-w-[800px] relative z-20">
                 <h2 class="text-2xl bebas font-semibold uppercase mb-4">¿QUIÉNES SOMOS?</h2>
                 <p>En ICATALI ofrecemos productos que se caracterizan por poseer un alto contenido de proteína de origen
                     vegetal digerible, que se diseñaron un enfoque emocional, nutrimental y funcional con soporte
@@ -79,10 +79,10 @@
                 </div>
             </div>
             <div
-                class="bg-[url('../../../icatali/public/img/decoraciones/nosotros-lateral-verde.svg')] bg-no-repeat bg-contain h-20 w-24 absolute">
+                class="z-10 bg-[url('../../../icatali/public/img/decoraciones/nosotros-lateral-verde.svg')] bg-no-repeat bg-contain h-[45.5vw] w-[39.5vw] absolute -top-0 xl:-top-20">
             </div>
             <div
-                class="bg-[url('../../../icatali/public/img/decoraciones/nosotros-lateral-azul.svg')] bg-no-repeat bg-contain h-[23rem] w-[20rem] absolute right-0 top-52 ">
+                class="z-10 bg-[url('../../../icatali/public/img/decoraciones/nosotros-lateral-azul.svg')] bg-no-repeat bg-contain h-[45.5vw] w-[39.5vw] absolute right-0 top-40">
             </div>
         </div>
     </div>

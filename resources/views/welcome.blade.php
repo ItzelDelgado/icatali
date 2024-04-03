@@ -13,15 +13,15 @@
         <button class="bg-black rounded-full px-4 py-2 ml-5">
             <a class="text-white uppercase font-bold bebas-400" href="">Contactanos</a>
         </button>
-        <img class="absolute w-40 -left-24 -bottom-20" src="{{ asset('img/decoraciones/circulo-radial.svg') }}"
+        <img class="absolute w-40 -left-24 lg:left-[55%] xl:left-[63%] -bottom-20 lg:bottom-[40%] xl:bottom-[47%]" src="{{ asset('img/decoraciones/circulo-radial.svg') }}"
             alt="">
-        <div class="absolute bg-black w-48 h-48 rounded-[50%] -skew-x-[8deg] -right-12 -bottom-16 overflow-hidden">
+        <div class="absolute bg-black  w-48 md:w-72 lg:w-80 h-48 md:h-72 lg:h-80 rounded-[50%] -skew-x-[8deg] lg:-skew-x-0 -right-12 lg:right-16 -bottom-16 lg:bottom-16 overflow-hidden">
             <img class="w-full h-full object-cover" src="{{ asset('img/barras_de_amaranto.JPG') }}" alt="">
         </div>
     </section>
 
     <section class="relative bg-white z-20 p-10 container mx-auto">
-        <h2 class="text-lg bebas-400 font-semibold uppercase text-center">5 beneficios de las legumbres</h2>
+        <h2 class="text-3xl bebas-400 font-semibold uppercase text-center underline bebas">5 beneficios de las legumbres</h2>
         <ul class="text-lg p-3 list-image-checkmark">
             <li>Mejoraran la salud</li>
             <li>Son cultivos limpios</li>
@@ -31,7 +31,7 @@
         </ul>
         <img src="" alt="">
     </section>
-    <section class="relative bg-nube-azul bg-no-repeat bg-cover bg-left px-10 py-20 container mx-auto">
+    <section class="relative bg-nube-azul md:bg-[url('../../../icatali/public/img/decoraciones/nube-desktop-inicio.svg')] bg-no-repeat bg-cover bg-left px-10 py-20 mx-auto flex">
         <div class="">
             <h2 class="text-2xl bebas-400 font-semibold uppercase pb-4">Conoce icatali</h2>
             <p>Nos especializamos en el diseño y desarrollo de alternativas de consumo de origen vegetal, destacando por
@@ -51,6 +51,7 @@
             <p>Nos esforzamos por ser la elección confiable y saludable para aquellos que buscan una alternativa
                 consciente y deliciosa en sus opciones de consumo</p>
         </div>
+        <img class="hidden lg:block" src="{{ asset('img/decoraciones/cestas-semillas.png') }}" alt="">
     </section>
 
     <section class="relative bg-white z-20 p-10 container mx-auto">
