@@ -75,7 +75,6 @@ class ComentarioController extends Controller
      */
     public function edit(Comentario $comentario)
     {
-        
         return view('admin.comentarios.edit',compact('comentario'));
     }
 
@@ -84,6 +83,7 @@ class ComentarioController extends Controller
      */
     public function update(Request $request, Comentario $comentario)
     {
+        //return $request->all();
         //return Storage::put('comentarios', $request->image);
         $request->validate(([
             'alias' => 'required|string',
@@ -93,6 +93,12 @@ class ComentarioController extends Controller
 
         $data = $request->all();
 
+        if ($request->has('current_image') && $request->current_image === "deleted") {
+            if($comentario->img_path){
+                Storage::delete($comentario->img_path);
+            }
+            $data['img_path'] = null;
+        }
         if($request->file('image')){
             if($comentario->img_path){
                 Storage::delete($comentario->img_path);

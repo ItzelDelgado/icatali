@@ -2,9 +2,7 @@
     <div class="m-4">
         <h1 class="text-2xl font-medium text-gray-800">Editar comentario</h1>
     </div>
-    <form action="{{ route('admin.comentarios.update', $comentario) }}" 
-    method="POST" 
-    enctype="multipart/form-data"
+    <form action="{{ route('admin.comentarios.update', $comentario) }}" method="POST" enctype="multipart/form-data"
         class="bg-white rounded-lg p-6 shadow-lg">
         @csrf
         @method('PUT')
@@ -39,6 +37,27 @@
                 {{-- <img class="py-2" id="imgPreview"> 
             </div>
         </div> --}}
+        {{-- 
+        <div class="mb-4">
+
+            <div class="absolute top-8 right-8">
+                <label class="bg-white px-4 py-2 rounded-lg">
+                    <i class="fa-solid fa-camera px-3 py-2 mr-2 cursor-pointer"></i>
+                    Agregar imagen
+                    <input type="file" accept="image/*" 
+                    name="image" 
+                    class="hidden"
+                    onchange="previewImage(event, '#imgPreview')">
+                </label>
+            </div>
+            <figure>
+                <img class="aspect-[16/9] object-cover object-center bg-slate-500" 
+                src="{{$comentario->image}}" 
+                alt=""
+                id="imgPreview">
+            </figure>
+        </div> --}}
+        <input type="hidden" name="current_image" value="{{ $comentario->image ?? null }}">
 
         <div>
             {{-- <figure>
@@ -47,11 +66,13 @@
 
             <label class="bg-slate-700 text-white px-4 py-2 rounded-lg cursor-pointer">
                 <i class="fa-solid fa-camera px-3 py-2"></i>
-                Agregar imagen
+                Actualizar imagen
                 <input type="file" accept="image/*" name="image" class="hidden"
                     onchange="previewImage(event, '#imgPreview')">
             </label>
-            <img class="py-2" id="imgPreview">
+            <img src="{{ $comentario->image }}" class="py-2" id="imgPreview">
+            <button type="button" onclick="removeImagePreview('#imgPreview')" class="text-red-500">Eliminar
+                imagen</button>
 
         </div>
 
@@ -98,6 +119,22 @@
                 //Modificamos el atributo src de la etiqueta img
                 $imgPreview.src = objectURL;
 
+            }
+
+            function removeImagePreview(querySelector) {
+                // Recuperamos la etiqueta img donde cargamos la imagen
+                const imgPreview = document.querySelector(querySelector);
+
+                // Vaciamos el atributo src de la etiqueta img
+                imgPreview.src = "";
+
+                // Limpiamos el valor del campo de entrada de archivos
+                const inputFile = document.querySelector('input[type="file"]');
+                inputFile.value = "";
+
+                // Establecer el valor del campo oculto para indicar que la imagen se ha eliminado
+                const currentImageInput = document.querySelector('input[name="current_image"]');
+                currentImageInput.value = "deleted";
             }
         </script>
     @endpush

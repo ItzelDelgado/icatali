@@ -15,11 +15,15 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('descripcion',2500);
-            $table->string('beneficios',2500);
-            $table->string('ingredientes',2500);
+            $table->string('beneficios',2500)->nullable();
+            $table->string('ingredientes',2500)->nullable();
             $table->double('precio');
             $table->double('precio_descuento')->nullable();
             $table->boolean('is_active')->default(1);
+            $table->string('img_path_principal')->nullable();
+            $table->string('img_path_paquete')->nullable();
+            $table->string('img_path_izq')->nullable();
+            $table->string('img_path_der')->nullable();
             $table->timestamps();
         });
     }

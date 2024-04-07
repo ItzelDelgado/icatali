@@ -2,10 +2,8 @@
     <div class="mt-2 mb-4">
         <h1 class="text-2xl font-medium text-gray-800">Agregar nuevo comentario</h1>
     </div>
-    <form action="{{ route('admin.comentarios.store') }}" 
-    method="POST" 
-    enctype="multipart/form-data"
-    class="bg-white rounded-lg p-6 shadow-lg">
+    <form action="{{ route('admin.comentarios.store') }}" method="POST" enctype="multipart/form-data"
+        class="bg-white rounded-lg p-6 shadow-lg">
         @csrf
 
         <x-validation-errors class="mb-4" />
@@ -24,10 +22,6 @@
             <textarea class="border-2 border-solid w-full resize-x overflow-auto h-20" name="comentario">{{ old('comentario') }}</textarea>
         </div>
         <div>
-            {{-- <figure>
-                <img class="aspect-[9/16] object-cover object-center max-w-36 mx-auto">
-            </figure> --}}
-            
             <label class="bg-slate-700 text-white px-4 py-2 rounded-lg cursor-pointer">
                 <i class="fa-solid fa-camera px-3 py-2"></i>
                 Agregar imagen
@@ -35,7 +29,8 @@
                     onchange="previewImage(event, '#imgPreview')">
             </label>
             <img class="py-2" id="imgPreview">
-
+            <button type="button" onclick="removeImagePreview('#imgPreview')" class="text-red-500">Eliminar
+                imagen</button>
         </div>
         <div class="flex justify-end">
             <x-button>
@@ -65,6 +60,18 @@
                 //Modificamos el atributo src de la etiqueta img
                 $imgPreview.src = objectURL;
 
+            }
+
+            function removeImagePreview(querySelector) {
+                // Recuperamos la etiqueta img donde cargamos la imagen
+                const imgPreview = document.querySelector(querySelector);
+
+                // Vaciamos el atributo src de la etiqueta img
+                imgPreview.src = "";
+
+                // Limpiamos el valor del campo de entrada de archivos
+                const inputFile = document.querySelector('input[type="file"]');
+                inputFile.value = "";
             }
         </script>
     @endpush
