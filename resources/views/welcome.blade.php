@@ -1,6 +1,7 @@
 <x-app-layout>
 
     <section class="bg-white relative p-10 h-[28rem] z-10 overflow-hidden container mx-auto">
+
         <h1 class="uppercase font-bold mb-4 text-2xl md:text-4xl lg:text-5xl">¡Nútrete hoy!</h1>
         <p class="montserrat-400 mb-4 md:max-w-[500px]">En Icatali ofrecemos alimentos que se caracterizan por ser altos
             en proteína de
@@ -87,35 +88,19 @@
     </div>
 
     <div class="lg:flex justify-between items-center gap-5 max-w-[1000px] mx-auto hidden">
-        <div
-            class="bg-white flex flex-col justify-center items-center border-t-[1.5rem]
+        @foreach ($comentarios as $comentario)
+            <div class="bg-white flex flex-col justify-center items-center border-t-[1.5rem]
         border-t-red-700  border-x-2 border-x-red-700 border-b-4 border-b-red-700
         px-14 py-5 container mx-auto max-w-[400px]">
-            <img class="w-60" src="{{ asset('img/female-user.png') }}" alt="">
-            <p>Las galletas me encantan; su dulzura es adecuad, son suaves y no me es suficiente tres cuando la
-                combino con café. La uso como refrigerio con la convicción de que son saludables. Rosario</p>
-        </div>
-        <div
-            class="bg-white flex flex-col justify-center items-center border-t-[1.5rem]
-                    border-t-blue-700 border-x-2 border-x-blue-700 border-b-4 border-b-blue-700
-                    px-14 py-5 container mx-auto max-w-[400px]">
-            <img class="w-60" src="{{ asset('img/female-user.png') }}" alt="">
-            <p>Las galletas me encantan; su dulzura es adecuad, son suaves y no me es suficiente tres cuando la
-                combino con café. La uso como refrigerio con la convicción de que son saludables. Rosario</p>
-        </div>
-
-        <div
-            class="bg-white flex flex-col justify-center items-center border-t-[1.5rem]
-                    border-t-green-900 border-x-2 border-x-green-900 border-b-4 border-b-green-900
-                    px-14 py-5 container mx-auto max-w-[400px]">
-            <img class="w-60" src="{{ asset('img/female-user.png') }}" alt="">
-            <p>Las galletas me encantan; su dulzura es adecuad, son suaves y no me es suficiente tres cuando la
-                combino con café. La uso como refrigerio con la convicción de que son saludables. Rosario</p>
-        </div>
+                <img class="w-60" src="{{ asset('img/female-user.png') }}" alt="">
+                <p><strong>{{$comentario->alias}}</strong></p>
+                <p>{{$comentario->comentario}}</p>
+            </div>
+        @endforeach
     </div>
 
 
-    <div id="default-carousel" class="relative w-full md:hidden" data-carousel="slide">
+    <div id="default-carousel" class="relative w-full lg:hidden" data-carousel="slide">
         <!-- Carousel wrapper -->
         <div class="relative h-[30rem] overflow-hidden rounded-lg md:h-96">
             <!-- Item 1 -->
@@ -166,7 +151,7 @@
             class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
             data-carousel-prev>
             <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                 <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

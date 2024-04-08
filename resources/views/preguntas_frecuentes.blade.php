@@ -8,10 +8,9 @@
             @foreach ($preguntas_frecuentes as $pregunta_frecuente)
                 <div x-data="{ open: false }" class="relative" x-on:click.outside="open = false">
                     <!-- Botón del dropdown -->
-                    <div @click="open = !open"
-                        class="flex justify-center items-center bg-verde-icatali p-2 border-2 md:gap-2 gap-1">
-                        <h2 class="cursor-pointer ">{{ $pregunta_frecuente->pregunta }}</h2>
-                        <i class="fa-solid fa-circle-chevron-down text-2xl"></i>
+                    <div @click="open = !open" class="w-full flex justify-center items-center bg-verde-icatali p-2 border-2 md:gap-2 gap-1">
+                        <h2 class="px-4 cursor-pointer w-11/12">{{ $pregunta_frecuente->pregunta }}</h2>
+                        <i class="w-1/12 text-center fa-solid fa-circle-chevron-down text-2xl"></i>
                     </div>
                     <!-- Contenido del dropdown -->
                     <p x-show="open"

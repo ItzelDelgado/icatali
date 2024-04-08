@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Comentario;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
@@ -9,7 +9,17 @@ class WelcomeController extends Controller
     //
     public function __invoke()
     {
-        return view('welcome');    
+        return view('welcome');
     }
-    
+
+    public function index()
+    {
+        $comentarios = Comentario::where('is_active', 1)
+        ->latest('id')
+        ->get();
+
+        return view('welcome', compact('comentarios'));
+    }
+
+
 }

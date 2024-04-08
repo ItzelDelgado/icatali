@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ComentarioController;
 use App\Http\Controllers\PreguntaFrecuenteController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
@@ -15,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', WelcomeController::class)->name('inicio');
+Route::get('/', [WelcomeController::class,'index'])->name('inicio');
+
+
 
 Route::get('/sobre-nosotros', function () {
     return view('sobre_nosotros');
