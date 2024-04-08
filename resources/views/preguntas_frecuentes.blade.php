@@ -5,20 +5,24 @@
         ¿Como podemos ayudarte?</h1>
     <div class="max-w-[800px] mx-auto">
         <div class="w-full">
-            <div x-data="{ open: false }" class="relative" x-on:click.outside="open = false">
-                <!-- Botón del dropdown -->
-                <div @click="open = !open" class="flex justify-center items-center bg-verde-icatali p-2 border-2 md:gap-2 gap-1">
-                    <h2 class="cursor-pointer ">¿Son productos específicamente para veganos?</h2>
-                    <i class="fa-solid fa-circle-chevron-down text-2xl"></i>
+            @foreach ($preguntas_frecuentes as $pregunta_frecuente)
+                <div x-data="{ open: false }" class="relative" x-on:click.outside="open = false">
+                    <!-- Botón del dropdown -->
+                    <div @click="open = !open"
+                        class="flex justify-center items-center bg-verde-icatali p-2 border-2 md:gap-2 gap-1">
+                        <h2 class="cursor-pointer ">{{ $pregunta_frecuente->pregunta }}</h2>
+                        <i class="fa-solid fa-circle-chevron-down text-2xl"></i>
+                    </div>
+                    <!-- Contenido del dropdown -->
+                    <p x-show="open"
+                        class="dropdown-content relative bg-white shadow-md rounded-md px-4 mt-2 pb-2 w-full"
+                        x-transition:leave-end="opacity-0 transform ">
+                        {{ $pregunta_frecuente->respuesta }}
+                    </p>
                 </div>
-                <!-- Contenido del dropdown -->
-                <p x-show="open" class="dropdown-content relative bg-white shadow-md rounded-md px-4 mt-2 pb-2 w-full"
-                    x-transition:leave-end="opacity-0 transform ">
-                    No, sin embargo, los pueden consumir sin ningún problema ya que no contienen ningún ingrediente de
-                    origen animal.
-                </p>
-            </div>
+            @endforeach
 
         </div>
     </div>
+
 </x-app-layout>

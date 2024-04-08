@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PreguntaFrecuenteController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,9 +25,11 @@ Route::get('/productos', function () {
     return view('productos');
 })->name('productos');
 
-Route::get('/preguntas-frecuentes', function () {
-    return view('preguntas_frecuentes');
-})->name('preguntas_frecuentes');
+// Route::get('/preguntas-frecuentes', function () {
+//     return view('preguntas_frecuentes');
+// })->name('preguntas_frecuentes');
+
+Route::get('/preguntas-frecuentes', [PreguntaFrecuenteController::class,'index'])->name('preguntas_frecuentes');
 
 Route::get('/contacto', function () {
     return view('contacto');

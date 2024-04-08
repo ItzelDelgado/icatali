@@ -71,60 +71,63 @@
                 Agregar ingrediente
             </a>
         </div>
-        <div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 max-w-[800px]  mx-auto gap-20 pb-16">
+            <div>
 
-            <label class="bg-slate-700 text-white px-4 py-2 rounded-lg cursor-pointer">
-                <i class="fa-solid fa-camera px-3 py-2"></i>
-                Actualizar imagen principal
-                <input type="file" accept="image/*" id="imagePrincipal" name="imagePrincipal" class="hidden"
-                    onchange="previewImage(event, '#imgPreviewPrincipal')">
-            </label>
-            <img src="{{ $producto->image }}" class="py-2" id="imgPreviewPrincipal">
-            <button type="button" onclick="removeImagePreview('#imgPreviewPrincipal', 'imagePrincipal')"
-                class="text-red-500">Eliminar
-                imagen</button>
+                <label class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
+                    <i class="fa-solid fa-camera px-3 py-2"></i>
+                    Actualizar imagen principal
+                    <input type="hidden" id="imagePrincipal_hidden" value="">
+                    <input type="file" accept="image/*" id="imagePrincipal" name="imagePrincipal" class="hidden"
+                        onchange="previewImage(event, '#imgPreviewPrincipal')">
+                </label>
+                <img src="{{ $producto->image }}" class="py-2 w-full h-[350px] object-cover" id="imgPreviewPrincipal">
+                <button type="button" onclick="removeImagePreview('#imgPreviewPrincipal', 'imagePrincipal')"
+                    class="text-red-500">Eliminar
+                    imagen</button>
+            </div>
+
+            <div>
+
+                <label class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
+                    <i class="fa-solid fa-camera px-3 py-2"></i>
+                    Actualizar imagen de empaque
+                    <input type="file" accept="image/*" id="imageEmpaque" name="imageEmpaque" class="hidden"
+                        onchange="previewImage(event, '#imgPreviewEmpaque')">
+                </label>
+                <img src="{{ $producto->image_pa }}" class="py-2 w-full h-[350px] object-cover" id="imgPreviewEmpaque">
+                <button type="button" onclick="removeImagePreview('#imgPreviewEmpaque', 'imageEmpaque')"
+                    class="text-red-500">Eliminar
+                    imagen</button>
+            </div>
+
+            <div>
+
+                <label class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
+                    <i class="fa-solid fa-camera px-3 py-2"></i>
+                    Actualizar imagen de lateral izquierdo
+                    <input type="file" accept="image/*" id="imageIzq" name="imageIzq" class="hidden"
+                        onchange="previewImage(event, '#imgPreviewIzq')">
+                </label>
+                <img src="{{ $producto->image_izq }}" class="py-2 w-full h-[350px] object-cover" id="imgPreviewIzq">
+                <button type="button" onclick="removeImagePreview('#imgPreviewIzq', 'imageIzq')"
+                    class="text-red-500">Eliminar
+                    imagen</button>
+            </div>
+            <div>
+                <label class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
+                    <i class="fa-solid fa-camera px-3 py-2"></i>
+                    Actualizar imagen de lateral derecho
+                    <input type="file" accept="image/*" id="imageDer" name="imageDer" class="hidden"
+                        onchange="previewImage(event, '#imgPreviewDer')">
+                </label>
+                <img src="{{ $producto->image_der }}" class="py-2 w-full h-[350px] object-cover" id="imgPreviewDer">
+                <button type="button" onclick="removeImagePreview('#imgPreviewDer', 'imageDer')"
+                    class="text-red-500">Eliminar
+                    imagen</button>
+            </div>
+
         </div>
-
-        <div>
-
-            <label class="bg-slate-700 text-white px-4 py-2 rounded-lg cursor-pointer">
-                <i class="fa-solid fa-camera px-3 py-2"></i>
-                Actualizar imagen de empaque
-                <input type="file" accept="image/*" id="imageEmpaque" name="imageEmpaque" class="hidden"
-                    onchange="previewImage(event, '#imgPreviewEmpaque')">
-            </label>
-            <img src="{{ $producto->image_pa }}" class="py-2" id="imgPreviewEmpaque">
-            <button type="button" onclick="removeImagePreview('#imgPreviewEmpaque', 'imageEmpaque')"
-                class="text-red-500">Eliminar
-                imagen</button>
-        </div>
-
-        <div>
-
-            <label class="bg-slate-700 text-white px-4 py-2 rounded-lg cursor-pointer">
-                <i class="fa-solid fa-camera px-3 py-2"></i>
-                Actualizar imagen de lateral izquierdo
-                <input type="file" accept="image/*" id="imageIzq" name="imageIzq" class="hidden"
-                    onchange="previewImage(event, '#imgPreviewIzq')">
-            </label>
-            <img src="{{ $producto->image_izq }}" class="py-2" id="imgPreviewIzq">
-            <button type="button" onclick="removeImagePreview('#imgPreviewIzq', 'imageIzq')"
-                class="text-red-500">Eliminar
-                imagen</button>
-        </div>
-        <div>
-            <label class="bg-slate-700 text-white px-4 py-2 rounded-lg cursor-pointer">
-                <i class="fa-solid fa-camera px-3 py-2"></i>
-                Actualizar imagen de lateral derecho
-                <input type="file" accept="image/*" id="imageDer" name="imageDer" class="hidden"
-                    onchange="previewImage(event, '#imgPreviewDer')">
-            </label>
-            <img src="{{ $producto->image_der }}" class="py-2" id="imgPreviewDer">
-            <button type="button" onclick="removeImagePreview('#imgPreviewDer', 'imageDer')"
-                class="text-red-500">Eliminar
-                imagen</button>
-        </div>
-
 
         <div class="mb-4">
             <x-label class="mb-2">
@@ -308,29 +311,12 @@
             });
 
             window.onload = function() {
-
-                let imagen1 = document.getElementById('imgPreviewPrincipal');
-                let inputArchivo1 = document.getElementById('imagePrincipal');
-                let imagen2 = document.getElementById('imgPreviewEmpaque');
-                let inputArchivo2 = document.getElementById('imageEmpaque');
-                let imagen3 = document.getElementById('imgPreviewIzq');
-                let inputArchivo3 = document.getElementById('imageIzq');                
-                let imagen4 = document.getElementById('imgPreviewDer');
-                let inputArchivo4 = document.getElementById('imageDer');
-
-
-                rutaSrc1 = imagen1.src;
-                rutaSrc2 = imagen2.src;
-                rutaSrc3 = imagen3.src;
-                rutaSrc4 = imagen4.src;
-
-                console.log(rutaSrc1);
-
-                // Asignar el valor del atributo src de la imagen al atributo value del input
-                // inputArchivo1.value = imagen1.src;
-                // inputArchivo2.value = imagen2.src;
-                // inputArchivo3.value = imagen3.src;
-                // inputArchivo4.value = imagen4.src;
+                imagenPrincipal = document.getElementById('imagePrincipal').value;
+                imagenPrincipalHidden = document.getElementById('imagePrincipal_hidden');
+                if (imagenPrincipal === '') {
+                    imagenPrincipalHidden.value = "0";
+                }
+                console.log(imagenPrincipalHidden)
             };
         </script>
     @endpush

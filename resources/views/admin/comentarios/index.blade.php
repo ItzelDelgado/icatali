@@ -70,7 +70,7 @@
 
                         <td class="px-4 py-2 w-[20%]">
                             {{-- {{ $comentario->img_path }} --}}
-                            <img class="object-cover object-center max-w-36 mx-auto"
+                            <img class="object-cover object-center max-w-36 h-40 mx-auto"
                                 src="{{ $comentario->image }}" alt="">
                         </td>
 

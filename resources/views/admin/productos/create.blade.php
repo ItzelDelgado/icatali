@@ -71,60 +71,62 @@
                 placeholder="Escriba el precio con descuento de este producto" />
         </div>
 
-        <!-- Agregar imagen principal -->
-        <div>
-            <label class="bg-slate-700 text-white px-4 py-2 rounded-lg cursor-pointer">
-                <i class="fa-solid fa-camera px-3 py-2"></i>
-                Agregar imagen principal
-                <input type="file" accept="image/*" id="imagePrincipal" name="imagePrincipal" value=""
-                    class="hidden image-preview" onchange="previewImage(event, '#imgPreviewPrincipal')">
-            </label>
-            <img class="py-2 " id="imgPreviewPrincipal">
-            <button type="button" onclick="removeImagePreview('#imgPreviewPrincipal', 'imagePrincipal')"
-                class="text-red-500">Eliminar
-                imagen</button>
-        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 max-w-[800px] mx-auto gap-3">
+            <!-- Agregar imagen principal -->
+            <div>
+                <label class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
+                    <i class="fa-solid fa-camera px-3 py-2"></i>
+                    Agregar imagen principal
+                    <input type="file" accept="image/*" id="imagePrincipal" name="imagePrincipal" value=""
+                        class="hidden image-preview" onchange="previewImage(event, '#imgPreviewPrincipal')">
+                </label>
+                <img class="py-2 w-full h-[350px] object-cover" id="imgPreviewPrincipal">
+                <button type="button" onclick="removeImagePreview('#imgPreviewPrincipal', 'imagePrincipal')"
+                    class="text-red-500">Eliminar
+                    imagen</button>
+            </div>
 
-        <!-- Agregar imagen de empaque -->
-        <div>
-            <label class="bg-slate-700 text-white px-4 py-2 rounded-lg cursor-pointer">
-                <i class="fa-solid fa-camera px-3 py-2"></i>
-                Agregar imagen de empaque
-                <input type="file" accept="image/*" id="imageEmpaque" name="imageEmpaque" class="hidden"
-                    onchange="previewImage(event, '#imgPreviewEmpaque')">
-            </label>
-            <img class="py-2 image-preview" id="imgPreviewEmpaque">
-            <button type="button" onclick="removeImagePreview('#imgPreviewEmpaque', 'imageEmpaque')"
-                class="text-red-500">Eliminar
-                imagen</button>
-        </div>
+            <!-- Agregar imagen de empaque -->
+            <div>
+                <label class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
+                    <i class="fa-solid fa-camera px-3 py-2"></i>
+                    Agregar imagen de empaque
+                    <input type="file" accept="image/*" id="imageEmpaque" name="imageEmpaque" class="hidden"
+                        onchange="previewImage(event, '#imgPreviewEmpaque')">
+                </label>
+                <img class="image-preview py-2 w-full h-[350px] object-cover" id="imgPreviewEmpaque">
+                <button type="button" onclick="removeImagePreview('#imgPreviewEmpaque', 'imageEmpaque')"
+                    class="text-red-500">Eliminar
+                    imagen</button>
+            </div>
 
-        <!-- Agregar imagen de lateral izquierdo -->
-        <div>
-            <label class="bg-slate-700 text-white px-4 py-2 rounded-lg cursor-pointer">
-                <i class="fa-solid fa-camera px-3 py-2"></i>
-                Agregar imagen de lateral izquierdo
-                <input type="file" accept="image/*" id="imageIzq" name="imageIzq" class="hidden"
-                    onchange="previewImage(event, '#imgPreviewIzq')">
-            </label>
-            <img class="py-2 image-preview" id="imgPreviewIzq">
-            <button type="button" onclick="removeImagePreview('#imgPreviewIzq', 'imageIzq')"
-                class="text-red-500">Eliminar
-                imagen</button>
-        </div>
+            <!-- Agregar imagen de lateral izquierdo -->
+            <div>
+                <label class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
+                    <i class="fa-solid fa-camera px-3 py-2"></i>
+                    Agregar imagen de lateral izquierdo
+                    <input type="file" accept="image/*" id="imageIzq" name="imageIzq" class="hidden"
+                        onchange="previewImage(event, '#imgPreviewIzq')">
+                </label>
+                <img class="image-preview py-2 w-full h-[350px] object-cover" id="imgPreviewIzq">
+                <button type="button" onclick="removeImagePreview('#imgPreviewIzq', 'imageIzq')"
+                    class="text-red-500">Eliminar
+                    imagen</button>
+            </div>
 
-        <!-- Agregar imagen de lateral derecho -->
-        <div>
-            <label class="bg-slate-700 text-white px-4 py-2 rounded-lg cursor-pointer">
-                <i class="fa-solid fa-camera px-3 py-2"></i>
-                Agregar imagen de lateral derecho
-                <input type="file" accept="image/*" id="imageDer" name="imageDer" class="hidden"
-                    onchange="previewImage(event, '#imgPreviewDer')">
-            </label>
-            <img class="py-2 image-preview" id="imgPreviewDer">
-            <button type="button" onclick="removeImagePreview('#imgPreviewDer', 'imageDer')"
-                class="text-red-500">Eliminar
-                imagen</button>
+            <!-- Agregar imagen de lateral derecho -->
+            <div>
+                <label class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
+                    <i class="fa-solid fa-camera px-3 py-2"></i>
+                    Agregar imagen de lateral derecho
+                    <input type="file" accept="image/*" id="imageDer" name="imageDer" class="hidden"
+                        onchange="previewImage(event, '#imgPreviewDer')">
+                </label>
+                <img class="image-preview py-2 w-full h-[350px] object-cover" id="imgPreviewDer">
+                <button type="button" onclick="removeImagePreview('#imgPreviewDer', 'imageDer')"
+                    class="text-red-500">Eliminar
+                    imagen</button>
+            </div>
         </div>
         <div class="flex justify-end">
             <x-button>
