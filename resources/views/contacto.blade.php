@@ -12,35 +12,44 @@
         </div>
 
         <div class="w-8/12 mx-auto">
+            <div class="max-w-[500px] mb-4 mx-auto">
+                <h1 class=" text-2xl ">CONTACTO</h1>
+                <p>Telefono: <span>5532110142</span></p>
+                <p>Horario: <span>9-17 horas</span></p>
+            </div>
             <form class="flex flex-col" action="">
-                <label class="bebas-400 font-bold mb-2" for="name">NOMBRE:</label>
+                <label class="bebas text-xl font-bold mb-2" for="name">NOMBRE:</label>
                 <input
                     class="bg-gray-200 appearance-none border-2 border-gray-300 rounded-full w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400 mb-2"
                     type="text" name="nombre">
-                <label class="bebas-400 font-bold mb-2" for="">CORREO:</label>
+                <label class="bebas text-xl font-bold mb-2" for="">CORREO:</label>
                 <input
                     class="bg-gray-200 appearance-none border-2 border-gray-300 rounded-full w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400 mb-2"
                     type="text" name="nombre">
-                <label class="bebas-400 font-bold mb-2" for="">TALÉFONO</label>
+                <label class="bebas text-xl font-bold mb-2" for="">TALÉFONO</label>
                 <input
                     class="bg-gray-200 appearance-none border-2 border-gray-300 rounded-full w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400 mb-2"
                     type="text" name="nombre">
-                <label class="bebas-400 font-bold mb-2" for="">COMENTARIO</label>
+                <label class="bebas text-xl font-bold mb-2" for="">COMENTARIO</label>
                 <textarea
                     class="bg-gray-200 appearance-none border-2 border-gray-300 rounded-3xl w-full h-36 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400 mb-2"
                     type="text" name="nombre">
             </textarea>
                 <input class="bg-verde-icatali w-fit font-bold px-6 py-3 rounded-full mt-4" type="submit">
             </form>
+            <img class="w-full rounded-lg mt-4" src="{{ asset('img/entrada_icat.jpg') }}" alt="">
         </div>
     </div>
 
     <div class="md:block  hidden relative top-44 md:px-20 xl:px-40">
-        <div class="flex justify-center items-center">
-            <div class="max-w-[500px] w-[500px] mx-auto">
-                <h1 class=" text-2xl ">CONTACTO</h1>
-                <p>Telefono: <span>5532110142</span></p>
-                <p>Horario: <span>9-17 horas</span></p>
+        <div class="flex justify-center items-center gap-4">
+            <div class="flex flex-col gap-4 max-w-[500px]">
+                <div class="max-w-[500px] mx-auto">
+                    <h1 class=" text-2xl ">CONTACTO</h1>
+                    <p>Telefono: <span>5532110142</span></p>
+                    <p>Horario: <span>9-17 horas</span></p>
+                </div>
+                <img class="w-full rounded-lg" src="{{ asset('img/entrada_icat.jpg') }}" alt="">
             </div>
             <div class="max-w-[600px] w-[600px] mx-auto">
                 <form class="flex flex-col " action="">

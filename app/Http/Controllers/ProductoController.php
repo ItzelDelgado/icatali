@@ -12,7 +12,11 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        //
+        $productos = Producto::where('is_active', 1)
+            ->latest('id')
+            ->get();
+
+        return view('productos', compact('productos'));
     }
 
     /**

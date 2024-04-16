@@ -2,7 +2,7 @@
 
     <div class="md:hidden">
         <div class="relative h-[27rem] mb-12">
-            <div class="relative right-14 bg-[#DFEEF4] rounded-full w-[25rem] h-[25rem]"></div>
+            <div class="relative right-14 bg-[#DFEEF4] rounded-full w-[26rem] h-[26rem]"></div>
             <div class="absolute top-11">
                 <h1 class="bebas text-3xl text-center mb-2">ACERCA DE ICATALI</h1>
                 <p class="w-80 pl-3 text-center">Aunque cada persona es diferente, nosotros aseguramos que los beneficios
@@ -40,7 +40,7 @@
     </div>
 
     <div class="hidden md:block">
-        <div class="flex justify-center">
+        <div class="flex justify-center mt-4">
             <div class="relative h-[27rem] mb-12">
                 <div class="relative  bg-[#DFEEF4] rounded-full w-[25rem] h-[25rem]"></div>
                 <div class="absolute top-11 right-10">
@@ -78,11 +78,9 @@
                     <img class="w-full" src="{{ asset('img/sobre_nosotros-semillas.png') }}" alt="">
                 </div>
             </div>
-            <div
-                class="z-10 bg-[url('../../../icatali/public/img/decoraciones/nosotros-lateral-verde.svg')] bg-no-repeat bg-contain h-[45.5vw] w-[39.5vw] absolute -top-0 xl:-top-20">
+            <div class="z-10 bg-[url('../../../icatali/public/img/decoraciones/nosotros-lateral-verde.svg')] bg-no-repeat bg-contain h-[47rem] w-[41rem] absolute -top-0 xl:-top-20">
             </div>
-            <div
-                class="z-10 bg-[url('../../../icatali/public/img/decoraciones/nosotros-lateral-azul.svg')] bg-no-repeat bg-contain h-[45.5vw] w-[39.5vw] absolute right-0 top-40">
+            <div class="z-10 bg-[url('../../../icatali/public/img/decoraciones/nosotros-lateral-azul.svg')] bg-no-repeat bg-contain h-[47rem] w-[41rem] absolute right-0 top-40">
             </div>
         </div>
     </div>
