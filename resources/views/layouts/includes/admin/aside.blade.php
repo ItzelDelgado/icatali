@@ -28,6 +28,13 @@
             'active' => request()->routeIs('admin.productos.*'),
             'icon' => 'fa-solid fa-seedling',
         ],
+        [
+        //Informacion acerca del enlace
+            'name' => 'Roles',
+            'url' => route('admin.roles.index'),
+            'active' => request()->routeIs('admin.roles.*'),
+            'icon' => 'fa-solid fa-user-tag',
+        ],
         // [
         //     //Informacion acerca del enlace
         //     'name' => 'Medicamentos',
