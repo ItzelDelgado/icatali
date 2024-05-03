@@ -17,7 +17,7 @@
                 <x-button>
                     Actualizar permiso
                 </x-button>
-                <x-danger-button onclick="deleteRole()">
+                <x-danger-button onclick="deletePermission()">
                     Eliminar
                 </x-danger-button>
             </div>
@@ -32,7 +32,7 @@
     </div>
     @push('js')
         <script>
-            function deleteRole(){
+            function deletePermission(){
                 let form = document.getElementById('formDelete');
                 form.submit();
             }
