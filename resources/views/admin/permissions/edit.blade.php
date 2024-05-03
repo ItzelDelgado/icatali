@@ -1,28 +1,28 @@
 <x-admin-layout>
     <div class="bg-white shadow rounded-lg p-6">
-        <form action="{{ route('admin.roles.update', $role) }}" method="POST">
+        <form action="{{ route('admin.permissions.update', $permission) }}" method="POST">
             @csrf
             @method('PUT')
             <x-validation-errors class="mb-4"/>
             <div class="mb-4">
                 <x-label class="mb-1">
-                    Nombre del rol
+                    Nombre de permiso
                 </x-label>
                 <x-input class="w-full"
                     name="name"
-                    placeholder="Ingrese el nombre el rol"
-                    value="{{old('name', $role->name)}}" />
+                    placeholder="Ingrese el nombre del permiso"
+                    value="{{old('name', $permission->name)}}" />
             </div>
             <div class="flex gap-2">
                 <x-button>
-                    Actualizar rol
+                    Actualizar permiso
                 </x-button>
                 <x-danger-button onclick="deleteRole()">
                     Eliminar
                 </x-danger-button>
             </div>
         </form>
-        <form action="{{route('admin.roles.destroy', $role)}}"
+        <form action="{{route('admin.permissions.destroy', $permission)}}"
             method="POST"
             id="formDelete">
 

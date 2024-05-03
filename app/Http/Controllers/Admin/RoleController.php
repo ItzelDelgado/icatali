@@ -86,7 +86,7 @@ class RoleController extends Controller
             ]
         );
 
-        return redirect()->route('admin.roles.edit', $role);
+        return redirect()->route('admin.roles.index', $role);
     }
 
     /**
@@ -94,6 +94,17 @@ class RoleController extends Controller
      */
     public function destroy(Role $role)
     {
-        //
+        $role->delete();
+
+        session()->flash(
+            'swal',
+            [
+                'title' => "¡Bien hecho!",
+                'text' => "El rol se elimino correctamente",
+                'icon' => "success"
+            ]
+        );
+
+        return redirect()->route('admin.roles.index');
     }
 }

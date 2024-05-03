@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ComentarioController;
+use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\PreguntaFrecuenteController;
 use App\Http\Controllers\Admin\ProductoController;
 use App\Http\Controllers\Admin\RoleController;
@@ -30,3 +31,4 @@ Route::resource('/productos', ProductoController::class)
 ->except(['destroy']);
 
 Route::resource('/roles', RoleController::class);
+Route::resource('/permissions', PermissionController::class);
