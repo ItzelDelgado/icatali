@@ -13,7 +13,7 @@
 
         <div class="w-8/12 mx-auto">
             <div class="max-w-[500px] mb-4 mx-auto">
-                <h1 class=" text-2xl ">CONTACTO</h1>
+                <h1 class="text-3xl">CONTACTO</h1>
                 <p>Telefono: <span>5532110142</span></p>
                 <p>Horario: <span>9-17 horas</span></p>
             </div>
@@ -45,7 +45,7 @@
         <div class="flex justify-center items-center gap-4">
             <div class="flex flex-col gap-4 max-w-[500px]">
                 <div class="max-w-[500px] mx-auto">
-                    <h1 class=" text-2xl ">CONTACTO</h1>
+                    <h1 class=" text-4xl ">CONTACTO</h1>
                     <p>Telefono: <span>5532110142</span></p>
                     <p>Horario: <span>9-17 horas</span></p>
                 </div>
