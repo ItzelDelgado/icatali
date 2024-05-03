@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
 class RoleController extends Controller
@@ -22,7 +23,8 @@ class RoleController extends Controller
      */
     public function create()
     {
-        return view('admin.roles.create');
+        $permissions = Permission::all();
+        return view('admin.roles.create', compact('permissions'));
     }
 
     /**
@@ -31,10 +33,13 @@ class RoleController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => ['required', 'unique:roles,name']
+            'name' => ['required', 'unique:roles,name'],
+            'permissions' => 'nullable|array',
         ]);
 
-        $rol = Role::create($request->all());
+        $role = Role::create($request->all());
+
+        $role->permissions()->attach($request->permissions);
 
         session()->flash(
             'swal',
@@ -62,7 +67,9 @@ class RoleController extends Controller
      */
     public function edit(Role $role)
     {
-        return  view('admin.roles.edit', compact('role'));
+        // $permissions = $role->permissions->pluck('id')->toArray();
+        $permissions = Permission::all();
+        return  view('admin.roles.edit', compact('role', 'permissions'));
     }
 
     /**
@@ -71,10 +78,13 @@ class RoleController extends Controller
     public function update(Request $request, Role $role)
     {
         $request->validate([
-            'name' => ['required', 'unique:roles,name,' . $role->id]
+            'name' => ['required', 'unique:roles,name,' . $role->id],
+            'permissions' => 'nullable|array',
         ]);
 
         $role->update($request->all());
+
+        $role->permissions()->sync($request->permissions);
 
         session()->flash(
             'swal',

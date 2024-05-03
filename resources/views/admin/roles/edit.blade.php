@@ -13,6 +13,22 @@
                     placeholder="Ingrese el nombre el rol"
                     value="{{old('name', $role->name)}}" />
             </div>
+            <div class="mb-4">
+                <ul>
+                    @foreach ($permissions as $permission)
+                        <li>
+                            <label>
+                                <x-checkbox type="checkbox"
+                                    name="permissions[]"
+                                    value="{{$permission->id}}"
+                                    :checked="in_array($permission->id, old('permissions', $role->permissions->pluck('id')->toArray()))">
+                                </x-checkbox>
+                                    {{$permission->name}}
+                            </label>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
             <div class="flex gap-2">
                 <x-button>
                     Actualizar rol

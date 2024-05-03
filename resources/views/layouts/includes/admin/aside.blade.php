@@ -30,6 +30,13 @@
         ],
         [
         //Informacion acerca del enlace
+            'name' => 'Usuarios',
+            'url' => route('admin.users.index'),
+            'active' => request()->routeIs('admin.users.*'),
+            'icon' => 'fa-solid fa-user',
+        ],
+        [
+        //Informacion acerca del enlace
             'name' => 'Roles',
             'url' => route('admin.roles.index'),
             'active' => request()->routeIs('admin.roles.*'),

@@ -12,6 +12,22 @@
                     placeholder="Ingrese el nombre el rol"
                     value="{{old('name')}}" />
             </div>
+            <div class="mb-4">
+                <ul>
+                    @foreach ($permissions as $permission)
+                        <li>
+                            <label>
+                                <x-checkbox type="checkbox"
+                                    name="permissions[]"
+                                    value="{{$permission->id}}"
+                                    :checked="in_array($permission->id, old('permissions',[]))">
+                                </x-checkbox>
+                                    {{$permission->name}}
+                            </label>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
             <x-button>
                 Crear rol
             </x-button>

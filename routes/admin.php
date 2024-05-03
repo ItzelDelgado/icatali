@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\PreguntaFrecuenteController;
 use App\Http\Controllers\Admin\ProductoController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\UserController;
 use App\Models\PreguntaFrecuente;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +23,8 @@ Route::get('/', function () {
 
 Route::resource('/comentarios', ComentarioController::class)
 ->except(['show','destroy']);
+
+Route::resource('/users', UserController::class);
 
 Route::resource('/preguntas_frecuentes', PreguntaFrecuenteController::class)
 ->parameter('preguntas_frecuentes','pregunta_frecuente')

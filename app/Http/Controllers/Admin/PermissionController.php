@@ -45,7 +45,7 @@ class PermissionController extends Controller
             ]
         );
 
-        return redirect()->route('admin.permissions.edit', $permission);
+        return redirect()->route('admin.permissions.index', $permission);
     }
 
     /**
@@ -67,16 +67,43 @@ class PermissionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Permission $permission)
     {
-        //
+        $request->validate([
+            'name' => ['required', 'unique:permissions,name,' . $permission->id]
+        ]);
+
+        $permission->update($request->all());
+
+        session()->flash(
+            'swal',
+            [
+                'title' => "¡Bien hecho!",
+                'text' => "El permiso se actualizo correctamente",
+                'icon' => "success"
+            ]
+        );
+
+        return redirect()->route('admin.permissions.index', $permission);
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Permission $permission)
     {
-        //
+        $permission->delete();
+
+        session()->flash(
+            'swal',
+            [
+                'title' => "¡Bien hecho!",
+                'text' => "El permiso se elimino correctamente",
+                'icon' => "success"
+            ]
+        );
+
+        return redirect()->route('admin.permissions.index');
     }
 }
