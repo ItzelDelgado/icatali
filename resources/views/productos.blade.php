@@ -16,8 +16,13 @@
                     <img class="w-44" src="{{ $producto->image_pa }}" alt="">
                 </div>
                 <div class="flex flex-col items-center gap-4">
-                    <p class="font-bold"><span>{{$producto->nombre}}</span></p>
-                    <p class="font-bold">Precio: <span>{{$producto->precio}}</span></p>
+                    <p class="font-bold"><span>{{ $producto->nombre }}</span></p>
+                    @if ($producto->precio_descuento)
+                        <p class="font-bold line-through text-gray-500">{{ $producto->precio }} MXN</p>
+                        <p class="font-bold">{{ $producto->precio_descuento }} MXN</p>
+                    @else
+                        <p class="font-bold">{{ $producto->precio }} MXN</p>
+                    @endif
                     <button class="bg-blue-300 font-bold w-fit px-3 py-2 rounded-2xl"><a
                             href="{{ route('productos.show', $producto) }}">Comprar</a></button>
                 </div>

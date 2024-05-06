@@ -15,7 +15,8 @@ class WelcomeController extends Controller
     public function index()
     {
         $comentarios = Comentario::where('is_active', 1)
-        ->latest('id')
+        ->inRandomOrder()
+        ->limit(3)
         ->get();
 
         return view('welcome', compact('comentarios'));

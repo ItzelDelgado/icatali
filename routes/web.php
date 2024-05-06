@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ComentarioController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\PreguntaFrecuenteController;
 use App\Http\Controllers\WelcomeController;
@@ -37,9 +38,9 @@ Route::get('/preguntas-frecuentes', [PreguntaFrecuenteController::class,'index']
 
 Route::resource('/productos', ProductoController::class);
 
-Route::get('/contacto', function () {
-    return view('contacto');
-})->name('contacto');
+Route::get('contacto', [ContactController::class, 'index'])->name('contacto.index');
+
+Route::post('contacto', [ContactController::class, 'store'])->name('contacto.store');
 
 Route::middleware([
     'auth:sanctum',

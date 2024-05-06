@@ -22,15 +22,21 @@ Route::get('/', function () {
 
 
 Route::resource('/comentarios', ComentarioController::class)
-->except(['show','destroy']);
+->except(['show','destroy'])
+->middleware(['can:gestionar comentarios']);
 
-Route::resource('/users', UserController::class);
+Route::resource('/users', UserController::class)
+    ->middleware(['can:gestionar usuarios']);
 
 Route::resource('/preguntas_frecuentes', PreguntaFrecuenteController::class)
 ->parameter('preguntas_frecuentes','pregunta_frecuente')
-->except(['show','destroy']);
+->except(['show','destroy'])
+->middleware(['can:gestionar preguntas frecuentes']);
 
-Route::resource('/productos', ProductoController::class);
+Route::resource('/productos', ProductoController::class)
+    ->middleware(['can:gestionar productos']);
 
-Route::resource('/roles', RoleController::class);
-Route::resource('/permissions', PermissionController::class);
+Route::resource('/roles', RoleController::class)
+    ->middleware(['can:gestionar roles']);
+Route::resource('/permissions', PermissionController::class)
+    ->middleware(['can:gestionar permisos']);

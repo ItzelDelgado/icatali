@@ -94,12 +94,12 @@ class UserController extends Controller
             'name' => 'string|max:255',
             'email' => 'string|max:255',
             'password' => 'nullable|string|confirmed',
-            'hospital_id' => 'exists:hospitals,id',
         ]));
 
         $us_bd = User::find($user->id);
 
         $user->name = $request->name;
+        $user->email = $request->email;
 
         if ($request->password) {
             $user->password = bcrypt($request->password);

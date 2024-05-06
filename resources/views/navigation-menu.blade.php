@@ -27,8 +27,8 @@
         [
             //Informacion acerca del enlace
             'name' => 'CONTACTO',
-            'url' => route('contacto'),
-            'active' => request()->routeIs('contacto'),
+            'url' => route('contacto.index'),
+            'active' => request()->routeIs('contacto.index'),
         ],
         // [
         //     //Informacion acerca del enlace
