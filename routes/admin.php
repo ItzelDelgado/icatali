@@ -30,8 +30,7 @@ Route::resource('/preguntas_frecuentes', PreguntaFrecuenteController::class)
 ->parameter('preguntas_frecuentes','pregunta_frecuente')
 ->except(['show','destroy']);
 
-Route::resource('/productos', ProductoController::class)
-->except(['destroy']);
+Route::resource('/productos', ProductoController::class);
 
 Route::resource('/roles', RoleController::class);
 Route::resource('/permissions', PermissionController::class);

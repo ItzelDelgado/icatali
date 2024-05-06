@@ -35,8 +35,7 @@ Route::get('/productos', function () {
 
 Route::get('/preguntas-frecuentes', [PreguntaFrecuenteController::class,'index'])->name('preguntas_frecuentes');
 
-Route::get('/productos', [ProductoController::class,'index'])->name('productos');
-
+Route::resource('/productos', ProductoController::class);
 
 Route::get('/contacto', function () {
     return view('contacto');

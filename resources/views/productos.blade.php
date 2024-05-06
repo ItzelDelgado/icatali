@@ -19,7 +19,7 @@
                     <p class="font-bold"><span>{{$producto->nombre}}</span></p>
                     <p class="font-bold">Precio: <span>{{$producto->precio}}</span></p>
                     <button class="bg-blue-300 font-bold w-fit px-3 py-2 rounded-2xl"><a
-                            href="">Comprar</a></button>
+                            href="{{ route('productos.show', $producto) }}">Comprar</a></button>
                 </div>
             </div>
         @endforeach
