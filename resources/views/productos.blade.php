@@ -13,7 +13,7 @@
             <div>
                 <div
                     class="bg-[url('../../../icatali/public/img/decoraciones/fondo-productos-verde-2.svg')] bg-no-repeat bg-contain w-60 h-56 mx-auto flex items-center justify-center mb-3">
-                    <img class="w-44" src="{{ $producto->image_pa }}" alt="">
+                    <img class="w-44" src="{{ $producto->image }}" alt="">
                 </div>
                 <div class="flex flex-col items-center gap-4">
                     <p class="font-bold"><span>{{ $producto->nombre }}</span></p>
