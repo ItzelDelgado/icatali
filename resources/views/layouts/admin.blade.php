@@ -48,6 +48,7 @@
         <script>
             // Swal.fire({!! json_encode(session('swal')) !!});
             Swal.fire(@json(session('swal')));
+            {!! session()->forget('swal') !!}
         </script>
     @endif
 
