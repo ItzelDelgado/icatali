@@ -1,10 +1,12 @@
 <x-app-layout>
+    @section('title', 'Sobre nosotros')
 
     <div class="md:hidden">
         <div class="relative h-[27rem] mb-12">
             <div class="relative right-14 bg-[#DFEEF4] rounded-full w-[26rem] h-[26rem]"></div>
             <div class="absolute top-11">
-                <h1 class="bebas text-3xl text-center mb-2">ACERCA DE ICATALI</h1>
+                <h1 class="bebas text-3xl text-center mb-2 ">ACERCA DE ICATALI</h1>
+
                 <p class="w-80 pl-3 text-center">Aunque cada persona es diferente, nosotros aseguramos que los beneficios
                     siempre estarán presentes gracias a que nos hemos adaptado a los nuevos estilos de vida o tipos de
                     dieta
@@ -44,7 +46,7 @@
             <div class="relative h-[27rem] mb-12">
                 <div class="relative  bg-[#DFEEF4] rounded-full w-[25rem] h-[25rem]"></div>
                 <div class="absolute top-11 right-10">
-                    <h1 class="bebas text-3xl text-center mb-2">ACERCA DE ICATALI</h1>
+                    <h1 class="bebas text-3xl text-center mb-2 ">ACERCA DE ICATALI</h1>
                     <p class="w-80 text-center">Aunque cada persona es diferente, nosotros aseguramos que los
                         beneficios siempre estarán presentes gracias a que nos hemos adaptado a los nuevos estilos de
                         vida o tipos de dieta como la restrictiva (por enfermedad), plant based, Veganos, Vegetarianos,

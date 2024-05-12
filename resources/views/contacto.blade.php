@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', 'Contacto')
     <div class="md:hidden">
         <div class="relative h-80 w-full">
             <h1 class="w-64 absolute z-20 top-8 left-3 text-2xl">Cada bocado es un paso hacia un futuro más saludable y

@@ -1,5 +1,5 @@
 <x-app-layout>
-
+    @section('title', 'Preguntas frecuentes')
     <h1
         class="bg-[url('../../../icatali/public/img/decoraciones/nube-preguntas.svg')] bg-no-repeat bg-cover h-36 flex justify-center items-center text-3xl mb-8 bebas">
         ¿Como podemos ayudarte?</h1>

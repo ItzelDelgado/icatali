@@ -1,5 +1,5 @@
 <x-app-layout>
-
+    @section('title', 'Productos')
     <div
         class="bg-[url('../../../icatali/public/img/decoraciones/nube-productos.svg')] bg-no-repeat bg-cover h-52 mb-8 px-2 flex justify-center items-center">
         <div class="px-6 py-3 text-center">

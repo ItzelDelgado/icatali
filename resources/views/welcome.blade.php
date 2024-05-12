@@ -1,6 +1,8 @@
 <x-app-layout>
 
-    <section class="bg-white relative p-10 h-[28rem] z-10 overflow-hidden container mx-auto">
+    @section('title', 'Bienvenido a Icatali')
+
+    <section class="bg-white relative p-10 h-[28rem] z-10 overflow-hidden container mx-auto pt-16">
 
         <h1 class="uppercase font-bold mb-4 text-2xl md:text-4xl lg:text-5xl">¡Nútrete hoy!</h1>
         <p class="montserrat-400 mb-4 md:max-w-[500px]">En Icatali ofrecemos alimentos que se caracterizan por ser altos
@@ -13,7 +15,7 @@
             <p><strong>5532110142</strong></p>
         </div>
         <button class="bg-black rounded-full px-4 py-2 ml-5">
-            <a class="text-white uppercase font-bold bebas-400" href="">Contactanos</a>
+            <a class="text-white uppercase font-bold bebas-400" href="https://wa.link/aw9lcl" target="_blank">Contactanos</a>
         </button>
         <img class="absolute w-40 -left-24 lg:left-[55%] xl:left-[63%] -bottom-20 lg:bottom-[40%] xl:bottom-[47%]"
             src="{{ asset('img/decoraciones/circulo-radial.svg') }}" alt="">
@@ -24,13 +26,13 @@
     </section>
 
     <section class="relative bg-white z-20 p-10 container mx-auto">
-        <h2 class="text-3xl bebas-400 font-semibold uppercase text-center underline bebas">5 beneficios de las legumbres
+        <h2 class="text-3xl bebas-400 font-semibold uppercase text-center bebas">5 beneficios de las legumbres
         </h2>
         <div class="flex justify-center items-center">
             <ul class="text-lg p-3 list-image-checkmark">
                 <li>Mejoraran la salud</li>
                 <li>Son cultivos limpios</li>
-                <li>Larga vida util</li>
+                <li>Larga vida útil</li>
                 <li>Cero desperdicio</li>
                 <li>Favorecen el crecimiento de otros cultivos</li>
             </ul>
