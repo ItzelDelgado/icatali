@@ -15,7 +15,7 @@
         [
             //Informacion acerca del enlace
             'name' => 'PRODUCTOS',
-            'url' => route('productos'),
+            'url' => route('productos.index'),
             'active' => request()->routeIs('productos'),
         ],
         [
@@ -27,8 +27,8 @@
         [
             //Informacion acerca del enlace
             'name' => 'CONTACTO',
-            'url' => route('contacto'),
-            'active' => request()->routeIs('contacto'),
+            'url' => route('contacto.index'),
+            'active' => request()->routeIs('contacto.index'),
         ],
         // [
         //     //Informacion acerca del enlace

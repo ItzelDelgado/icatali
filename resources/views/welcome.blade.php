@@ -35,13 +35,13 @@
                 <li>Favorecen el crecimiento de otros cultivos</li>
             </ul>
             <div
-                class="hidden md:flex  md:mt-10 bg-[url('../../../icatali/public/img/decoraciones/fondo-productos-verde-2.svg')] bg-no-repeat bg-contain w-60 h-56 items-center justify-center mb-3">
+                class="hidden md:flex md:mt-10 bg-[url('../../../icatali/public/img/decoraciones/fondo-productos-verde-2.svg')] bg-no-repeat bg-contain w-60 h-56 items-center justify-center mb-3">
                 <img class="w-44" src="{{ asset('img/productos/producto-hamburguesa.png') }}" alt="">
             </div>
         </div>
     </section>
     <section
-        class="relative bg-nube-azul md:bg-[url('../../../icatali/public/img/decoraciones/nube-desktop-inicio.svg')] bg-no-repeat bg-cover bg-left px-10 py-20 mx-auto flex justify-center  items-center gap-10">
+        class="relative bg-nube-azul md:bg-[url('../../../icatali/public/img/decoraciones/nube-desktop-inicio.svg')] lg:bg-[url('../../../icatali/public/img/decoraciones/nube-inicio-desktop-1.svg')] bg-no-repeat bg-cover bg-left px-10 py-20 mx-auto flex justify-center  items-center gap-10 lg:h-[39rem]">
         <div class="max-w-[800px]">
             <h2 class="text-4xl bebas font-semibold uppercase pb-4">Conoce icatali</h2>
             <p>Nos especializamos en el diseño y desarrollo de alternativas de consumo de origen vegetal, destacando por
@@ -82,7 +82,7 @@
         </div>
     </section>
 
-    <div class="bg-nube-verde bg-no-repeat bg-cover bg-top py-20 container mx-auto">
+    <div class="bg-[url('../../../icatali/public/img/decoraciones/nube-inicio-desktop-2.svg')] bg-no-repeat bg-cover bg-top py-20 container mx-auto">
         <h2 class="text-xl bebas-400 font-semibold uppercase text-center relative top-4">¿QUÉ DICE LA GENTE DE ICATALI?
         </h2>
     </div>

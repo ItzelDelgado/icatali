@@ -138,6 +138,7 @@ class ProductoController extends Controller
      */
     public function show(Producto $producto)
     {
+
         return view('admin.productos.show', compact('producto'));
     }
 
@@ -146,7 +147,7 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        //return $producto;
+
         return view('admin.productos.edit', compact('producto'));
     }
 

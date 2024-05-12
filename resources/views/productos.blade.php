@@ -13,13 +13,18 @@
             <div>
                 <div
                     class="bg-[url('../../../icatali/public/img/decoraciones/fondo-productos-verde-2.svg')] bg-no-repeat bg-contain w-60 h-56 mx-auto flex items-center justify-center mb-3">
-                    <img class="w-44" src="{{ $producto->image_pa }}" alt="">
+                    <img class="w-44" src="{{ $producto->image }}" alt="">
                 </div>
                 <div class="flex flex-col items-center gap-4">
-                    <p class="font-bold"><span>{{$producto->nombre}}</span></p>
-                    <p class="font-bold">Precio: <span>{{$producto->precio}}</span></p>
+                    <p class="font-bold"><span>{{ $producto->nombre }}</span></p>
+                    @if ($producto->precio_descuento)
+                        <p class="font-bold line-through text-gray-500">{{ $producto->precio }} MXN</p>
+                        <p class="font-bold">{{ $producto->precio_descuento }} MXN</p>
+                    @else
+                        <p class="font-bold">{{ $producto->precio }} MXN</p>
+                    @endif
                     <button class="bg-blue-300 font-bold w-fit px-3 py-2 rounded-2xl"><a
-                            href="">Comprar</a></button>
+                            href="{{ route('productos.show', $producto) }}">Comprar</a></button>
                 </div>
             </div>
         @endforeach

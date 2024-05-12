@@ -106,7 +106,7 @@ class ComentarioController extends Controller
             $data['img_path'] = Storage::put('comentarios', $request->image);
         }
 
-        
+
         $comentario->update($data);
 
         session()->flash(
