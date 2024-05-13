@@ -17,9 +17,9 @@
                 <button class="absolute left-48 -bottom-14 bg-black rounded-full text-white p-3 font-bold"><a
                         href="">CONTACTANOS</a></button>
             </div>
+
         </div>
-        <section
-            class="container mx-auto bg-[url('../../../icatali/public/img/decoraciones/nube-acerca-de.svg')] bg-no-repeat bg-cover h-[54rem]
+        <section class="container mx-auto bg-[url('../../../icatali/public/img/decoraciones/nube-acerca-de.svg')] bg-no-repeat bg-cover h-[66rem]
             flex justify-center items-center">
             <div>
                 <h2 class="text-2xl bebas font-semibold uppercase mb-4">¿QUIÉNES SOMOS?</h2>
@@ -37,6 +37,9 @@
                     esforzamos por ofrecer experiencias alimenticias que despierten tus emociones. Desde el primer
                     bocado,
                     queremos que sientas la conexión entre el bienestar físico y emocional.</p>
+                <div class="max-w-[300px] mx-auto mt-6">
+                    <img class="w-full" src="{{ asset('img/sobre_nosotros-semillas.png') }}" alt="">
+                </div>
             </div>
         </section>
     </div>
@@ -60,6 +63,8 @@
             <div class="relative max-w-[700px] ml-20">
                 <img class="w-full" src="{{ asset('img/decoraciones/sobre-nosotros-banner.png') }}" alt="">
             </div>
+            <img class="w-12 absolute lg:top-[56%] lg:right-[40%] hidden lg:block" src="{{asset('img/decoraciones/semillas-1.svg')}}" alt="">
+            <img class="w-8 absolute lg:top-[30%] lg:right-[56%] hidden lg:block" src="{{asset('img/decoraciones/semillas-3.svg')}}" alt="">
         </div>
         <div class="relative">
             <div class="container max-w-[800px] relative z-20">
@@ -80,9 +85,11 @@
                     <img class="w-full" src="{{ asset('img/sobre_nosotros-semillas.png') }}" alt="">
                 </div>
             </div>
-            <div class="z-10 bg-[url('../../../icatali/public/img/decoraciones/nosotros-lateral-verde.svg')] bg-no-repeat bg-contain h-[47rem] w-[41rem] absolute -top-0 xl:-top-20">
+            <div
+                class="z-10 bg-[url('../../../icatali/public/img/decoraciones/nosotros-lateral-verde.svg')] bg-no-repeat bg-contain h-[47rem] w-[41rem] absolute -top-0 xl:-top-20">
             </div>
-            <div class="z-10 bg-[url('../../../icatali/public/img/decoraciones/nosotros-lateral-azul.svg')] bg-no-repeat bg-contain h-[47rem] w-[41rem] absolute right-0 top-40">
+            <div
+                class="z-10 bg-[url('../../../icatali/public/img/decoraciones/nosotros-lateral-azul.svg')] bg-no-repeat bg-contain h-[47rem] w-[41rem] absolute right-0 top-40">
             </div>
         </div>
     </div>

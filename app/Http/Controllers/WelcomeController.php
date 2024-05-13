@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Comentario;
+use App\Models\Producto;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
@@ -19,7 +20,12 @@ class WelcomeController extends Controller
         ->limit(3)
         ->get();
 
-        return view('welcome', compact('comentarios'));
+        $productos = Producto::where('is_active', 1)
+            ->latest('id')
+            ->limit(3)
+            ->get();
+
+        return view('welcome', compact('comentarios', 'productos'));
     }
 
 
