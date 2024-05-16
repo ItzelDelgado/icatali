@@ -24,9 +24,12 @@
             class="absolute bg-black  w-48 md:w-72 lg:w-80 h-48 md:h-72 lg:h-80 rounded-[50%] -skew-x-[8deg] lg:-skew-x-0 -right-12 lg:right-16 -bottom-16 lg:bottom-16 overflow-hidden">
             <img class="w-full h-full object-cover" src="{{ asset('img/barras_de_amaranto.JPG') }}" alt="">
         </div>
-        <img class="w-36 absolute lg:top-[70%] lg:right-[49%] hidden lg:block" src="{{asset('img/decoraciones/ovalos-verdes.svg')}}" alt="">
-        <img class="w-12 absolute top-[4%] lg:top-[7%] right-[9%] lg:right-[25%]" src="{{asset('img/decoraciones/semillas-1.svg')}}" alt="">
-        <img class="w-8 absolute top-[75%] lg:top-[70%] right-[38%] lg:right-[71%]" src="{{asset('img/decoraciones/semillas-2.svg')}}" alt="">
+        <img class="w-36 absolute lg:top-[70%] lg:right-[49%] hidden lg:block"
+            src="{{ asset('img/decoraciones/ovalos-verdes.svg') }}" alt="">
+        <img class="w-12 absolute top-[4%] lg:top-[7%] right-[9%] lg:right-[25%]"
+            src="{{ asset('img/decoraciones/semillas-1.svg') }}" alt="">
+        <img class="w-8 absolute top-[75%] lg:top-[70%] right-[38%] lg:right-[71%]"
+            src="{{ asset('img/decoraciones/semillas-2.svg') }}" alt="">
     </section>
 
     <section class="relative bg-white z-20 p-10 container mx-auto">
@@ -84,8 +87,14 @@
         </div>
     </section>
 
-    <div class="bg-[url('../../../icatali/public/img/decoraciones/nube-inicio-desktop-2.svg')] bg-no-repeat bg-cover bg-top py-20 mx-auto sm:h-72">
-        <h2 class="text-xl bebas-400 font-semibold uppercase text-center relative sm:top-14">¿QUÉ DICE LA GENTE DE ICATALI?</h2>
+    <div class="h-[28rem]">
+        <div class="relative h-[12rem]">
+            <img src="{{ asset('img/decoraciones/cilindro_inicio.svg') }}" class="absolute max-w-[62rem] right-0"
+                alt="">
+            <h2 class="text-4xl bebas font-semibold uppercase text-center relative sm:top-14 flex items-center justify-center h-full">¿QUÉ   <span class="text-3xl bebas"> &nbsp; DICE LA GENTE DE &nbsp; </span>  ICATALI?</h2>
+        </div>
+    </div>
+
     </div>
 
     <div class="lg:flex justify-between items-center gap-5 max-w-[1000px] mx-auto hidden">
