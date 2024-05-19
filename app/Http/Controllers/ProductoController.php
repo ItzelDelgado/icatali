@@ -42,27 +42,21 @@ class ProductoController extends Controller
         return view('producto', compact('producto'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Producto $producto)
+    public function buscar(Request $request)
     {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Producto $producto)
-    {
-        //
-    }
+        $searchTerm = $request->input('keyword'); // Reemplaza 'cadena_a_buscar' con la cadena que deseas buscar
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Producto $producto)
-    {
-        //
+        $productos = Producto::where('is_active', 1)
+            ->where(function ($query) use ($searchTerm) {
+                $query->where('nombre', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('descripcion', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('beneficios', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('ingredientes', 'like', '%' . $searchTerm . '%');
+            })
+            ->latest('id')
+            ->get();
+
+        return view('productos', compact('productos'));
     }
 }

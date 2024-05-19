@@ -21,16 +21,17 @@
             <form class="flex flex-col" action="{{ route('contacto.store') }}" method="POST">
                 @csrf
                 <label class="bebas text-xl font-bold mb-2" for="name">NOMBRE:</label>
-                <x-input class="bg-gray-200 appearance-none border-2 border-gray-300 rounded-full w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400 mb-2"
+                <x-input
+                    class="bg-gray-200 appearance-none border-2 border-gray-300 rounded-full w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400 mb-2"
                     type="text" name="nombre" />
                 <label class="bebas text-xl font-bold mb-2" for="correo">CORREO:</label>
                 <x-input
                     class="bg-gray-200 appearance-none border-2 border-gray-300 rounded-full w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400 mb-2"
-                    type="email" name="correo"/>
+                    type="email" name="correo" />
                 <label class="bebas text-xl font-bold mb-2" for="telefono">TALÉFONO</label>
                 <x-input
                     class="bg-gray-200 appearance-none border-2 border-gray-300 rounded-full w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400 mb-2"
-                    type="text" name="telefono"/>
+                    type="text" name="telefono" />
                 <label class="bebas text-xl font-bold mb-2" for="comentario">COMENTARIO</label>
                 <textarea
                     class="bg-gray-200 appearance-none border-2 border-gray-300 rounded-3xl w-full h-36 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400 mb-2"
@@ -42,38 +43,50 @@
         </div>
     </div>
 
-    <div class="md:block  hidden relative top-44 md:px-20 xl:px-40">
-        <div class="flex justify-center items-center gap-4">
-            <div class="flex flex-col gap-4 max-w-[500px]">
-                <div class="max-w-[500px] mx-auto">
-                    <h1 class=" text-4xl ">CONTACTO</h1>
-                    <p>Telefono: <span>5532110142</span></p>
-                    <p>Horario: <span>9-17 horas</span></p>
+    <div class="md:block  hidden relative">
+        <div class="">
+            <div class="flex justify-center mt-4 gap-4">
+                <div class="relative max-w-[700px] ml-20">
+                    <img class="w-full" src="{{ asset('img/decoraciones/icat-contacto.png') }}" alt="">
                 </div>
-                <img class="w-full rounded-lg" src="{{ asset('img/entrada_icat.jpg') }}" alt="">
+                <div class="relative h-[27rem] mb-12">
+                    <div class="relative  bg-[#DFEEF4] rounded-full w-[25rem] h-[25rem]"></div>
+                    <div class="absolute top-11 right-10">
+                        <h1 class="bebas text-3xl text-center mb-2 ">CONTACTO</h1>
+                        <p class="w-80 text-center">
+                            Telefono: 5532110142 <br>
+                            Horario: 9-17 horas
+                        </p>
+                        <button class="absolute left-48 -bottom-14 bg-black rounded-full text-white p-3 font-bold"><a
+                                href="">CONTACTANOS</a></button>
+                    </div>
+                </div>
+
             </div>
-            <div class="max-w-[600px] w-[600px] mx-auto">
+            <div class="max-w-[600px] w-[600px] mx-auto mt-10">
                 <form class="flex flex-col" action="{{ route('contacto.store') }}" method="POST">
                     @csrf
-                    <x-validation-errors class="mb-4"/>
+                    <x-validation-errors class="mb-4" />
                     <label class="bebas text-xl font-bold mb-2" for="nombre">NOMBRE:</label>
-                    <x-input class="bg-gray-200 appearance-none border-2 border-gray-300 rounded-full w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400 mb-2"
-                        type="text" name="nombre" value="{{old('nombre')}}"/>
+                    <x-input
+                        class="bg-gray-200 appearance-none border-2 border-gray-300 rounded-full w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400 mb-2"
+                        type="text" name="nombre" value="{{ old('nombre') }}" />
                     <label class="bebas text-xl font-bold mb-2" for="correo">CORREO:</label>
                     <x-input
                         class="bg-gray-200 appearance-none border-2 border-gray-300 rounded-full w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400 mb-2"
-                        type="email" name="correo" value="{{old('correo')}}"/>
+                        type="email" name="correo" value="{{ old('correo') }}" />
                     <label class="bebas text-xl font-bold mb-2" for="telefono">TALÉFONO</label>
                     <x-input
                         class="bg-gray-200 appearance-none border-2 border-gray-300 rounded-full w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400 mb-2"
-                        type="text" name="telefono" value="{{old('telefono')}}" />
+                        type="text" name="telefono" value="{{ old('telefono') }}" />
                     <label class="bebas text-xl font-bold mb-2" for="mensaje">MENSAJE</label>
                     <textarea
                         class="bg-gray-200 appearance-none border-2 border-gray-300 rounded-3xl w-full h-36 py-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400 mb-2"
                         type="text" name="mensaje">
-                        {{old('mensaje')}}
+                        {{ old('mensaje') }}
                     </textarea>
-                    <input class="bg-verde-icatali w-fit font-bold px-6 py-3 rounded-full mt-4 cursor-pointer" type="submit">
+                    <input class="bg-verde-icatali w-fit font-bold px-6 py-3 rounded-full mt-4 cursor-pointer"
+                        type="submit">
                 </form>
             </div>
         </div>
