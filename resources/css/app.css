@@ -54,7 +54,7 @@ h1 {
 }
 
 .list-image-checkmark li::before {
-    content: url(http://[::1]:5173/public/img/decoraciones/checklist.png);
+    content: url(../../../icatali/public/img/decoraciones/checklist.png);
     position: relative;
     left: -5px;
     top: 44%;

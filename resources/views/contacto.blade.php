@@ -46,19 +46,17 @@
     <div class="md:block  hidden relative">
         <div class="">
             <div class="flex justify-center mt-4 gap-4">
-                <div class="relative max-w-[700px] ml-20">
+                <div class="relative max-w-[650px] ml-20">
                     <img class="w-full" src="{{ asset('img/decoraciones/icat-contacto.png') }}" alt="">
                 </div>
                 <div class="relative h-[27rem] mb-12">
-                    <div class="relative  bg-[#DFEEF4] rounded-full w-[25rem] h-[25rem]"></div>
-                    <div class="absolute top-11 right-10">
+                    <div class="relative  bg-[#DFEEF4] rounded-full md:w-[20rem] xl:w-[25rem] md:h-[20rem] xl:h-[25rem]"></div>
+                    <div class="absolute  md:top-28 md:right-2 xl:top-36 xl:right-10">
                         <h1 class="bebas text-3xl text-center mb-2 ">CONTACTO</h1>
                         <p class="w-80 text-center">
-                            Telefono: 5532110142 <br>
-                            Horario: 9-17 horas
+                            <strong>Telefono:</strong> 5532110142 <br>
+                            <strong>Horario:</strong> 9-17 horas
                         </p>
-                        <button class="absolute left-48 -bottom-14 bg-black rounded-full text-white p-3 font-bold"><a
-                                href="">CONTACTANOS</a></button>
                     </div>
                 </div>
 

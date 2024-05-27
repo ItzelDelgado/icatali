@@ -25,6 +25,8 @@ class WelcomeController extends Controller
             ->limit(3)
             ->get();
 
+
+
         return view('welcome', compact('comentarios', 'productos'));
     }
 

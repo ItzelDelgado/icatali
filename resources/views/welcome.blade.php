@@ -10,19 +10,15 @@
             origen vegetal digerible, avalados con estudios científicos.Nuestro objetivo principal es ofrecer productos
             atractivos, nutritivos y accesibles para que el consumidor pueda elegir fácilmente opciones sanas. y sobre
             todo reconociendo todos sus ingredientes</p>
-        <div class="mb-4">
-            <p><strong>Haga sus pedidos</strong></p>
-            <p><strong>5532110142</strong></p>
-        </div>
-        <button class="bg-black rounded-full px-4 py-2 ml-5">
+        <button class="bg-black rounded-full px-6 py-2">
             <a class="text-white uppercase font-bold bebas-400" href="https://wa.link/aw9lcl"
-                target="_blank">Contactanos</a>
+                target="_blank">Pedidos</a>
         </button>
         <img class="absolute w-40 -left-24 lg:left-[55%] xl:left-[63%] -bottom-20 lg:bottom-[40%] xl:bottom-[47%]"
             src="{{ asset('img/decoraciones/circulo-radial.svg') }}" alt="">
         <div
             class="absolute bg-black  w-48 md:w-72 lg:w-80 h-48 md:h-72 lg:h-80 rounded-[50%] -skew-x-[8deg] lg:-skew-x-0 -right-12 lg:right-16 -bottom-16 lg:bottom-16 overflow-hidden">
-            <img class="w-full h-full object-cover" src="{{ asset('img/barras_de_amaranto.JPG') }}" alt="">
+            <img class="w-full h-full object-cover" src="{{ asset('img/semillas-banner.jpg') }}" alt="">
         </div>
         <img class="w-36 absolute lg:top-[70%] lg:right-[49%] hidden lg:block"
             src="{{ asset('img/decoraciones/ovalos-verdes.svg') }}" alt="">
@@ -45,7 +41,7 @@
             </ul>
             <div
                 class="hidden md:flex md:mt-10 bg-[url('../../../icatali/public/img/decoraciones/fondo-productos-verde-2.svg')] bg-no-repeat bg-contain w-60 h-56 items-center justify-center mb-3">
-                <img class="w-44" src="{{ asset('img/productos/producto-hamburguesa.png') }}" alt="">
+                <img class="w-44 rounded-3xl" src="{{ asset('img/leguminosas.jpg') }}" alt="">
             </div>
         </div>
     </section>
@@ -70,7 +66,7 @@
             <p>Nos esforzamos por ser la elección confiable y saludable para aquellos que buscan una alternativa
                 consciente y deliciosa en sus opciones de consumo</p>
         </div>
-        <img class="hidden lg:block w-64 h-64" src="{{ asset('img/decoraciones/cestas-semillas.png') }}" alt="">
+        <img class="hidden lg:block w-64 h-64 rounded-[7rem]" src="{{ asset('img/hotcakes.jpg') }}" alt="">
     </section>
 
     <section class="relative bg-white z-20 p-10 container mx-auto">
@@ -79,7 +75,7 @@
             @foreach ($productos as $producto)
                 <a href="">
                     <div class="text-center pt-4">
-                        <img class="mx-auto rounded-full h-56 w-56" src="{{ $producto->image }}" alt="">
+                        <img class="mx-auto rounded-full h-56 w-56" src="{{ $producto->img_path_der }}" alt="">
                         <h3 class="text-xl font-bold pt-4">{{ $producto->nombre }}</h3>
                     </div>
                 </a>
@@ -87,11 +83,11 @@
         </div>
     </section>
 
-    <div class="h-[28rem]">
+    <div class="h-[14rem] lg:h-[28rem]">
         <div class="relative h-[12rem]">
-            <img src="{{ asset('img/decoraciones/cilindro_inicio.svg') }}" class="absolute max-w-[62rem] right-0"
+            <img src="{{ asset('img/decoraciones/cilindro_inicio.svg') }}" class="absolute max-w-[39rem] lg:max-w-[62rem] 2xl:max-w-[72rem] right-0"
                 alt="">
-            <h2 class="text-4xl bebas font-semibold uppercase text-center relative sm:top-14 flex items-center justify-center h-full">¿QUÉ   <span class="text-3xl bebas"> &nbsp; DICE LA GENTE DE &nbsp; </span>  ICATALI?</h2>
+            <h2 class="text-4xl bebas font-semibold uppercase text-center relative top-0 lg:top-14 2xl:top-20 flex items-center justify-center h-full">¿QUÉ   <span class="text-3xl bebas"> &nbsp; DICE LA GENTE DE &nbsp; </span>  ICATALI?</h2>
         </div>
     </div>
 
