@@ -1,7 +1,7 @@
 <x-app-layout>
     @section('title', 'Preguntas frecuentes')
     <h1
-        class="bg-[url('../../../icatali/public/img/decoraciones/nube-preguntas.svg')] bg-no-repeat bg-cover h-36 flex justify-center items-center text-3xl mb-8 bebas ">
+        class="bg-[url('../../../icatali/public/img/decoraciones/nube-preguntas.svg')] bg-no-repeat bg-cover h-52 flex justify-center items-center text-4xl mb-8 bebas ">
         ¿Como podemos ayudarte?</h1>
     <img class="hidden xl:block w-40 absolute lg:top-[43%] lg:right-[84%] rotate-[123deg] " src="{{ asset('img/decoraciones/plantita-1.svg') }}" alt="">
     <img class="hidden xl:block w-40 absolute lg:top-[50%] lg:right-[9%] " src="{{ asset('img/decoraciones/costal-semillas.svg') }}" alt="">

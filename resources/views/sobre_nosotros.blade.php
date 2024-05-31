@@ -2,18 +2,12 @@
     @section('title', 'Sobre nosotros')
 
     <div class="md:hidden">
-        <div class="relative h-[27rem] mb-12">
-            <div class="relative right-14 bg-[#DFEEF4] rounded-full w-[26rem] h-[26rem]"></div>
-            <div class="absolute top-11">
+        <div class="relative h-[29rem] mb-12">
+            <div class="relative right-14 bg-[#DFEEF4] rounded-full w-[29rem] h-[29rem]"></div>
+            <div class="absolute top-11 left-4">
                 <h1 class="bebas text-3xl text-center mb-2 ">ACERCA DE ICATALI</h1>
 
-                <p class="w-80 pl-3 text-center">Aunque cada persona es diferente, nosotros aseguramos que los beneficios
-                    siempre estarán presentes gracias a que nos hemos adaptado a los nuevos estilos de vida o tipos de
-                    dieta
-                    como la restrictiva (por enfermedad), plant based, Veganos, Vegetarianos, Flexivegetariano, plant
-                    forward, entre otros, ofreciendo una diversidad de productos que pueden cubrir las necesidades de
-                    cada
-                    población.</p>
+                <p class="w-80 pl-3 text-center">Icatali nació con la visión de ofrecer alimentos saludables, nutritivos y sostenibles a precios competitivos para pacientes de hospitales públicos. Comprometidos con la alta calidad y respaldados por la ciencia, promovemos el bienestar de las personas y del medio ambiente. Adaptamos nuestros productos a diferentes estilos de vida y planes alimenticios, asegurando opciones saludables y confiables tanto para consumidores sanos como para aquellos con enfermedades.</p>
                 <button class="absolute left-48 -bottom-14 bg-black rounded-full text-white p-3 font-bold"><a
                         href="">CONTACTANOS</a></button>
             </div>
@@ -46,16 +40,11 @@
 
     <div class="hidden md:block">
         <div class="flex justify-center mt-4">
-            <div class="relative h-[27rem] mb-12">
-                <div class="relative  bg-[#DFEEF4] rounded-full w-[25rem] h-[25rem]"></div>
-                <div class="absolute top-11 right-10">
+            <div class="relative h-[34rem] mb-12">
+                <div class="relative  bg-[#DFEEF4] rounded-full w-[30rem] h-[30rem]"></div>
+                <div class="absolute top-11 right-20">
                     <h1 class="bebas text-3xl text-center mb-2 ">ACERCA DE ICATALI</h1>
-                    <p class="w-80 text-center">Aunque cada persona es diferente, nosotros aseguramos que los
-                        beneficios siempre estarán presentes gracias a que nos hemos adaptado a los nuevos estilos de
-                        vida o tipos de dieta como la restrictiva (por enfermedad), plant based, Veganos, Vegetarianos,
-                        Flexivegetariano, plant forward, entre otros, ofreciendo una diversidad de productos que pueden
-                        cubrir las necesidades
-                        de cada población.</p>
+                    <p class="w-80 text-center">Icatali nació con la visión de ofrecer alimentos saludables, nutritivos y sostenibles a precios competitivos para pacientes de hospitales públicos. Comprometidos con la alta calidad y respaldados por la ciencia, promovemos el bienestar de las personas y del medio ambiente. Adaptamos nuestros productos a diferentes estilos de vida y planes alimenticios, asegurando opciones saludables y confiables tanto para consumidores sanos como para aquellos con enfermedades.</p>
                     <button class="absolute left-48 -bottom-14 bg-black rounded-full text-white p-3 font-bold"><a
                             href="">CONTACTANOS</a></button>
                 </div>

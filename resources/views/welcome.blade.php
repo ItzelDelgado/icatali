@@ -5,23 +5,18 @@
     <section class="bg-white relative p-10 h-[28rem] z-10 overflow-hidden container mx-auto pt-4 sm:pt-16">
 
         <h1 class="uppercase font-bold mb-4 text-2xl md:text-4xl lg:text-5xl">¡Nútrete hoy!</h1>
-        <p class="montserrat-400 mb-4 md:max-w-[500px]">En Icatali ofrecemos alimentos que se caracterizan por ser altos
-            en proteína de
-            origen vegetal digerible, avalados con estudios científicos.Nuestro objetivo principal es ofrecer productos
-            atractivos, nutritivos y accesibles para que el consumidor pueda elegir fácilmente opciones sanas. y sobre
-            todo reconociendo todos sus ingredientes</p>
+        <p class="montserrat-400 mb-4 md:max-w-[500px]">
+            En Icatali, nos especializamos en ofrecer alimentos con un alto contenido de proteína vegetal de alta digestibilidad, respaldados por estudios científicos. Nuestro objetivo principal es proporcionar productos atractivos, nutritivos y precio competitivo, permitiendo al consumidor elegir opciones saludables de manera sencilla, y con un claro reconocimiento de todos sus ingredientes.
+        </p>
         <button class="bg-black rounded-full px-6 py-2">
             <a class="text-white uppercase font-bold bebas-400" href="https://wa.link/aw9lcl"
                 target="_blank">Pedidos</a>
         </button>
         <img class="absolute w-40 -left-24 lg:left-[55%] xl:left-[63%] -bottom-20 lg:bottom-[40%] xl:bottom-[47%]"
             src="{{ asset('img/decoraciones/circulo-radial.svg') }}" alt="">
-        <div
-            class="absolute bg-black  w-48 md:w-72 lg:w-80 h-48 md:h-72 lg:h-80 rounded-[50%] -skew-x-[8deg] lg:-skew-x-0 -right-12 lg:right-16 -bottom-16 lg:bottom-16 overflow-hidden">
+        <div class="absolute bg-black  w-48 md:w-72 lg:w-80 h-48 md:h-72 lg:h-80 rounded-[50%] -skew-x-[8deg] lg:-skew-x-0 -right-12 lg:right-16 -bottom-16 lg:bottom-16 overflow-hidden">
             <img class="w-full h-full object-cover" src="{{ asset('img/semillas-banner.jpg') }}" alt="">
         </div>
-        <img class="w-36 absolute lg:top-[70%] lg:right-[49%] hidden lg:block"
-            src="{{ asset('img/decoraciones/ovalos-verdes.svg') }}" alt="">
         <img class="w-12 absolute top-[4%] lg:top-[7%] right-[9%] lg:right-[25%]"
             src="{{ asset('img/decoraciones/semillas-1.svg') }}" alt="">
         <img class="w-8 absolute top-[75%] lg:top-[70%] right-[38%] lg:right-[71%]"
@@ -49,22 +44,7 @@
         class="relative bg-nube-azul md:bg-[url('../../../icatali/public/img/decoraciones/nube-desktop-inicio.svg')] lg:bg-[url('../../../icatali/public/img/decoraciones/nube-inicio-desktop-1.svg')] bg-no-repeat bg-cover bg-left px-10 py-20 mx-auto flex justify-center  items-center gap-10 lg:h-[39rem]">
         <div class="max-w-[800px]">
             <h2 class="text-4xl bebas font-semibold uppercase pb-4">Conoce icatali</h2>
-            <p>Nos especializamos en el diseño y desarrollo de alternativas de consumo de origen vegetal, destacando por
-                su
-                calidad y accesibilidad. Nuestra misión es ser aliados en la nutrición, brindando confianza al
-                consumidor al
-                proporcionar productos con ingredientes que promueven la salud del cuerpo y del planeta. Utilizamos
-                materias
-                primas sostenibles que ofrecen nutrientes con un bajo impacto ambiental.</p>
-            <p>Nuestros productos son validados sensorialmente por los consumidores y se caracterizan por tener un
-                índice glucémico bajo, fibra, así como un etiquetado limpio y veraz. Aunque reconocemos que cada persona
-                es
-                única, aseguramos que los beneficios de nuestros productos siempre estarán presentes, gracias a nuestra
-                adaptación a los nuevos estilos de vida y tipos de dieta, como la restrictiva (por enfermedad), plant
-                based,
-                veganos, vegetarianos, flexivegetarianos, plant forward, entre otros.</p>
-            <p>Nos esforzamos por ser la elección confiable y saludable para aquellos que buscan una alternativa
-                consciente y deliciosa en sus opciones de consumo</p>
+            <p>Nos especializamos en diseñar y desarrollar alternativas vegetales de alta calidad y precios competitivos. Nuestra misión es promover la salud del cuerpo y del planeta con productos sostenibles y de bajo impacto ambiental. Ofrecemos alimentos con bajo índice glucémico, alta fibra y etiquetado claro, adaptados a diversos estilos de vida y planes alimenticios, además son validados sensorialmente por los consumidores. Nos esforzamos por ser la opción confiable y saludable para quienes buscan consumo consciente y delicioso</p>
         </div>
         <img class="hidden lg:block w-64 h-64 rounded-[7rem]" src="{{ asset('img/hotcakes.jpg') }}" alt="">
     </section>
