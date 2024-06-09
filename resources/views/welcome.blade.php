@@ -14,9 +14,10 @@
         </button>
         <img class="absolute w-40 -left-24 lg:left-[55%] xl:left-[63%] -bottom-20 lg:bottom-[40%] xl:bottom-[47%]"
             src="{{ asset('img/decoraciones/circulo-radial.svg') }}" alt="">
-        <div class="absolute bg-black  w-48 md:w-72 lg:w-80 h-48 md:h-72 lg:h-80 rounded-[50%] -skew-x-[8deg] lg:-skew-x-0 -right-12 lg:right-16 -bottom-16 lg:bottom-16 overflow-hidden">
-            <img class="w-full h-full object-cover" src="{{ asset('img/semillas-banner.jpg') }}" alt="">
+        <div class="absolute  h-40 md:h-72 lg:h-96  lg:right-16 -bottom-8 right-6 lg:bottom-16 overflow-hidden">
+            <img class="w-full h-full object-cover" src="{{ asset('img/flor_icatali.png') }}" alt="">
         </div>
+        <img class="w-36 absolute lg:top-[70%] lg:right-[49%] hidden lg:block" src="http://icatali.com/img/decoraciones/ovalos-verdes.svg" alt="">
         <img class="w-12 absolute top-[4%] lg:top-[7%] right-[9%] lg:right-[25%]"
             src="{{ asset('img/decoraciones/semillas-1.svg') }}" alt="">
         <img class="w-8 absolute top-[75%] lg:top-[70%] right-[38%] lg:right-[71%]"
@@ -36,7 +37,7 @@
             </ul>
             <div
                 class="hidden md:flex md:mt-10 bg-[url('../../../icatali/public/img/decoraciones/fondo-productos-verde-2.svg')] bg-no-repeat bg-contain w-60 h-56 items-center justify-center mb-3">
-                <img class="w-44 rounded-3xl" src="{{ asset('img/leguminosas.jpg') }}" alt="">
+                <img class="w-64 rounded-3xl" src="{{ asset('img/semillas_listado.png') }}" alt="">
             </div>
         </div>
     </section>
@@ -55,7 +56,7 @@
             @foreach ($productos as $producto)
                 <a href="">
                     <div class="text-center pt-4">
-                        <img class="mx-auto rounded-full h-56 w-56" src="{{ $producto->img_path_der }}" alt="">
+                        <img class="mx-auto rounded-full h-56 w-56" src="{{ $producto->image_der }}" alt="">
                         <h3 class="text-xl font-bold pt-4">{{ $producto->nombre }}</h3>
                     </div>
                 </a>
