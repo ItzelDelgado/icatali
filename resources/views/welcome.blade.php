@@ -47,7 +47,7 @@
             <h2 class="text-4xl bebas font-semibold uppercase pb-4">Conoce icatali</h2>
             <p>Nos especializamos en diseñar y desarrollar alternativas vegetales de alta calidad y precios competitivos. Nuestra misión es promover la salud del cuerpo y del planeta con productos sostenibles y de bajo impacto ambiental. Ofrecemos alimentos con bajo índice glucémico, alta fibra y etiquetado claro, adaptados a diversos estilos de vida y planes alimenticios, además son validados sensorialmente por los consumidores. Nos esforzamos por ser la opción confiable y saludable para quienes buscan consumo consciente y delicioso</p>
         </div>
-        <img class="hidden lg:block w-64 h-64 rounded-[7rem]" src="{{ asset('img/hotcakes.jpg') }}" alt="">
+        <img class="hidden lg:block w-64 h-64" src="{{ asset('img/conoce-icatali.png') }}" alt="">
     </section>
 
     <section class="relative bg-white z-20 p-10 container mx-auto">

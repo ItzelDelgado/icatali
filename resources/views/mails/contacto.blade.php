@@ -9,9 +9,9 @@
 <body>
     <h1>Correo de contacto</h1>
     <p>Nombre: {{$data['nombre']}}</p>
-    <p>Nombre: {{$data['correo']}}</p>
-    <p>Nombre: {{$data['telefono']}}</p>
-    <p>Nombre: {{$data['mensaje']}}</p>
+    <p>Correo: {{$data['correo']}}</p>
+    <p>Teléfono: {{$data['telefono']}}</p>
+    <p>Mensaje: {{$data['mensaje']}}</p>
 
 </body>
 </html>

@@ -7,20 +7,25 @@
             <p>Aseguramos que la experiencia de consumir nuestros productos será única y diferente.</p>
         </div>
     </div>
-    <form action="{{ route('productos.buscar') }}" method="POST" enctype="multipart/form-data" class="bg-white p-6">
-        @csrf
-        <x-validation-errors class="mb-4" />
-        <div class="flex items-baseline justify-end container">
-            <div class="mb-4 max-w-52">
-                <x-input value="{{ old('keyword') }}" name="keyword" class="w-full" placeholder="buscar..." />
-            </div>
-            <div class="flex justify-end h-10">
-                <x-button>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </x-button>
-            </div>
+    <div class="flex items-baseline justify-end">
+        <div>
+            <a href="{{ route('productos.index') }}" class="font-bold text-lg">Ver todo</a>
         </div>
-    </form>
+        <form action="{{ route('productos.buscar') }}" method="POST" enctype="multipart/form-data" class="bg-white p-6">
+            @csrf
+            <x-validation-errors class="mb-4" />
+            <div class="flex items-baseline justify-end container">
+                <div class="mb-4 max-w-52">
+                    <x-input value="{{ old('keyword') }}" name="keyword" class="w-full" placeholder="buscar..." />
+                </div>
+                <div class="flex justify-end h-10">
+                    <x-button>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </x-button>
+                </div>
+            </div>
+        </form>
+    </div>
     <div class="grid grid-cols-1 lg:grid-cols-2 mx-auto max-w-[60rem] gap-6">
         @foreach ($productos as $producto)
             <div>
