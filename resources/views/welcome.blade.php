@@ -12,16 +12,16 @@
             <a class="text-white uppercase font-bold bebas-400" href="https://wa.link/aw9lcl"
                 target="_blank">Pedidos</a>
         </button>
-        <img class="absolute w-40 -left-24 lg:left-[55%] xl:left-[63%] -bottom-20 lg:bottom-[40%] xl:bottom-[47%]"
-            src="{{ asset('img/decoraciones/circulo-radial.svg') }}" alt="">
-        <div class="absolute  h-40 md:h-72 lg:h-96  lg:right-16 -bottom-8 right-6 lg:bottom-16 overflow-hidden">
+        {{-- <img class="absolute w-40 -left-24 lg:left-[55%] xl:left-[63%] -bottom-20 lg:bottom-[40%] xl:bottom-[47%]"
+            src="{{ asset('img/decoraciones/circulo-radial.svg') }}" alt=""> --}}
+        <div class="absolute  h-40 md:h-72 lg:h-96  lg:right-28 -bottom-8 right-6 lg:bottom-16 overflow-hidden">
             <img class="w-full h-full object-cover" src="{{ asset('img/flor_icatali.png') }}" alt="">
         </div>
         <img class="w-36 absolute lg:top-[70%] lg:right-[49%] hidden lg:block" src="http://icatali.com/img/decoraciones/ovalos-verdes.svg" alt="">
-        <img class="w-12 absolute top-[4%] lg:top-[7%] right-[9%] lg:right-[25%]"
-            src="{{ asset('img/decoraciones/semillas-1.svg') }}" alt="">
-        <img class="w-8 absolute top-[75%] lg:top-[70%] right-[38%] lg:right-[71%]"
-            src="{{ asset('img/decoraciones/semillas-2.svg') }}" alt="">
+        {{-- <img class="w-12 absolute top-[4%] lg:top-[7%] right-[9%] lg:right-[25%]"
+            src="{{ asset('img/decoraciones/semillas-1.svg') }}" alt=""> --}}
+        {{-- <img class="w-8 absolute top-[75%] lg:top-[70%] right-[38%] lg:right-[71%]"
+            src="{{ asset('img/decoraciones/semillas-2.svg') }}" alt=""> --}}
     </section>
 
     <section class="relative bg-white z-20 p-10 container mx-auto">
@@ -56,7 +56,10 @@
             @foreach ($productos as $producto)
                 <a href="">
                     <div class="text-center pt-4">
-                        <img class="mx-auto rounded-full h-56 w-56" src="{{ $producto->image_der }}" alt="">
+                        <div class="relative">
+                            <img class="mx-auto rounded-full h-56 w-56 darken-on-hover" src="{{ $producto->image_der }}" alt="">
+                            <p class="absolute right-0 left-0 top-24 text-white">hola</p>
+                        </div>
                         <h3 class="text-xl font-bold pt-4">{{ $producto->nombre }}</h3>
                     </div>
                 </a>

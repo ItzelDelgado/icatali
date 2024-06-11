@@ -1,1 +1,1 @@
-<img class="w-36" src="{{ asset('img/ICATALI-LOGO.png') }}" alt="">
+<img class="w-36" src="{{ asset('img/icatali_logo.png') }}" alt="">
