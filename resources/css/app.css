@@ -68,3 +68,14 @@ h1 {
 .darken-on-hover:hover {
     filter: brightness(50%); /* Oscurecer la imagen al 50% */
 }
+
+/* Ocultar el texto por defecto */
+.text-hidden {
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Transición suave */
+}
+
+/* Mostrar el texto al pasar el ratón sobre el contenedor relativo del elemento */
+.relative:hover .text-hidden {
+    opacity: 1;
+}

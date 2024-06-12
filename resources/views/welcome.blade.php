@@ -6,18 +6,21 @@
 
         <h1 class="uppercase font-bold mb-4 text-2xl md:text-4xl lg:text-5xl">¡Nútrete hoy!</h1>
         <p class="montserrat-400 mb-4 md:max-w-[500px]">
-            En Icatali, nos especializamos en ofrecer alimentos con un alto contenido de proteína vegetal de alta digestibilidad, respaldados por estudios científicos. Nuestro objetivo principal es proporcionar productos atractivos, nutritivos y precio competitivo, permitiendo al consumidor elegir opciones saludables de manera sencilla, y con un claro reconocimiento de todos sus ingredientes.
+            En Icatali, nos especializamos en ofrecer alimentos con un alto contenido de proteína vegetal de alta
+            digestibilidad, respaldados por estudios científicos. Nuestro objetivo principal es proporcionar productos
+            atractivos, nutritivos y precio competitivo, permitiendo al consumidor elegir opciones saludables de manera
+            sencilla, y con un claro reconocimiento de todos sus ingredientes.
         </p>
         <button class="bg-black rounded-full px-6 py-2">
-            <a class="text-white uppercase font-bold bebas-400" href="https://wa.link/aw9lcl"
-                target="_blank">Pedidos</a>
+            <a class="text-white uppercase font-bold bebas-400" href="https://wa.link/aw9lcl" target="_blank">Pedidos</a>
         </button>
         {{-- <img class="absolute w-40 -left-24 lg:left-[55%] xl:left-[63%] -bottom-20 lg:bottom-[40%] xl:bottom-[47%]"
             src="{{ asset('img/decoraciones/circulo-radial.svg') }}" alt=""> --}}
         <div class="absolute  h-40 md:h-72 lg:h-96  lg:right-28 -bottom-8 right-6 lg:bottom-16 overflow-hidden">
             <img class="w-full h-full object-cover" src="{{ asset('img/flor_icatali.png') }}" alt="">
         </div>
-        <img class="w-36 absolute lg:top-[70%] lg:right-[49%] hidden lg:block" src="http://icatali.com/img/decoraciones/ovalos-verdes.svg" alt="">
+        <img class="w-36 absolute lg:top-[70%] lg:right-[49%] hidden lg:block"
+            src="http://icatali.com/img/decoraciones/ovalos-verdes.svg" alt="">
         {{-- <img class="w-12 absolute top-[4%] lg:top-[7%] right-[9%] lg:right-[25%]"
             src="{{ asset('img/decoraciones/semillas-1.svg') }}" alt=""> --}}
         {{-- <img class="w-8 absolute top-[75%] lg:top-[70%] right-[38%] lg:right-[71%]"
@@ -45,7 +48,12 @@
         class="relative bg-nube-azul md:bg-[url('../../../icatali/public/img/decoraciones/nube-desktop-inicio.svg')] lg:bg-[url('../../../icatali/public/img/decoraciones/nube-inicio-desktop-1.svg')] bg-no-repeat bg-cover bg-left px-10 py-20 mx-auto flex justify-center  items-center gap-10 lg:h-[39rem]">
         <div class="max-w-[800px]">
             <h2 class="text-4xl bebas font-semibold uppercase pb-4">Conoce icatali</h2>
-            <p>Nos especializamos en diseñar y desarrollar alternativas vegetales de alta calidad y precios competitivos. Nuestra misión es promover la salud del cuerpo y del planeta con productos sostenibles y de bajo impacto ambiental. Ofrecemos alimentos con bajo índice glucémico, alta fibra y etiquetado claro, adaptados a diversos estilos de vida y planes alimenticios, además son validados sensorialmente por los consumidores. Nos esforzamos por ser la opción confiable y saludable para quienes buscan consumo consciente y delicioso</p>
+            <p>Nos especializamos en diseñar y desarrollar alternativas vegetales de alta calidad y precios
+                competitivos. Nuestra misión es promover la salud del cuerpo y del planeta con productos sostenibles y
+                de bajo impacto ambiental. Ofrecemos alimentos con bajo índice glucémico, alta fibra y etiquetado claro,
+                adaptados a diversos estilos de vida y planes alimenticios, además son validados sensorialmente por los
+                consumidores. Nos esforzamos por ser la opción confiable y saludable para quienes buscan consumo
+                consciente y delicioso</p>
         </div>
         <img class="hidden lg:block w-64 h-64" src="{{ asset('img/conoce-icatali.png') }}" alt="">
     </section>
@@ -57,8 +65,13 @@
                 <a href="">
                     <div class="text-center pt-4">
                         <div class="relative">
-                            <img class="mx-auto rounded-full h-56 w-56 darken-on-hover" src="{{ $producto->image_der }}" alt="">
-                            <p class="absolute right-0 left-0 top-24 text-white">hola</p>
+                            <img class="mx-auto rounded-full h-56 w-56 darken-on-hover" src="{{ $producto->image_der }}"
+                                alt="">
+                                <div class="text-hidden absolute right-0 left-0 top-24  text-white">
+                                    <p class="">hola</p>
+                                    <p>Ingredientes: {{$producto->ingredientes}}</p>
+                                    <p>Beneficios: {{$producto->beneficios}}</p>
+                                </div>
                         </div>
                         <h3 class="text-xl font-bold pt-4">{{ $producto->nombre }}</h3>
                     </div>
@@ -69,9 +82,11 @@
 
     <div class="h-[14rem] lg:h-[28rem]">
         <div class="relative h-[12rem]">
-            <img src="{{ asset('img/decoraciones/cilindro_inicio.svg') }}" class="absolute max-w-[39rem] lg:max-w-[62rem] 2xl:max-w-[72rem] right-0"
-                alt="">
-            <h2 class="text-4xl bebas font-semibold uppercase text-center relative top-0 lg:top-14 2xl:top-20 flex items-center justify-center h-full">¿QUÉ   <span class="text-3xl bebas"> &nbsp; DICE LA GENTE DE &nbsp; </span>  ICATALI?</h2>
+            <img src="{{ asset('img/decoraciones/cilindro_inicio.svg') }}"
+                class="absolute max-w-[39rem] lg:max-w-[62rem] 2xl:max-w-[72rem] right-0" alt="">
+            <h2
+                class="text-4xl bebas font-semibold uppercase text-center relative top-0 lg:top-14 2xl:top-20 flex items-center justify-center h-full">
+                ¿QUÉ <span class="text-3xl bebas"> &nbsp; DICE LA GENTE DE &nbsp; </span> ICATALI?</h2>
         </div>
     </div>
 
