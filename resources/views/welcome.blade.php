@@ -62,21 +62,23 @@
         <h2 class="text-4xl bebas font-semibold uppercase pb-4 text-center">Productos</h2>
         <div class="flex flex-col md:flex-row items-center justify-between gap-14">
             @foreach ($productos as $producto)
-                <a href="">
+                <a href="{{ route('productos.show', $producto) }}">
                     <div class="text-center pt-4">
-                        <div class="relative">
+                        <div class="relative hover-trigger"> <!-- Añadir clase 'hover-trigger' aquí -->
                             <img class="mx-auto rounded-full h-56 w-56 darken-on-hover" src="{{ $producto->image_der }}"
                                 alt="">
-                                <div class="text-hidden absolute right-0 left-0 top-24  text-white">
-                                    <p class="">hola</p>
-                                    <p>Ingredientes: {{$producto->ingredientes}}</p>
-                                    <p>Beneficios: {{$producto->beneficios}}</p>
-                                </div>
+                            <div class="text-hidden absolute right-0 left-0 top-24 text-white hover-target">
+                                <!-- Añadir clase 'hover-target' -->
+                                <p>hola</p>
+                                <p>Ingredientes: {{ $producto->ingredientes }}</p>
+                                <p>Beneficios: {{ $producto->beneficios }}</p>
+                            </div>
                         </div>
                         <h3 class="text-xl font-bold pt-4">{{ $producto->nombre }}</h3>
                     </div>
                 </a>
             @endforeach
+
         </div>
     </section>
 

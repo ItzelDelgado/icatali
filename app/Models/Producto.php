@@ -12,7 +12,7 @@ class Producto extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre', 
+        'nombre',
         'descripcion',
         'beneficios',
         'ingredientes',
@@ -54,7 +54,7 @@ class Producto extends Model
             // Si no es una URL completa, asumimos que es una ruta de almacenamiento y la convertimos en una URL pública
             return Storage::url($this->img_path_paquete);
         }
-    
+
         // Si no hay una imagen principal definida, puedes devolver una URL predeterminada o null según tu necesidad
         return 'https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg';
     }
@@ -69,7 +69,7 @@ class Producto extends Model
             // Si no es una URL completa, asumimos que es una ruta de almacenamiento y la convertimos en una URL pública
             return Storage::url($this->img_path_izq);
         }
-    
+
         // Si no hay una imagen principal definida, puedes devolver una URL predeterminada o null según tu necesidad
         return 'https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg';
     }
@@ -84,11 +84,11 @@ class Producto extends Model
             // Si no es una URL completa, asumimos que es una ruta de almacenamiento y la convertimos en una URL pública
             return Storage::url($this->img_path_der);
         }
-    
+
         // Si no hay una imagen principal definida, puedes devolver una URL predeterminada o null según tu necesidad
         return 'https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg';
     }
-    
+
 
     // protected function image_der(): Attribute
     // {
@@ -109,6 +109,9 @@ class Producto extends Model
     //     );
     // }
 
-
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 
 }

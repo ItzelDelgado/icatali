@@ -76,6 +76,6 @@ h1 {
 }
 
 /* Mostrar el texto al pasar el ratón sobre el contenedor relativo del elemento */
-.relative:hover .text-hidden {
+.hover-trigger:hover .hover-target {
     opacity: 1;
 }
