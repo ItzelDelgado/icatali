@@ -21,11 +21,10 @@ class WelcomeController extends Controller
         ->get();
 
         $productos = Producto::where('is_active', 1)
+            ->inRandomOrder()
             ->latest('id')
             ->limit(3)
             ->get();
-
-
 
         return view('welcome', compact('comentarios', 'productos'));
     }

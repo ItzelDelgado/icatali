@@ -61,13 +61,7 @@ h1 {
     bottom: -12px;
 }
 
-.darken-on-hover {
-    transition: filter 0.3s ease; /* Transición suave */
-}
 
-.darken-on-hover:hover {
-    filter: brightness(50%); /* Oscurecer la imagen al 50% */
-}
 
 /* Ocultar el texto por defecto */
 .text-hidden {
@@ -75,7 +69,19 @@ h1 {
     transition: opacity 0.3s ease; /* Transición suave */
 }
 
+.hover-trigger:hover .darken-on-hover{
+    transition: filter 0.3s ease; /* Transición suave */
+    filter: brightness(50%); /* Oscurecer la imagen al 50% */
+}
+
 /* Mostrar el texto al pasar el ratón sobre el contenedor relativo del elemento */
 .hover-trigger:hover .hover-target {
     opacity: 1;
+}
+
+.product-description{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

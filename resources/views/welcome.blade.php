@@ -67,11 +67,16 @@
                         <div class="relative hover-trigger"> <!-- Añadir clase 'hover-trigger' aquí -->
                             <img class="mx-auto rounded-full h-56 w-56 darken-on-hover" src="{{ $producto->image_der }}"
                                 alt="">
-                            <div class="text-hidden absolute right-0 left-0 top-24 text-white hover-target">
+                            <div class="text-hidden product-description text-white hover-target">
                                 <!-- Añadir clase 'hover-target' -->
-                                <p>hola</p>
-                                <p>Ingredientes: {{ $producto->ingredientes }}</p>
-                                <p>Beneficios: {{ $producto->beneficios }}</p>
+                                @foreach (explode(',', $producto->ingredientes) as $ingrediente)
+                                    <p>Ingrediente: {{ $ingrediente }}</p>
+                                @endforeach
+                                <ul>
+                                    @foreach (explode(',', $producto->beneficios) as $beneficio)
+                                        <li>{{ $beneficio }}</li>
+                                    @endforeach
+                                </ul>
                             </div>
                         </div>
                         <h3 class="text-xl font-bold pt-4">{{ $producto->nombre }}</h3>
