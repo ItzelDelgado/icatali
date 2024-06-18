@@ -23,8 +23,10 @@
             <x-label class="mb-2">
                 Descripción
             </x-label>
-            <textarea class="border-2 border-solid w-full resize-x overflow-auto h-20" name="descripcion"
-                placeholder="Escriba una descripción del producto">{{ old('descripcion', $producto->descripcion) }}</textarea>
+            <div class="ckeditor">
+                <textarea id="editor" class="border-2 border-solid w-full resize-x overflow-auto h-20" name="descripcion"
+                    placeholder="Escriba una descripción del producto">{{ old('descripcion', $producto->descripcion) }}</textarea>
+            </div>
             @error('descripcion')
                 <div class="text-red-500 text-sm">{{ $message }}</div>
             @enderror
@@ -74,7 +76,8 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 max-w-[800px]  mx-auto gap-20 pb-16">
             <div>
 
-                <label class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
+                <label
+                    class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
                     <i class="fa-solid fa-camera px-3 py-2"></i>
                     Actualizar imagen principal
                     <input type="hidden" id="imagePrincipal_hidden" value="">
@@ -89,7 +92,8 @@
 
             <div>
 
-                <label class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
+                <label
+                    class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
                     <i class="fa-solid fa-camera px-3 py-2"></i>
                     Actualizar imagen de empaque
                     <input type="file" accept="image/*" id="imageEmpaque" name="imageEmpaque" class="hidden"
@@ -103,7 +107,8 @@
 
             <div>
 
-                <label class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
+                <label
+                    class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
                     <i class="fa-solid fa-camera px-3 py-2"></i>
                     Actualizar imagen de lateral izquierdo
                     <input type="file" accept="image/*" id="imageIzq" name="imageIzq" class="hidden"
@@ -115,7 +120,8 @@
                     imagen</button>
             </div>
             <div>
-                <label class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
+                <label
+                    class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
                     <i class="fa-solid fa-camera px-3 py-2"></i>
                     Actualizar imagen de lateral derecho
                     <input type="file" accept="image/*" id="imageDer" name="imageDer" class="hidden"
@@ -318,6 +324,12 @@
                 }
                 console.log(imagenPrincipalHidden)
             };
+
+            ClassicEditor
+                .create(document.querySelector('#editor'))
+                .catch(error => {
+                    console.error(error);
+                });
         </script>
     @endpush
 

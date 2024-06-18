@@ -11,7 +11,7 @@
         <div>
             <a href="{{ route('productos.index') }}" class="font-bold text-lg">Ver todo</a>
         </div>
-        <form action="{{ route('productos.buscar') }}" method="POST" enctype="multipart/form-data" class="bg-white p-6">
+        <form action="{{ route('productos.buscar') }}" method="POST" enctype="multipart/form-data" class="bg-white md:p-6">
             @csrf
             <x-validation-errors class="mb-4" />
             <div class="flex items-baseline justify-end container">

@@ -2,7 +2,7 @@
 
     @section('title', 'Bienvenido a Icatali')
 
-    <section class="bg-white relative p-10 h-[28rem] z-10 overflow-hidden container mx-auto pt-4 sm:pt-16">
+    <section class="bg-white relative p-5 md:p-10  md:h-[28rem] z-10 overflow-hidden container mx-auto pt-4 sm:pt-16">
 
         <h1 class="uppercase font-bold mb-4 text-2xl md:text-4xl lg:text-5xl">¡Nútrete hoy!</h1>
         <p class="montserrat-400 mb-4 md:max-w-[500px]">
@@ -16,7 +16,8 @@
         </button>
         {{-- <img class="absolute w-40 -left-24 lg:left-[55%] xl:left-[63%] -bottom-20 lg:bottom-[40%] xl:bottom-[47%]"
             src="{{ asset('img/decoraciones/circulo-radial.svg') }}" alt=""> --}}
-        <div class="absolute  h-40 md:h-72 lg:h-96  lg:right-28 -bottom-8 right-6 lg:bottom-16 overflow-hidden">
+        <div
+            class="hidden md:block absolute  h-40 md:h-72 lg:h-96  lg:right-28 md:bottom-8 right-6 lg:bottom-16 overflow-hidden">
             <img class="w-full h-full object-cover" src="{{ asset('img/flor_icatali.png') }}" alt="">
         </div>
         <img class="w-36 absolute lg:top-[70%] lg:right-[49%] hidden lg:block"
@@ -26,6 +27,8 @@
         {{-- <img class="w-8 absolute top-[75%] lg:top-[70%] right-[38%] lg:right-[71%]"
             src="{{ asset('img/decoraciones/semillas-2.svg') }}" alt=""> --}}
     </section>
+
+    <img class="block md:hidden h-full object-contain w-36 mx-auto" src="{{ asset('img/flor_icatali.png') }}" alt="">
 
     <section class="relative bg-white z-20 p-10 container mx-auto">
         <h2 class="text-3xl bebas-400 font-semibold uppercase text-center bebas">5 beneficios de las legumbres
@@ -69,12 +72,10 @@
                                 alt="">
                             <div class="text-hidden product-description text-white hover-target">
                                 <!-- Añadir clase 'hover-target' -->
-                                @foreach (explode(',', $producto->ingredientes) as $ingrediente)
-                                    <p>Ingrediente: {{ $ingrediente }}</p>
-                                @endforeach
-                                <ul>
-                                    @foreach (explode(',', $producto->beneficios) as $beneficio)
-                                        <li>{{ $beneficio }}</li>
+                                <p class="text-xs text-start"><strong>Ingredientes:</strong></p>
+                                <ul class="list-disc text-xs text-start w-36 pl-4">
+                                    @foreach (explode(',', $producto->ingredientes) as $ingrediente)
+                                        <li> {{ $ingrediente }}</li>
                                     @endforeach
                                 </ul>
                             </div>

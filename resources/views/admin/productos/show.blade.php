@@ -23,8 +23,10 @@
             <x-label class="mb-2">
                 Descripción
             </x-label>
-            <textarea class="border-2 border-solid w-full resize-x overflow-auto h-20" name="descripcion"
-                placeholder="Escriba una descripción del producto">{{ old('descripcion', $producto->descripcion) }}</textarea>
+            <div class="ckeditor">
+                <textarea id="editor" class="border-2 border-solid w-full resize-x overflow-auto h-20" name="descripcion"
+                    placeholder="Escriba una descripción del producto">{{ old('descripcion', $producto->descripcion) }}</textarea>
+            </div>
             @error('descripcion')
                 <div class="text-red-500 text-sm">{{ $message }}</div>
             @enderror
@@ -92,11 +94,6 @@
                 <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Activar</span>
             </label>
         </div>
-        <div class="flex justify-end">
-            <x-button>
-                Actualizar producto
-            </x-button>
-        </div>
     </form>
 
     @push('js')
@@ -154,6 +151,12 @@
                 });
 
             });
+
+            ClassicEditor
+                .create(document.querySelector('#editor'))
+                .catch(error => {
+                    console.error(error);
+                });
         </script>
     @endpush
 

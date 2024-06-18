@@ -74,7 +74,7 @@
                 <button class="bg-green-300 font-bold w-fit px-3 py-1 rounded-2xl"><a
                         href="{{ route('contacto.index') }}">Comprar</a></button>
             </div>
-            <p class="mt-4"><span class="font-bold">Descripción:</span> {{ $producto->descripcion }}</p>
+            <p class="mt-4"><span class="font-bold">Descripción:</span> {!! $producto->descripcion !!}</p>
             <p class="font-bold mt-4">Beneficios:</p>
             @if ($producto->beneficios)
                 <ul class="list-disc pl-6">

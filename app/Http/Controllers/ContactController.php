@@ -23,7 +23,7 @@ class ContactController extends Controller
         ]);
 
         try {
-            Mail::to('itzeldelgado314@ciencias.unam.mx')->send(new ContactMailable($request->all()));
+            Mail::to('icataliservidor@gmail.com')->send(new ContactMailable($request->all()));
             session()->flash(
                 'swal',
                 [

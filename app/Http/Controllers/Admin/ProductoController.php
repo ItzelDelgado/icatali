@@ -15,6 +15,7 @@ class ProductoController extends Controller
     public function index()
     {
         $productos = Producto::latest('id')->paginate(10);
+
         return view('admin.productos.index', compact('productos'));
     }
 

@@ -21,8 +21,10 @@
             <x-label class="mb-2">
                 Descripción
             </x-label>
-            <textarea class="border-2 border-solid w-full resize-x overflow-auto h-20" name="descripcion"
-                placeholder="Escriba una descripción del producto">{{ old('descripcion') }}</textarea>
+            <div class="ckeditor">
+                <textarea id="editor" class="border-2 border-solid w-full resize-x overflow-auto h-20" name="descripcion"
+                    placeholder="Escriba una descripción del producto">{{ old('descripcion') }}</textarea>
+            </div>
             @error('descripcion')
                 <div class="text-red-500 text-sm">{{ $message }}</div>
             @enderror
@@ -74,7 +76,8 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 max-w-[800px] mx-auto gap-3">
             <!-- Agregar imagen principal -->
             <div>
-                <label class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
+                <label
+                    class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
                     <i class="fa-solid fa-camera px-3 py-2"></i>
                     Agregar imagen principal
                     <input type="file" accept="image/*" id="imagePrincipal" name="imagePrincipal" value=""
@@ -88,7 +91,8 @@
 
             <!-- Agregar imagen de empaque -->
             <div>
-                <label class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
+                <label
+                    class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
                     <i class="fa-solid fa-camera px-3 py-2"></i>
                     Agregar imagen de empaque
                     <input type="file" accept="image/*" id="imageEmpaque" name="imageEmpaque" class="hidden"
@@ -102,7 +106,8 @@
 
             <!-- Agregar imagen de lateral izquierdo -->
             <div>
-                <label class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
+                <label
+                    class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
                     <i class="fa-solid fa-camera px-3 py-2"></i>
                     Agregar imagen de lateral izquierdo
                     <input type="file" accept="image/*" id="imageIzq" name="imageIzq" class="hidden"
@@ -116,7 +121,8 @@
 
             <!-- Agregar imagen de lateral derecho -->
             <div>
-                <label class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
+                <label
+                    class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
                     <i class="fa-solid fa-camera px-3 py-2"></i>
                     Agregar imagen de lateral derecho
                     <input type="file" accept="image/*" id="imageDer" name="imageDer" class="hidden"
@@ -300,6 +306,13 @@
 
                 }
             });
+
+
+            ClassicEditor
+                .create(document.querySelector('#editor'))
+                .catch(error => {
+                    console.error(error);
+                });
         </script>
     @endpush
 
