@@ -18,7 +18,7 @@ Route::get('/', function () {
     // ]);
     return view('admin.dashboard');
     //return "Hola desde el admin";
-})->name('dashboard');
+});
 
 
 Route::resource('/comentarios', ComentarioController::class)
