@@ -47,6 +47,6 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/admin', function () {
-        return view('admin.productos.index');
+        return view('admin');
     })->name('admin');
 });
