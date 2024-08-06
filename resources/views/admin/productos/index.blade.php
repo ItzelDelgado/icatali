@@ -23,7 +23,7 @@
                     </th>
 
                     <th scope="col" class="px-6 py-3">
-                        Descripcion
+                        Otros datos
                     </th>
 
                     <th scope="col" class="px-6 py-3">
@@ -61,14 +61,6 @@
                                 </div>
                             @endif
                         </td>
-                        <td class="px-6 py-4 w-[10%]">
-                            <a class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                href="{{ route('admin.productos.show', $producto) }}">
-                                <i class="fa-solid fa-pencil text-zinc-50 pr-2"></i>
-                                Ver
-                            </a>
-                        </td>
-
                         <td class="px-6 py-4 w-[10%]">
                             <a class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                 href="{{ route('admin.productos.edit', $producto) }}">

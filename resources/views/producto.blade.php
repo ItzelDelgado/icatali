@@ -1,5 +1,17 @@
 <x-app-layout>
 
+    <style>
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+
+        ol {
+            list-style-type:decimal;
+            padding-left: 1.5rem;
+        }
+    </style>
+
     <div class="container grid md:grid-cols-2 md:items-center gap-8 md:mt-20">
         <div id="default-carousel" class="relative w-full md:col-start-2 md:row-start-1" data-carousel="slide">
             <!-- Carousel wrapper -->
@@ -10,15 +22,18 @@
                 </div>
                 <!-- Item 2 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="{{ $producto->image_pa }}" class="absolute inset-0 object-cover w-full h-full" alt="...">
+                    <img src="{{ $producto->image_pa }}" class="absolute inset-0 object-cover w-full h-full"
+                        alt="...">
                 </div>
                 <!-- Item 3 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="{{ $producto->image_izq }}" class="absolute inset-0 object-cover w-full h-full" alt="...">
+                    <img src="{{ $producto->image_izq }}" class="absolute inset-0 object-cover w-full h-full"
+                        alt="...">
                 </div>
                 <!-- Item 4 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="{{ $producto->image_der }}" class="absolute inset-0 object-cover w-full h-full" alt="...">
+                    <img src="{{ $producto->image_der }}" class="absolute inset-0 object-cover w-full h-full"
+                        alt="...">
                 </div>
             </div>
 
@@ -65,7 +80,7 @@
             <div class="flex items-center gap-2 mt-4">
                 @if ($producto->precio_descuento)
                     <p class="font-bold line-through text-gray-500">{{ $producto->precio }} MXN</p>
-                    <p class="font-bold">{{$producto->precio_descuento}} MXN</p>
+                    <p class="font-bold">{{ $producto->precio_descuento }} MXN</p>
                 @else
                     <p class="font-bold">{{ $producto->precio }} MXN</p>
                 @endif
@@ -74,7 +89,7 @@
                 <button class="bg-green-300 font-bold w-fit px-3 py-1 rounded-2xl"><a
                         href="{{ route('contacto.index') }}">Comprar</a></button>
             </div>
-            <p class="mt-4"><span class="font-bold">Descripción:</span> {!! $producto->descripcion !!}</p>
+            <p class="mt-4 descripcion"><span class="font-bold"></span> {!! $producto->descripcion !!}</p>
             <p class="font-bold mt-4">Beneficios:</p>
             @if ($producto->beneficios)
                 <ul class="list-disc pl-6">
@@ -85,12 +100,12 @@
             @endif
             <p class="font-bold mt-4">Ingredientes:</p>
             @if ($producto->ingredientes)
-            <ul class="list-disc pl-6">
-                @foreach (explode(',', $producto->ingredientes) as $ingrediente)
-                    <li>{{ trim($ingrediente) }}</li>
-                @endforeach
-            </ul>
-        @endif
+                <ul class="list-disc pl-6">
+                    @foreach (explode(',', $producto->ingredientes) as $ingrediente)
+                        <li>{{ trim($ingrediente) }}</li>
+                    @endforeach
+                </ul>
+            @endif
         </div>
     </div>
 

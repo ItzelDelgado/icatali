@@ -19,7 +19,7 @@
         </div>
         <div class="mb-4">
             <x-label class="mb-2">
-                Descripción
+                Otros datos
             </x-label>
             <div class="ckeditor">
                 <textarea id="editor" class="border-2 border-solid w-full resize-x overflow-auto h-20" name="descripcion"
