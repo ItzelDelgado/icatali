@@ -28,7 +28,8 @@
             src="{{ asset('img/decoraciones/semillas-2.svg') }}" alt=""> --}}
     </section>
 
-    <img class="block md:hidden h-full object-contain w-36 mx-auto" src="{{ asset('img/flor_icatali.png') }}" alt="">
+    <img class="block md:hidden h-full object-contain w-36 mx-auto" src="{{ asset('img/flor_icatali.png') }}"
+        alt="">
 
     <section class="relative bg-white z-20 p-10 container mx-auto">
         <h2 class="text-3xl bebas-400 font-semibold uppercase text-center bebas">5 beneficios de las legumbres
@@ -62,11 +63,13 @@
     </section>
 
     <section class="relative bg-white z-20 p-10 container mx-auto">
-        <h2 class="text-4xl bebas font-semibold uppercase pb-4 text-center">Productos</h2>
+        <a href="{{ route('productos.index') }}">
+            <h2 class="text-4xl bebas font-semibold uppercase pb-4 text-center hover:underline">Productos</h2>
+        </a>
         <div class="flex flex-col md:flex-row items-center justify-between gap-14">
             @foreach ($productos as $producto)
                 <a href="{{ route('productos.show', $producto) }}">
-                    <div class="text-center pt-4">
+                    <div class="text-center pt-4 hover:shadow-md p-2 rounded-md">
                         <div class="relative hover-trigger"> <!-- Añadir clase 'hover-trigger' aquí -->
                             <img class="mx-auto rounded-full h-56 w-56 darken-on-hover" src="{{ $producto->image_der }}"
                                 alt="">
@@ -88,33 +91,33 @@
         </div>
     </section>
 
-    <div class="h-[14rem] lg:h-[28rem]">
-        <div class="relative h-[12rem]">
-            <img src="{{ asset('img/decoraciones/cilindro_inicio.svg') }}"
-                class="absolute max-w-[39rem] lg:max-w-[62rem] 2xl:max-w-[72rem] right-0" alt="">
-            <h2
-                class="text-4xl bebas font-semibold uppercase text-center relative top-0 lg:top-14 2xl:top-20 flex items-center justify-center h-full">
+    <div class="">
+        <div class="relative w-full md:w-[47rem] lg:w-[56rem] xl:w-[73rem] 2xl:w-[90rem] md:left-[20%] lg:left-[28%] xl:left-[23%] 2xl:left-[25%]">
+            <h2 class="bg-[#DFEEF4] md:rounded-l-full h-44 md:h-60 xl:h-64 text-4xl bebas font-semibold uppercase text-center top-0 lg:top-14 2xl:top-20 flex items-center justify-center">
                 ¿QUÉ <span class="text-3xl bebas"> &nbsp; DICE LA GENTE DE &nbsp; </span> ICATALI?</h2>
         </div>
     </div>
 
-    </div>
 
-    <div class="lg:flex justify-between items-center gap-5 max-w-[1000px] mx-auto hidden">
+    <div class="lg:flex justify-between items-center gap-5 max-w-[1000px] mx-auto hidden mt-14">
+
         @foreach ($comentarios as $comentario)
-            <div
-                class="bg-white flex flex-col justify-center items-center border-t-[1.5rem]
+            <div class="bg-white items-center border-t-[1.5rem]
         border-t-red-700  border-x-2 border-x-red-700 border-b-4 border-b-red-700
-        p-6 py-5 container mx-auto max-w-[500px] h-[37rem]">
-                <img class="w-60" src="{{ $comentario->image }}" alt="">
-                <p><strong>{{ $comentario->alias }}</strong></p>
-                <p>{{ $comentario->comentario }}</p>
+        p-6 py-5 container mx-auto max-w-[500px] h-[37rem] flex flex-col justify-start gap-2 overflow-y-auto">
+                <div class="w-[190px] h-[220px]">
+                    <img class="w-full h-full object-cover object-center" src="{{ $comentario->image }}" alt="">
+                </div>
+                <div>
+                    <p class="text-center"><strong>{{ $comentario->alias }}</strong></p>
+                    <p>{{ $comentario->comentario }}</p>
+                </div>
             </div>
         @endforeach
     </div>
 
 
-    <div id="default-carousel" class="relative w-full lg:hidden" data-carousel="slide">
+    <div id="default-carousel" class="relative w-full lg:hidden mt-10" data-carousel="slide">
         <!-- Carousel wrapper -->
         <div class="relative  h-[36rem] overflow-hidden rounded-lg md:h-96">
             <!-- Item 1 -->
