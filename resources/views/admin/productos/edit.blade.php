@@ -25,7 +25,7 @@
         </div>
         <div class="mb-4">
             <x-label class="mb-2">
-                Slug
+                Slug (Esta será la url de la página del producto. Ej. hamburguesa-vegana)
             </x-label>
             <x-input value="{{ old('slug', $producto->slug) }}" name="slug" class="w-full"
                 placeholder="Escriba el nombre del slug" />
@@ -66,7 +66,9 @@
                 name="precio_descuento" class="w-full" placeholder="Escriba el precio con descuento de este producto" />
         </div>
         <div id="beneficios-container">
-            <p>Beneficios</p>
+            <x-label class="mb-2">
+                Beneficios
+            </x-label>
         </div>
 
         <div class="mb-4">
@@ -78,7 +80,9 @@
         </div>
 
         <div id="ingredientes-container">
-            <p>Ingredientes</p>
+            <x-label class="mb-2">
+                Ingredientes
+            </x-label>
         </div>
 
         <div class="mb-4">
