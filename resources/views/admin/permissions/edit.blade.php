@@ -1,4 +1,8 @@
 <x-admin-layout>
+    @section('title', 'Permisos')
+    <div class="mt-2 mb-4">
+        <h1 class="text-2xl font-medium text-gray-800">Editar permiso</h1>
+    </div>
     <div class="bg-white shadow rounded-lg p-6">
         <form action="{{ route('admin.permissions.update', $permission) }}" method="POST">
             @csrf

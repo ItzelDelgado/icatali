@@ -1,4 +1,9 @@
 <x-admin-layout>
+    @section('title', 'Productos')
+
+    @push('css')
+        <link rel="stylesheet" href="{{ asset('assets/vendor/ckeditor5.css') }}">
+    @endpush
     <div class="m-4">
         <h1 class="text-2xl font-medium text-gray-800">Editar producto</h1>
     </div>
@@ -15,6 +20,16 @@
             <x-input value="{{ old('nombre', $producto->nombre) }}" name="nombre" class="w-full"
                 placeholder="Escriba el nombre del producto" />
             @error('nombre')
+                <div class="text-red-500 text-sm">{{ $message }}</div>
+            @enderror
+        </div>
+        <div class="mb-4">
+            <x-label class="mb-2">
+                Slug
+            </x-label>
+            <x-input value="{{ old('slug', $producto->slug) }}" name="slug" class="w-full"
+                placeholder="Escriba el nombre del slug" />
+            @error('slug')
                 <div class="text-red-500 text-sm">{{ $message }}</div>
             @enderror
         </div>
@@ -47,7 +62,7 @@
             <x-label class="mb-2">
                 Precio con descuento
             </x-label>
-            <x-input value="{{ old('precio_descuento', $producto->descripcion_descuento) }}" type="number"
+            <x-input value="{{ old('precio_descuento', $producto->precio_descuento) }}" type="number" step="0.001"
                 name="precio_descuento" class="w-full" placeholder="Escriba el precio con descuento de este producto" />
         </div>
         <div id="beneficios-container">
@@ -157,6 +172,227 @@
     </form>
 
     @push('js')
+        <script type="module">
+            import {
+                ClassicEditor,
+                AccessibilityHelp,
+                Alignment,
+                Autoformat,
+                AutoImage,
+                Autosave,
+                Bold,
+                CloudServices,
+                Essentials,
+                Heading,
+                ImageBlock,
+                ImageCaption,
+                ImageInline,
+                ImageInsertViaUrl,
+                ImageResize,
+                ImageStyle,
+                ImageTextAlternative,
+                ImageToolbar,
+                ImageUpload,
+                Indent,
+                IndentBlock,
+                Italic,
+                Link,
+                LinkImage,
+                List,
+                ListProperties,
+                Paragraph,
+                PasteFromOffice,
+                SelectAll,
+                Strikethrough,
+                Subscript,
+                Superscript,
+                Table,
+                TableCaption,
+                TableCellProperties,
+                TableColumnResize,
+                TableProperties,
+                TableToolbar,
+                TextTransformation,
+                TodoList,
+                Underline,
+                Undo
+            } from 'ckeditor5';
+
+            ClassicEditor.create(document.querySelector('#editor'), {
+                    // Configuración de plugins
+                    plugins: [
+                        AccessibilityHelp,
+                        Alignment,
+                        Autoformat,
+                        AutoImage,
+                        Autosave,
+                        Bold,
+                        CloudServices,
+                        Essentials,
+                        Heading,
+                        ImageBlock,
+                        ImageCaption,
+                        ImageInline,
+                        ImageInsertViaUrl,
+                        ImageResize,
+                        ImageStyle,
+                        ImageTextAlternative,
+                        ImageToolbar,
+                        ImageUpload,
+                        Indent,
+                        IndentBlock,
+                        Italic,
+                        Link,
+                        LinkImage,
+                        List,
+                        ListProperties,
+                        Paragraph,
+                        PasteFromOffice,
+                        SelectAll,
+                        Strikethrough,
+                        Subscript,
+                        Superscript,
+                        Table,
+                        TableCaption,
+                        TableCellProperties,
+                        TableColumnResize,
+                        TableProperties,
+                        TableToolbar,
+                        TextTransformation,
+                        TodoList,
+                        Underline,
+                        Undo
+                    ],
+
+                    // Configuración de la barra de herramientas
+                    toolbar: {
+                        items: [
+                            'undo',
+                            'redo',
+                            '|',
+                            'heading',
+                            '|',
+                            'bold',
+                            'italic',
+                            'underline',
+                            'strikethrough',
+                            'subscript',
+                            'superscript',
+                            '|',
+                            'link',
+                            'insertTable',
+                            '|',
+                            'alignment',
+                            '|',
+                            'bulletedList',
+                            'numberedList',
+                            'todoList',
+                            'outdent',
+                            'indent'
+                        ],
+                        shouldNotGroupWhenFull: false
+                    },
+
+                    // Configuración adicional
+                    heading: {
+                        options: [{
+                                model: 'paragraph',
+                                title: 'Paragraph',
+                                class: 'ck-heading_paragraph'
+                            },
+                            {
+                                model: 'heading1',
+                                view: 'h1',
+                                title: 'Heading 1',
+                                class: 'ck-heading_heading1'
+                            },
+                            {
+                                model: 'heading2',
+                                view: 'h2',
+                                title: 'Heading 2',
+                                class: 'ck-heading_heading2'
+                            },
+                            {
+                                model: 'heading3',
+                                view: 'h3',
+                                title: 'Heading 3',
+                                class: 'ck-heading_heading3'
+                            },
+                            {
+                                model: 'heading4',
+                                view: 'h4',
+                                title: 'Heading 4',
+                                class: 'ck-heading_heading4'
+                            },
+                            {
+                                model: 'heading5',
+                                view: 'h5',
+                                title: 'Heading 5',
+                                class: 'ck-heading_heading5'
+                            },
+                            {
+                                model: 'heading6',
+                                view: 'h6',
+                                title: 'Heading 6',
+                                class: 'ck-heading_heading6'
+                            }
+                        ]
+                    },
+                    image: {
+                        toolbar: [
+                            'toggleImageCaption',
+                            'imageTextAlternative',
+                            '|',
+                            'imageStyle:inline',
+                            'imageStyle:wrapText',
+                            'imageStyle:breakText',
+                            '|',
+                            'resizeImage'
+                        ]
+                    },
+                    list: {
+                        properties: {
+                            styles: true,
+                            startIndex: true,
+                            reversed: true
+                        }
+                    },
+                    placeholder: 'Type or paste your content here!',
+                    table: {
+                        contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells', 'tableProperties',
+                            'tableCellProperties'
+                        ]
+                    },
+                    language: 'es',
+                    link: {
+                        addTargetToExternalLinks: true,
+                        defaultProtocol: 'https://',
+                        decorators: {
+                            toggleDownloadable: {
+                                mode: 'manual',
+                                label: 'Downloadable',
+                                attributes: {
+                                    download: 'file'
+                                }
+                            }
+                        }
+                    },
+                })
+                .then(editor => {
+                    window.editor = editor;
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        </script>
+        <!-- A friendly reminder to run on a server, remove this during the integration. -->
+        <script>
+            window.onload = function() {
+                if (window.location.protocol === "file:") {
+                    alert("This sample requires an HTTP server. Please serve this file with a web server.");
+                }
+            };
+        </script>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 let container = document.getElementById("ingredientes-container");
@@ -324,12 +560,6 @@
                 }
                 console.log(imagenPrincipalHidden)
             };
-
-            ClassicEditor
-                .create(document.querySelector('#editor'))
-                .catch(error => {
-                    console.error(error);
-                });
         </script>
     @endpush
 

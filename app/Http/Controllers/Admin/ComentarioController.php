@@ -47,7 +47,7 @@ class ComentarioController extends Controller
             // }
             $data['img_path'] = Storage::put('comentarios', $request->image);
         }
-
+        $data['is_active'] = 0; // 0 es inactivo
         Comentario::create($data);
 
         session()->flash(

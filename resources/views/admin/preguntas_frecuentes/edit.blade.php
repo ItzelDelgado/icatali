@@ -1,9 +1,10 @@
 <x-admin-layout>
+    @section('title', 'Preguntas Frecuentes')
     <div class="m-4">
-        <h1 class="text-2xl font-medium text-gray-800">Editar comentario</h1>
+        <h1 class="text-2xl font-medium text-gray-800">Editar pregunta frecuente</h1>
     </div>
-    <form action="{{ route('admin.preguntas_frecuentes.update', $preguntaFrecuente) }}" 
-    method="POST" 
+    <form action="{{ route('admin.preguntas_frecuentes.update', $preguntaFrecuente) }}"
+    method="POST"
         class="bg-white rounded-lg p-6 shadow-lg">
         @csrf
         @method('PUT')

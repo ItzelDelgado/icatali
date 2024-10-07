@@ -14,7 +14,7 @@
             'url' => route('admin.comentarios.index'),
             'active' => request()->routeIs('admin.comentarios.*'),
             'icon' => 'fa-solid fa-comments',
-            // 'can' => 'gestionar comentarios',
+            'can' => 'gestionar comentarios',
         ],
         [
             //Informacion acerca del enlace
@@ -22,7 +22,7 @@
             'url' => route('admin.preguntas_frecuentes.index'),
             'active' => request()->routeIs('admin.preguntas_frecuentes.*'),
             'icon' => 'fa-solid fa-circle-question',
-            // 'can' => 'gestionar preguntas frecuentes',
+            'can' => 'gestionar preguntas frecuentes',
         ],
         [
             //Informacion acerca del enlace
@@ -30,7 +30,7 @@
             'url' => route('admin.productos.index'),
             'active' => request()->routeIs('admin.productos.*'),
             'icon' => 'fa-solid fa-seedling',
-            // 'can' => 'gestionar productos',
+            'can' => 'gestionar productos',
         ],
         [
             //Informacion acerca del enlace
@@ -38,7 +38,7 @@
             'url' => route('admin.users.index'),
             'active' => request()->routeIs('admin.users.*'),
             'icon' => 'fa-solid fa-user',
-            // 'can' => 'gestionar usuarios',
+            'can' => 'gestionar usuarios',
         ],
         [
             //Informacion acerca del enlace
@@ -46,7 +46,7 @@
             'url' => route('admin.roles.index'),
             'active' => request()->routeIs('admin.roles.*'),
             'icon' => 'fa-solid fa-user-tag',
-            // 'can' => 'gestionar roles',
+            'can' => 'gestionar roles',
         ],
         [
             //Informacion acerca del enlace
@@ -54,22 +54,8 @@
             'url' => route('admin.permissions.index'),
             'active' => request()->routeIs('admin.permissions.*'),
             'icon' => 'fa-solid fa-key',
-            // 'can' => 'gestionar permisos',
+            'can' => 'gestionar permisos',
         ],
-        // [
-        //     //Informacion acerca del enlace
-        //     'name' => 'Medicamentos',
-        //     'url' => route('admin.medicines.index'),
-        //     'active' => request()->routeIs('admin.medicines.*'),
-        //     'icon' => 'fa-solid fa-prescription-bottle',
-        // ],
-        // [
-        //     //Informacion acerca del enlace
-        //     'name' => 'Solicitudes',
-        //     'url' => route('admin.solicitudes.index'),
-        //     'active' => request()->routeIs('admin.solicitudes.*'),
-        //     'icon' => 'fa-solid fa-file-import',
-        // ],
     ];
 @endphp
 <aside id="logo-sidebar"
@@ -82,7 +68,7 @@
         <ul class="space-y-2 font-medium">
 
             @foreach ($links as $link)
-                {{-- @can($link['can']) --}}
+                @can($link['can'])
                     <li>
                         <a href="{{ $link['url'] }}"
                             class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group {{ $link['active'] ? 'bg-gray-100' : '' }}">
@@ -98,7 +84,7 @@
                             <span class="ms-3">{{ $link['name'] }}</span>
                         </a>
                     </li>
-                {{-- @endcan --}}
+                @endcan
             @endforeach
         </ul>
     </div>

@@ -1,4 +1,5 @@
 <x-admin-layout>
+    @section('title', 'Usuarios')
     <div class="mt-2">
         <h1 class="text-2xl font-medium text-gray-800">Lista de Usuarios</h1>
     </div>
@@ -21,7 +22,7 @@
                         Nombre
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Email
+                        Nombre de Usuario
                     </th>
                     <th scope="col" class="px-6 py-3">
                         Roles

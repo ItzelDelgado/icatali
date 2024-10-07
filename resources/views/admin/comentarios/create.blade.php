@@ -1,4 +1,5 @@
 <x-admin-layout>
+    @section('title', 'Comentarios')
     <div class="mt-2 mb-4">
         <h1 class="text-2xl font-medium text-gray-800">Agregar nuevo comentario</h1>
     </div>

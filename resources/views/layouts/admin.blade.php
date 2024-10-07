@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <script type="importmap">
+        {
+            "imports": {
+                "ckeditor5": "/assets/vendor/ckeditor5.js",
+                "ckeditor5/": "/assets/vendor/"
+            }
+        }
+    </script>
     {{-- Font Awesome --}}
     <script src="https://kit.fontawesome.com/b023f039d3.js" crossorigin="anonymous"></script>
     <!-- Scripts -->
@@ -52,8 +60,11 @@
         </script>
     @endif
 
-    <script src="{{asset('assets/ckeditor/ckeditor.js')}}"></script>
+
+
+
     @stack('js')
+
 </body>
 
 </html>

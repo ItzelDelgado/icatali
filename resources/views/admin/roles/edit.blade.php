@@ -1,4 +1,8 @@
 <x-admin-layout>
+    @section('title', 'Roles')
+    <div class="mt-2 mb-4">
+        <h1 class="text-2xl font-medium text-gray-800">Editar rol</h1>
+    </div>
     <div class="bg-white shadow rounded-lg p-6">
         <form action="{{ route('admin.roles.update', $role) }}" method="POST">
             @csrf

@@ -30,6 +30,12 @@
             'url' => route('contacto.index'),
             'active' => request()->routeIs('contacto.index'),
         ],
+        [
+            //Informacion acerca del enlace
+            'name' => 'CREDITOS',
+            'url' => route('creditos'),
+            'active' => request()->routeIs('creditos'),
+        ],
         // [
         //     //Informacion acerca del enlace
         //     'name' => 'SOBRE NOSOTROS',

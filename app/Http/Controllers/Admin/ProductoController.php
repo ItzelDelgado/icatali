@@ -36,6 +36,7 @@ class ProductoController extends Controller
         //return $request->all();
         $request->validate(([
             'nombre' => 'required|string',
+            'slug' => 'required|unique:productos',
             'descripcion' => 'required|string|max:2500',
             'precio' => 'required|numeric',
             'precio_descuento' => 'nullable|numeric',
@@ -119,7 +120,6 @@ class ProductoController extends Controller
             // }
             $data['img_path_der'] = Storage::put('productos', $request->imageDer);
         }
-
         Producto::create($data);
 
         session()->flash(
@@ -160,6 +160,7 @@ class ProductoController extends Controller
         //return $request->all();
         $request->validate(([
             'nombre' => 'required|string',
+            'slug' => 'required|unique:productos,slug,' . $producto->id,
             'descripcion' => 'required|string|max:2500',
             'precio' => 'required|numeric',
             'precio_descuento' => 'nullable|numeric',

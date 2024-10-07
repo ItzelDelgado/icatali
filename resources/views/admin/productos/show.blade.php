@@ -1,4 +1,5 @@
-<x-admin-layout>
+{{-- <x-admin-layout>
+    @section('title', 'Productos')
     <div class="m-4">
         <h1 class="text-2xl font-medium text-gray-800">Editar producto</h1>
     </div>
@@ -160,4 +161,4 @@
         </script>
     @endpush
 
-</x-admin-layout>
+</x-admin-layout> --}}

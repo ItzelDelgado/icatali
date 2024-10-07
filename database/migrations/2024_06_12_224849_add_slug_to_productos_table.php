@@ -12,7 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('productos', function (Blueprint $table) {
-            $table->string('slug')->unique()->after('img_path_der'); // Añade 'slug' después de 'img_path_der'
+            if (!Schema::hasColumn('productos', 'slug')) {  // Verificar si la columna no existe
+                $table->string('slug')->unique()->after('img_path_der'); // Añade 'slug' después de 'img_path_der'
+            }
         });
     }
 
@@ -22,7 +24,9 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('productos', function (Blueprint $table) {
-            $table->dropColumn('slug'); // Elimina la columna 'slug' en caso de rollback
+            if (Schema::hasColumn('productos', 'slug')) {  // Verificar si la columna existe antes de eliminarla
+                $table->dropColumn('slug'); // Elimina la columna 'slug' en caso de rollback
+            }
         });
     }
 };

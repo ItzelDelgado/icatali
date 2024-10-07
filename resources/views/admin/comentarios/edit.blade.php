@@ -1,4 +1,5 @@
 <x-admin-layout>
+    @section('title', 'Comentarios')
     <div class="m-4">
         <h1 class="text-2xl font-medium text-gray-800">Editar comentario</h1>
     </div>
@@ -34,25 +35,25 @@
                     <input type="file" accept="image/*" name="image" class="hidden"
                         onchange="previewImage(event, '#imgPreview')">
                 </label>
-                {{-- <img class="py-2" id="imgPreview"> 
+                {{-- <img class="py-2" id="imgPreview">
             </div>
         </div> --}}
-        {{-- 
+        {{--
         <div class="mb-4">
 
             <div class="absolute top-8 right-8">
                 <label class="bg-white px-4 py-2 rounded-lg">
                     <i class="fa-solid fa-camera px-3 py-2 mr-2 cursor-pointer"></i>
                     Agregar imagen
-                    <input type="file" accept="image/*" 
-                    name="image" 
+                    <input type="file" accept="image/*"
+                    name="image"
                     class="hidden"
                     onchange="previewImage(event, '#imgPreview')">
                 </label>
             </div>
             <figure>
-                <img class="aspect-[16/9] object-cover object-center bg-slate-500" 
-                src="{{$comentario->image}}" 
+                <img class="aspect-[16/9] object-cover object-center bg-slate-500"
+                src="{{$comentario->image}}"
                 alt=""
                 id="imgPreview">
             </figure>

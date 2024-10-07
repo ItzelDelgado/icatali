@@ -1,9 +1,10 @@
 <x-admin-layout>
+    @section('title', 'Preguntas Frecuentes')
     <div class="mt-2 mb-4">
         <h1 class="text-2xl font-medium text-gray-800">Agregar nueva pregunta</h1>
     </div>
-    <form action="{{ route('admin.preguntas_frecuentes.store') }}" 
-    method="POST" 
+    <form action="{{ route('admin.preguntas_frecuentes.store') }}"
+    method="POST"
     class="bg-white rounded-lg p-6 shadow-lg">
         @csrf
 
@@ -28,5 +29,5 @@
             </x-button>
         </div>
     </form>
-   
+
 </x-admin-layout>

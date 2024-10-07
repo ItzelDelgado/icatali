@@ -14,7 +14,7 @@
                         </path>
                     </svg>
                 </button>
-                <a href="/" class="flex ms-2 md:me-24">
+                <a href="{{ url('/admin') }}" class="flex ms-2 md:me-24">
                     {{-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="CBTA" /> --}}
                     {{-- <span class="self-center text-xl font-semibold sm:text-2xl whitespace-now rap">CBTA</span> --}}
                     <img class="w-28 md:w-28" src="{{ asset('img/icatali_logo.png') }}" alt="">

@@ -1,4 +1,5 @@
 <x-admin-layout>
+    @section('title', 'Comentarios')
     <div class="mt-2">
         <h1 class="text-2xl font-medium text-gray-800">Comentarios</h1>
     </div>

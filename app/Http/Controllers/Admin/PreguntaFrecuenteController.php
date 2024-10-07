@@ -34,7 +34,7 @@ class PreguntaFrecuenteController extends Controller
             'pregunta' => 'required|string',
             'respuesta' => 'required|string|max:1500',
         ]));
-        
+        $request['is_active'] = 0; // 0 es inactivo
         PreguntaFrecuente::create($request->all());
         session()->flash(
             'swal',

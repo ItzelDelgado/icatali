@@ -1,4 +1,5 @@
 <x-admin-layout>
+    @section('title', 'Productos')
     <div class="mt-2">
         <h1 class="text-2xl font-medium text-gray-800">Productos</h1>
     </div>
@@ -31,7 +32,7 @@
                     </th>
 
                     <th scope="col" class="px-6 py-3">
-                        Detalles
+
                     </th>
                 </tr>
             </thead>

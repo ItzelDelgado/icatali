@@ -22,7 +22,8 @@ class Producto extends Model
         'img_path_paquete',
         'img_path_izq',
         'img_path_der',
-        'is_active'
+        'is_active',
+        'slug',
     ];
 
     protected function image(): Attribute

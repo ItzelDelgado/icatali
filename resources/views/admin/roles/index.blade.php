@@ -1,5 +1,5 @@
 <x-admin-layout>
-
+    @section('title', 'Roles')
     <div class="flex justify-end mb-4">
         <a class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             href="{{ route('admin.roles.create') }}">
@@ -14,11 +14,11 @@
                         ID
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Pregunta
+                        Nombre de rol
                     </th>
 
                     <th scope="col" class="px-6 py-3">
-                        Respuesta
+
                     </th>
                 </tr>
             </thead>

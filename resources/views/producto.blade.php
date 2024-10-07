@@ -79,10 +79,10 @@
             <h2 class="font-bold text-2xl md:text-4xl mt-4">{{ $producto->nombre }}</h2>
             <div class="flex items-center gap-2 mt-4">
                 @if ($producto->precio_descuento)
-                    <p class="font-bold line-through text-gray-500">{{ $producto->precio }} MXN</p>
-                    <p class="font-bold">{{ $producto->precio_descuento }} MXN</p>
+                    <p class="font-bold line-through text-gray-500">$ {{ $producto->precio }} MXN</p>
+                    <p class="font-bold">$ {{ $producto->precio_descuento }} MXN</p>
                 @else
-                    <p class="font-bold">{{ $producto->precio }} MXN</p>
+                    <p class="font-bold">$ {{ $producto->precio }} MXN</p>
                 @endif
 
 

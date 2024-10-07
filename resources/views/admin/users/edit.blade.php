@@ -1,7 +1,7 @@
 <x-admin-layout>
-    <p>Editar Usario</p>
+    @section('title', 'Usuarios')
     <div class="mt-2 mb-4">
-        <h1 class="text-2xl font-medium text-gray-800">Agregar nuevo Usuario</h1>
+        <h1 class="text-2xl font-medium text-gray-800">Editar usuario</h1>
     </div>
     <form action="{{ route('admin.users.update', $user) }}" method="POST" class="bg-white rounded-lg p-6 shadow-lg">
         @csrf
@@ -17,7 +17,7 @@
         </div>
         <div class="mb-4">
             <x-label class="mb-2">
-                email
+                Nombre de Usuario
             </x-label>
             <x-input value="{{ old('email', $user->email) }}" name="email" class="w-full"
                 placeholder="Escriba el correo del usuario" />
@@ -39,24 +39,56 @@
         <div class="mb-4">
             <ul>
                 @foreach ($roles as $role)
-                <li>
-                    <label>
-                        <input
-                        type="checkbox"
-                        name="roles[]"
-                        value="{{ $role->id }}"
-                        class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500"
-                        >
-                        {{ $role->name }}
-                    </label>
-                </li>
+                    @if (!(auth()->user()->roles->contains('name', 'Administrador') && $role->name == 'Super Administrador'))
+                        <li>
+                            <label>
+                                <input type="checkbox" name="roles[]" value="{{ $role->id }}"
+                                    {{ in_array($role->id, old('roles', $user->roles->pluck('id')->toArray())) ? 'checked' : '' }}
+                                    class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500 role-checkbox">
+                                {{ $role->name }}
+                            </label>
+                        </li>
+                    @endif
                 @endforeach
             </ul>
         </div>
+        <div class="mb-4">
+            <x-label class="mb-2">
+                Estado
+            </x-label>
+            <!-- Input hidden para enviar valor 0 cuando el checkbox no esté marcado -->
+            <input name="is_active" type="hidden" value="0">
+            <label class="relative inline-flex items-center cursor-pointer">
+                <!-- Checkbox para activar/desactivar usuario -->
+                <input name="is_active" type="checkbox" value="1" class="sr-only peer"
+                    @checked(old('is_active', $user->is_active) == 1)>
+                <div
+                    class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                </div>
+                <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Activar</span>
+            </label>
+        </div>
+
         <div class="flex justify-end">
             <x-button>
                 Editar usuario
             </x-button>
         </div>
     </form>
+
+    @push('js')
+        <script>
+            document.querySelectorAll('.role-checkbox').forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.querySelectorAll('.role-checkbox').forEach(otherCheckbox => {
+                            if (otherCheckbox !== this) {
+                                otherCheckbox.checked = false;
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+    @endpush
 </x-admin-layout>

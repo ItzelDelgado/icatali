@@ -1,52 +1,61 @@
-.ckeditor ul, ol {
+.ckeditor ul,ol {
     padding: 0;
-    list-style: none;
+    list-style: none
 }
 
 .ckeditor li {
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
-.ckeditor ol > li::before {
+.ckeditor ol>li:before {
     content: counter(item) ". ";
     counter-increment: item;
-    margin-right: 8px; /* Ajusta el espacio entre el número y el texto */
+    margin-right: 8px
 }
 
 .ckeditor ol {
-    counter-reset: item;
+    counter-reset: item
 }
 
-.ckeditor ul > li::before {
-    content: "• "; /* Puedes cambiar "•" por cualquier otro carácter de viñeta */
-    margin-right: 8px; /* Ajusta el espacio entre la viñeta y el texto */
+.ckeditor ul>li:before {
+    content: "• ";
+    margin-right: 8px
 }
 
 .ckeditor a {
-    @apply text-blue-500 visited:text-purple-600 hover:text-blue-500 underline;
+    --tw-text-opacity: 1;
+    color: rgb(63 131 248 / var(--tw-text-opacity));
+    text-decoration-line: underline
+}
+
+.ckeditor a:visited {
+    color: #7e3af2
+}
+
+.ckeditor a:hover {
+    --tw-text-opacity: 1;
+    color: rgb(63 131 248 / var(--tw-text-opacity))
 }
 
 .ckeditor h2 {
-    @apply text-2xl font-bold;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700
 }
 
 .ckeditor h3 {
-    @apply text-xl font-semibold;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600
 }
 
 .ckeditor h4 {
-    @apply text-lg font-semibold;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600
 }
 
-.ckeditor ul,
-.ckeditor ol,
-.ckeditor p,
-.ckeditor h2,
-.ckeditor h3,
-.ckeditor h4 {
-    @apply mb-4;
+.ckeditor ul,.ckeditor ol,.ckeditor p,.ckeditor h2,.ckeditor h3,.ckeditor h4 {
+    margin-bottom: 1rem
 }
-
-
-

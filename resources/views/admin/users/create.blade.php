@@ -1,6 +1,7 @@
 <x-admin-layout>
+    @section('title', 'Usuarios')
     <div class="mt-2 mb-4">
-        <h1 class="text-2xl font-medium text-gray-800">Agregar nuevo Usuario</h1>
+        <h1 class="text-2xl font-medium text-gray-800">Agregar nuevo usuario</h1>
     </div>
     <form action="{{ route('admin.users.store') }}" method="POST" class="bg-white rounded-lg p-6 shadow-lg">
         @csrf
@@ -16,7 +17,7 @@
         </div>
         <div class="mb-4">
             <x-label class="mb-2">
-                Email
+                Nombre de Usuario
             </x-label>
             <x-input value="{{ old('email') }}" name="email" class="w-full"
                 placeholder="Escriba el nombre del usuario" />
@@ -40,7 +41,8 @@
                 @foreach ($roles as $role)
                     <li>
                         <label for="">
-                            <x-checkbox type="checkbox" name="roles[]" value="{{ $role->id }}" :checked="in_array($role->id, old('roles', []))" />
+                            <x-checkbox type="checkbox" name="roles[]" class="role-checkbox" value="{{ $role->id }}"
+                                :checked="in_array($role->id, old('roles', []))" />
                             {{ $role->name }}
                         </label>
                     </li>
@@ -53,4 +55,22 @@
             </x-button>
         </div>
     </form>
+
+    @push('js')
+        <script>
+            document.querySelectorAll('.role-checkbox').forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.querySelectorAll('.role-checkbox').forEach(otherCheckbox => {
+                            if (otherCheckbox !== this) {
+                                otherCheckbox.checked = false;
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+    @endpush
+
+
 </x-admin-layout>

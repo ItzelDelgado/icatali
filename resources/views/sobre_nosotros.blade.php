@@ -17,14 +17,14 @@
             flex justify-center items-center">
             <div>
                 <h2 class="text-2xl bebas font-semibold uppercase mb-4">¿QUIÉNES SOMOS?</h2>
-                <p>En ICATALI ofrecemos productos que se caracterizan por poseer un alto contenido de proteína de origen
-                    vegetal digerible, que se diseñaron un enfoque emocional, nutrimental y funcional con soporte
+                <p>En ICATALI ofrecemos productos que se caracterizan por tener un alto contenido de proteína de origen
+                    vegetal digerible. Se diseñaron con un enfoque emocional, nutrimental y funcional con soporte
                     técnico y
                     científico</p>
                 <h2 class="text-2xl bebas font-semibold uppercase my-4">Compromiso con la Nutrición Sostenible</h2>
                 <p>En ICATALI, estamos comprometidos con la nutrición sostenible. Nuestros productos se destacan por su
                     alto
-                    contenido de proteínas de origen vegetal digeribles, un paso audaz hacia un futuro alimentario más
+                    contenido de proteínas de origen vegetal digeribles, un paso seguro hacia un futuro alimentario más
                     consciente y equilibrado.</p>
                 <h2 class="text-2xl bebas font-semibold uppercase my-4">Diseño Emocional, Nutricional y Funcional</h2>
                 <p>Cada producto ICATALI se ha diseñado con un enfoque integral. Más allá de nutrir tu cuerpo, nos
@@ -58,13 +58,13 @@
         <div class="relative">
             <div class="container max-w-[800px] relative z-20">
                 <h2 class="text-2xl bebas font-semibold uppercase mb-4">¿QUIÉNES SOMOS?</h2>
-                <p>En ICATALI ofrecemos productos que se caracterizan por poseer un alto contenido de proteína de origen
-                    vegetal digerible, que se diseñaron un enfoque emocional, nutrimental y funcional con soporte
+                <p>En ICATALI ofrecemos productos que se caracterizan por tener un alto contenido de proteína de origen
+                    vegetal digerible. Se diseñaron con un enfoque emocional, nutrimental y funcional con soporte
                     técnico y
                     científico</p>
                 <h2 class="text-2xl bebas font-semibold uppercase my-4">Compromiso con la Nutrición Sostenible</h2>
                 <p>En ICATALI, estamos comprometidos con la nutrición sostenible. Nuestros productos se destacan por su
-                    alto contenido de proteínas de origen vegetal digeribles, un paso audaz hacia un futuro alimentario
+                    alto contenido de proteínas de origen vegetal digeribles, un paso seguro hacia un futuro alimentario
                     más consciente y equilibrado.</p>
                 <h2 class="text-2xl bebas font-semibold uppercase my-4">Diseño Emocional, Nutricional y Funcional</h2>
                 <p>Cada producto ICATALI se ha diseñado con un enfoque integral. Más allá de nutrir tu cuerpo, nos

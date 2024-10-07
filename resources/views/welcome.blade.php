@@ -36,7 +36,7 @@
         </h2>
         <div class="flex justify-center items-center">
             <ul class="text-lg p-3 list-image-checkmark">
-                <li>Mejoraran la salud</li>
+                <li>Mejoran la salud</li>
                 <li>Son cultivos limpios</li>
                 <li>Larga vida útil</li>
                 <li>Cero desperdicio</li>

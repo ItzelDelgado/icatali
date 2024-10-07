@@ -16,13 +16,23 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::select('id', 'name', 'email')
-            ->with('roles:name') // Cargar los roles de los usuarios
-            ->paginate();
+        $query = User::select('id', 'name', 'email')
+            ->with('roles:name'); // Cargar los roles de los usuarios
 
-        //return $users;
+        // Verificar si el usuario autenticado tiene el rol "Administrador"
+        $user = auth()->user();
+        if ($user->roles->contains('name', 'Administrador')) {
+            // Excluir usuarios con el rol "Super Administrador"
+            $query->whereDoesntHave('roles', function ($q) {
+                $q->where('name', 'Super Administrador');
+            });
+        }
+
+        $users = $query->paginate();
+
         return view('admin.users.index', compact('users'));
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -90,41 +100,33 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $request->validate(([
+        $request->validate([
             'name' => 'string|max:255',
-            'email' => 'string|max:255',
+            'email' => "string|max:255|unique:users,email,{$user->id}",
             'password' => 'nullable|string|confirmed',
-        ]));
+        ]);
 
-        $us_bd = User::find($user->id);
-
+        $user->is_active = $request->is_active;
+        // Actualizar el estado de is_active
         $user->name = $request->name;
         $user->email = $request->email;
 
         if ($request->password) {
             $user->password = bcrypt($request->password);
-        } else {
-            $user->password = $us_bd->password;
         }
 
         $user->save();
-        // if ($request->filled('password')) {
-        //     $password = Hash::make($request->password);
-        //     $request->merge(['password' => $password]);
-        // }
-        //User::create($request->all());
         $user->roles()->sync($request->roles);
 
-        // $user->update($request->all());
         session()->flash(
             'swal',
             [
                 'title' => "¡Bien hecho!",
                 'text' => "El usuario se ha editado con éxito.",
                 'icon' => "success"
-
             ]
         );
+
         return redirect()->route('admin.users.index');
     }
 

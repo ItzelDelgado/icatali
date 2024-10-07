@@ -27,6 +27,10 @@ Route::get('/productos', function () {
     return view('productos');
 })->name('productos');
 
+Route::get('/creditos', function () {
+    return view('creditos');
+})->name('creditos');
+
 // Route::get('/preguntas-frecuentes', function () {
 //     return view('preguntas_frecuentes');
 // })->name('preguntas_frecuentes');
