@@ -24,7 +24,7 @@
         </div>
         <div class="mb-4">
             <x-label class="mb-2">
-                Slug
+                Slug (Esta será la url de la página del producto. Ej. hamburguesa-vegana)
             </x-label>
             <x-input value="{{ old('slug') }}" name="slug" class="w-full"
                 placeholder="Escriba el nombre del slug" />
@@ -73,7 +73,7 @@
             <x-label class="mb-2">
                 Precio
             </x-label>
-            <x-input value="{{ old('precio') }}" type="number" step="0.001" name="precio" class="w-full"
+            <x-input value="{{ old('precio') }}" type="number" step="0.001" name="precio" class="w-72"
                 placeholder="Escriba el precio de este producto" />
             @error('precio')
                 <div class="text-red-500 text-sm">{{ $message }}</div>
@@ -85,7 +85,7 @@
                 Precio con descuento
             </x-label>
             <x-input value="{{ old('precio_descuento') }}" type="number" step="0.001" name="precio_descuento"
-                class="w-full" placeholder="Escriba el precio con descuento de este producto" />
+                class="w-72" placeholder="Escriba el precio con descuento de este producto" />
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 max-w-[800px] mx-auto gap-3">
@@ -119,7 +119,7 @@
                 </label>
                 <img class="image-preview py-2 w-full h-[350px] object-cover" id="imgPreviewEmpaque">
                 <div class="text-sm">
-                    <p>Esta imagen se carga en la información detalla del producto</p>
+                    <p>Esta imagen se carga en la información detallada del producto</p>
                 </div>
                 <button type="button" onclick="removeImagePreview('#imgPreviewEmpaque', 'imageEmpaque')"
                     class="text-red-500">Eliminar
@@ -137,7 +137,7 @@
                 </label>
                 <img class="image-preview py-2 w-full h-[350px] object-cover" id="imgPreviewIzq">
                 <div class="text-sm">
-                    <p>Esta imagen se carga en la información detalla del producto</p>
+                    <p>Esta imagen se carga en la información detallada del producto</p>
                 </div>
                 <button type="button" onclick="removeImagePreview('#imgPreviewIzq', 'imageIzq')"
                     class="text-red-500">Eliminar

@@ -16,7 +16,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $query = User::select('id', 'name', 'email')
+        $query = User::select('id', 'name', 'email','is_active')
             ->with('roles:name'); // Cargar los roles de los usuarios
 
         // Verificar si el usuario autenticado tiene el rol "Administrador"

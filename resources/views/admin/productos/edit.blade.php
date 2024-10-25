@@ -52,7 +52,7 @@
                 Precio
             </x-label>
             <x-input value="{{ old('precio', $producto->precio) }}" type="number" step="0.001" name="precio"
-                class="w-full" placeholder="Escriba el precio de este producto" />
+                class="w-72" placeholder="Escriba el precio de este producto" />
             @error('precio')
                 <div class="text-red-500 text-sm">{{ $message }}</div>
             @enderror
@@ -63,7 +63,7 @@
                 Precio con descuento
             </x-label>
             <x-input value="{{ old('precio_descuento', $producto->precio_descuento) }}" type="number" step="0.001"
-                name="precio_descuento" class="w-full" placeholder="Escriba el precio con descuento de este producto" />
+                name="precio_descuento" class="w-72" placeholder="Escriba el precio con descuento de este producto" />
         </div>
         <div id="beneficios-container">
             <x-label class="mb-2">
@@ -98,12 +98,15 @@
                 <label
                     class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
                     <i class="fa-solid fa-camera px-3 py-2"></i>
-                    Actualizar imagen principal
+                    Imagen sin fondo
                     <input type="hidden" id="imagePrincipal_hidden" value="">
                     <input type="file" accept="image/*" id="imagePrincipal" name="imagePrincipal" class="hidden"
                         onchange="previewImage(event, '#imgPreviewPrincipal')">
                 </label>
                 <img src="{{ $producto->image }}" class="py-2 w-full h-[350px] object-cover" id="imgPreviewPrincipal">
+                <div class="text-sm">
+                    <p>Esta imagen se carga en la página de productos.</p>
+                </div>
                 <button type="button" onclick="removeImagePreview('#imgPreviewPrincipal', 'imagePrincipal')"
                     class="text-red-500">Eliminar
                     imagen</button>
@@ -114,11 +117,14 @@
                 <label
                     class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
                     <i class="fa-solid fa-camera px-3 py-2"></i>
-                    Actualizar imagen de empaque
+                    Primera imagen de empaque
                     <input type="file" accept="image/*" id="imageEmpaque" name="imageEmpaque" class="hidden"
                         onchange="previewImage(event, '#imgPreviewEmpaque')">
                 </label>
                 <img src="{{ $producto->image_pa }}" class="py-2 w-full h-[350px] object-cover" id="imgPreviewEmpaque">
+                <div class="text-sm">
+                    <p>Esta imagen se carga en la información detallada del producto</p>
+                </div>
                 <button type="button" onclick="removeImagePreview('#imgPreviewEmpaque', 'imageEmpaque')"
                     class="text-red-500">Eliminar
                     imagen</button>
@@ -129,11 +135,14 @@
                 <label
                     class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
                     <i class="fa-solid fa-camera px-3 py-2"></i>
-                    Actualizar imagen de lateral izquierdo
+                    Segunda imagen de empaque
                     <input type="file" accept="image/*" id="imageIzq" name="imageIzq" class="hidden"
                         onchange="previewImage(event, '#imgPreviewIzq')">
                 </label>
                 <img src="{{ $producto->image_izq }}" class="py-2 w-full h-[350px] object-cover" id="imgPreviewIzq">
+                <div class="text-sm">
+                    <p>Esta imagen se carga en la información detallada del producto</p>
+                </div>
                 <button type="button" onclick="removeImagePreview('#imgPreviewIzq', 'imageIzq')"
                     class="text-red-500">Eliminar
                     imagen</button>
@@ -142,11 +151,14 @@
                 <label
                     class="bg-slate-700 text-white px-4 py-0 rounded-lg cursor-pointer flex items-center justify-center p-0">
                     <i class="fa-solid fa-camera px-3 py-2"></i>
-                    Actualizar imagen de lateral derecho
+                    Imagen de portada
                     <input type="file" accept="image/*" id="imageDer" name="imageDer" class="hidden"
                         onchange="previewImage(event, '#imgPreviewDer')">
                 </label>
                 <img src="{{ $producto->image_der }}" class="py-2 w-full h-[350px] object-cover" id="imgPreviewDer">
+                <div class="text-sm">
+                    <p>Esta imagen se carga en la página de inicio del sitio web (página principal)</p>
+                </div>
                 <button type="button" onclick="removeImagePreview('#imgPreviewDer', 'imageDer')"
                     class="text-red-500">Eliminar
                     imagen</button>

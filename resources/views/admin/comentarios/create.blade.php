@@ -38,6 +38,11 @@
                 Crear comentario
             </x-button>
         </div>
+        <div class="flex justify-end mt-4">
+            <p class="w-72 text-xs  text-gray-600">Nota: Al crear un nuevo comentario, este se generará en un
+                estado inactivo por defecto. Para publicarlo, deberá
+                editar el comentario y cambiar el estado a activo.</p>
+        </div>
     </form>
     @push('js')
         <script>

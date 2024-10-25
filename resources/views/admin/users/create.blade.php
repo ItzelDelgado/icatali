@@ -39,13 +39,15 @@
         <div class="mb-4">
             <ul>
                 @foreach ($roles as $role)
-                    <li>
-                        <label for="">
-                            <x-checkbox type="checkbox" name="roles[]" class="role-checkbox" value="{{ $role->id }}"
-                                :checked="in_array($role->id, old('roles', []))" />
-                            {{ $role->name }}
-                        </label>
-                    </li>
+                    @if (auth()->user()->roles->contains('name', 'Super Administrador') || $role->name != 'Super Administrador')
+                        <li>
+                            <label for="" class="flex items-center gap-2">
+                                <x-checkbox type="checkbox" name="roles[]" class="role-checkbox"
+                                    value="{{ $role->id }}" :checked="in_array($role->id, old('roles', []))" />
+                                {{ $role->name }}
+                            </label>
+                        </li>
+                    @endif
                 @endforeach
             </ul>
         </div>

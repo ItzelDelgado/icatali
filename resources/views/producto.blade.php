@@ -86,8 +86,7 @@
                 @endif
 
 
-                <button class="bg-green-300 font-bold w-fit px-3 py-1 rounded-2xl"><a
-                        href="{{ route('contacto.index') }}">Comprar</a></button>
+                <button class="bg-green-300 font-bold w-fit px-3 py-1 rounded-2xl"><a href="https://api.whatsapp.com/send?phone=5215532110142&text=Hola!%2C%20¿Me%20gustaría%20recibir%20mas%20información%3F">Comprar</a></button>
             </div>
             <p class="mt-4 descripcion"><span class="font-bold"></span> {!! $producto->descripcion !!}</p>
             <p class="font-bold mt-4">Beneficios:</p>

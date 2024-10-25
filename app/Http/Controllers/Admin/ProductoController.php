@@ -120,6 +120,8 @@ class ProductoController extends Controller
             // }
             $data['img_path_der'] = Storage::put('productos', $request->imageDer);
         }
+
+        $data['is_active'] = 0;
         Producto::create($data);
 
         session()->flash(

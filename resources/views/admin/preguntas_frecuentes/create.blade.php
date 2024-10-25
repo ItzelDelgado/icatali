@@ -28,6 +28,11 @@
                 Agregar pregunta
             </x-button>
         </div>
+        <div class="flex justify-end mt-4">
+            <p class="w-72 text-xs  text-gray-600">Nota: Al crear una nueva pregunta frecuente, esta se generará en un
+                estado inactivo por defecto. Para publicarla, deberá
+                editar la pregunta frecuente y cambiar el estado a activo.</p>
+        </div>
     </form>
 
 </x-admin-layout>
