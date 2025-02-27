@@ -38,5 +38,5 @@ Route::resource('/productos', ProductoController::class);
 
 Route::resource('/roles', RoleController::class);
     // ->middleware(['can:gestionar roles']);
-Route::resource('/permissions', PermissionController::class);
+// Route::resource('/permissions', PermissionController::class);
     // ->middleware(['can:gestionar permisos']);

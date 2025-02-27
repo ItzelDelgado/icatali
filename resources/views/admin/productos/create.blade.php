@@ -162,7 +162,9 @@
                     imagen</button>
             </div>
         </div>
-        <div class="flex justify-end">
+        <div class="flex gap-8 justify-end">
+            <a class="inline-flex items-center px-4 py-2 bg-red-500 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-600 focus:bg-red-600 active:bg-red-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150"
+                href="{{ route('admin.productos.index') }}">Cancelar</a>
             <x-button>
                 Agregar producto
             </x-button>
@@ -401,6 +403,12 @@
 
         <script>
             document.addEventListener("DOMContentLoaded", function() {
+                // Limpiar el almacenamiento local de ingredientes y beneficios al cargar la página
+                if (window.location.pathname === "/admin/productos/create") {
+                    localStorage.removeItem("ingredientes");
+                    localStorage.removeItem("beneficios");
+                }
+
                 let container = document.getElementById("ingredientes-container");
 
                 // Función para agregar un nuevo campo de entrada de ingrediente
@@ -451,11 +459,11 @@
                     guardarIngredientes();
                 });
 
+                //************ Beneficios ************
 
-                //************
                 let container2 = document.getElementById("beneficios-container");
 
-                // Función para agregar un nuevo campo de entrada de ingrediente
+                // Función para agregar un nuevo campo de entrada de beneficio
                 function agregarBeneficio(valor) {
                     let nuevoInput = document.createElement("div");
                     nuevoInput.className = "mb-4";
@@ -475,12 +483,12 @@
                     container2.appendChild(nuevoInput);
                 }
 
-                // Agregar evento de clic al botón de agregar ingrediente
+                // Agregar evento de clic al botón de agregar beneficio
                 document.getElementById("agregar-beneficio").addEventListener("click", function() {
                     agregarBeneficio('');
                 });
 
-                // Cargar ingredientes desde el almacenamiento local al cargar la página
+                // Cargar beneficios desde el almacenamiento local al cargar la página
                 let beneficiosGuardados = JSON.parse(localStorage.getItem("beneficios"));
                 if (beneficiosGuardados) {
                     beneficiosGuardados.forEach(function(valor) {
@@ -488,7 +496,7 @@
                     });
                 }
 
-                // Función para guardar ingredientes en el almacenamiento local
+                // Función para guardar beneficios en el almacenamiento local
                 function guardarBeneficios() {
                     let beneficios = [];
                     let inputs = document.querySelectorAll('[name="beneficios[]"]');
@@ -498,13 +506,10 @@
                     localStorage.setItem("beneficios", JSON.stringify(beneficios));
                 }
 
-                // Guardar ingredientes en el almacenamiento local antes de recargar la página
+                // Guardar beneficios en el almacenamiento local antes de recargar la página
                 window.addEventListener("beforeunload", function() {
                     guardarBeneficios();
                 });
-
-
-
             });
 
             function previewImage(event, querySelector) {

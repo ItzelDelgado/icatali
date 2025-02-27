@@ -59,3 +59,7 @@
 .ckeditor ul,.ckeditor ol,.ckeditor p,.ckeditor h2,.ckeditor h3,.ckeditor h4 {
     margin-bottom: 1rem
 }
+
+.ckeditor i {
+    font-style: italic;
+}

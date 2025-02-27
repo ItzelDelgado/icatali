@@ -16,6 +16,8 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Laravel\Fortify\Fortify;
 use Illuminate\Validation\ValidationException;
+use App\Actions\Fortify\CustomLoginResponse;
+use Laravel\Fortify\Contracts\LoginResponse as LoginResponseContract;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -32,6 +34,10 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+
+        $this->app->singleton(LoginResponseContract::class, CustomLoginResponse::class);
+
+
         Fortify::createUsersUsing(CreateNewUser::class);
         Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
         Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);

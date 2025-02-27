@@ -15,7 +15,7 @@
         <div class="w-8/12 mx-auto">
             <div class="max-w-[500px] mb-4 mx-auto">
                 <h1 class="text-3xl">CONTACTO</h1>
-                <p>Telefono: <span>5532110142</span></p>
+                <p>Telefono: <span>5648405008</span></p>
                 <p>Horario: <span>9-17 horas</span></p>
             </div>
             <form class="flex flex-col" action="{{ route('contacto.store') }}" method="POST">
@@ -54,7 +54,7 @@
                     <div class="absolute  md:top-28 md:right-2 xl:top-36 xl:right-10">
                         <h1 class="bebas text-3xl text-center mb-2 ">CONTACTO</h1>
                         <p class="w-80 text-center">
-                            <strong>Telefono:</strong> 5532110142 <br>
+                            <strong>Telefono:</strong> 5648405008 <br>
                             <strong>Horario:</strong> 9-17 horas
                         </p>
                     </div>
