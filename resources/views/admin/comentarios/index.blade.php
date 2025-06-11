@@ -1,7 +1,8 @@
 <x-admin-layout>
     @section('title', 'Comentarios')
-    <div class="mt-2">
+    <div class="mt-2 flex items-center gap-2">
         <h1 class="text-2xl font-medium text-gray-800">Comentarios</h1>
+        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm.053 17c.466 0 .844-.378.844-.845 0-.466-.378-.844-.844-.844-.466 0-.845.378-.845.844 0 .467.379.845.845.845zm.468-2.822h-.998c-.035-1.162.182-2.054.939-2.943.491-.57 1.607-1.479 1.945-2.058.722-1.229.077-3.177-2.271-3.177-1.439 0-2.615.877-2.928 2.507l-1.018-.102c.28-2.236 1.958-3.405 3.922-3.405 1.964 0 3.615 1.25 3.615 3.22 0 1.806-1.826 2.782-2.638 3.868-.422.563-.555 1.377-.568 2.09z"/></svg>
     </div>
 
     <div class="flex justify-end mb-4">
@@ -32,21 +33,16 @@
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                     <th scope="col" class="px-6 py-3">
-                        ID
+                        Autor
                     </th>
-                    <th scope="col" class="px-6 py-3">
-                        Alias
-                    </th>
-
                     <th scope="col" class="px-6 py-3">
                         Comentario
                     </th>
-
                     <th scope="col" class="px-6 py-3">
                         Imagen
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Estatus
+                        Visibilidad en el sitio
                     </th>
                     <th scope="col" class="px-6 py-3">
 
@@ -56,19 +52,14 @@
             <tbody>
                 @foreach ($comentarios as $comentario)
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row"
-                            class=" w-[7%] px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            {{ $comentario->id }}
-                        </th>
+
                         <td class="px-6 py-4 w-[23%]"> {{-- w-[3/12] --}}
                             {{ $comentario->alias }}
                         </td>
-
                         <td class="px-6 py-4 w-[25%]">
                             {{-- {{ Str::limit($comentario->comentario,100) }} --}}
                             {{ $comentario->comentario }}
                         </td>
-
                         <td class="px-4 py-2 w-[20%]">
                             {{-- {{ $comentario->img_path }} --}}
                             <img class="object-cover object-center max-w-36 h-40 mx-auto"
@@ -78,11 +69,11 @@
                         <td class="px-6 py-4 w-[15%]">
                             @if ($comentario->is_active)
                                 <div class="flex items-center">
-                                    <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> Activo
+                                    <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> Sí
                                 </div>
                             @else
                                 <div class="flex items-center">
-                                    <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"></div> Inactivo
+                                    <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"></div> No
                                 </div>
                             @endif
                         </td>

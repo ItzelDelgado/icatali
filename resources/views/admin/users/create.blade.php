@@ -10,7 +10,7 @@
 
         <div class="mb-4">
             <x-label class="mb-2">
-                Nombre
+                Nombre completo del Usuario
             </x-label>
             <x-input value="{{ old('name') }}" name="name" class="w-full"
                 placeholder="Escriba el nombre del usuario" />

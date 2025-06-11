@@ -16,6 +16,10 @@ class ProductoController extends Controller
     {
         $productos = Producto::latest('id')->paginate(10);
 
+        foreach ($productos as $producto) {
+            $producto->url_edicion = url("/productos/{$producto->slug}");
+        }
+
         return view('admin.productos.index', compact('productos'));
     }
 
